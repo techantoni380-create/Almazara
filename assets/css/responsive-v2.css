@@ -1,0 +1,819 @@
+/* ALMAZARA RESPONSIVE V2 — clean final layer. Desktop > 1100px is untouched. */
+
+/* TABLET 641–1100 */
+@media (min-width:641px) and (max-width:1100px){
+  .site-header .container.nav{width:calc(100% - 32px)!important;height:76px!important}
+  .site-header .nav-links{display:none!important}
+  .mobile-menu-trigger{display:grid!important}
+  .site-header .nav-tools{margin-left:auto!important}
+
+  .hero{height:680px!important;min-height:680px!important;max-height:none!important;position:relative!important}
+  .hero .hero-media,.hero .hero-media img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
+  .hero .hero-media img{object-fit:cover!important;transform:none!important}
+  .hero .hero-inner{height:680px!important;min-height:680px!important;display:flex!important;align-items:center!important;position:relative!important;z-index:3!important}
+  .hero .hero-copy,.hero .hero-copy-live{position:relative!important;inset:auto!important;transform:none!important;width:48%!important;max-width:520px!important;margin:0!important;padding:0!important;text-align:left!important;opacity:1!important;visibility:visible!important}
+  .hero h1,.hero .hero-copy-live h1{position:relative!important;inset:auto!important;transform:none!important;margin:0 0 18px!important;font-size:clamp(48px,6.5vw,68px)!important;line-height:.92!important;text-align:left!important;opacity:1!important;visibility:visible!important}
+  .hero .lead,.hero-lead-live{position:relative!important;inset:auto!important;transform:none!important;width:auto!important;max-width:430px!important;margin:0 0 22px!important;font-size:16px!important;line-height:1.5!important;text-align:left!important;opacity:1!important;visibility:visible!important}
+  .hero-actions-live2{position:relative!important;inset:auto!important;transform:none!important;width:auto!important;max-width:420px!important;margin:20px 0 0!important;display:grid!important;grid-template-columns:1fr!important;gap:10px!important;opacity:1!important;visibility:visible!important}
+  .hero-signature-live{position:relative!important;inset:auto!important;transform:none!important;width:auto!important;max-width:420px!important;margin:20px 0 0!important;opacity:1!important;visibility:visible!important}
+  .hero-kicker-live,.hero .kicker{position:relative!important;inset:auto!important;transform:none!important;width:auto!important;margin:0 0 12px!important;text-align:left!important;opacity:1!important;visibility:visible!important}
+  .hero-kicker-line{position:relative!important;inset:auto!important;transform:none!important;margin:0 0 20px!important}
+
+  .home-page .home-hero-live .hero-media img{object-position:69% center!important}
+  .home-page .home-hero-live .hero-media:after{background:linear-gradient(90deg,rgba(2,7,4,.88) 0%,rgba(2,7,4,.68) 47%,rgba(2,7,4,.12) 76%,rgba(2,7,4,.04) 100%)!important}
+  .home-page .home-hero-live .hero-copy-live{width:49%!important}
+  .home-page .home-hero-live .hero-trust-live2{display:none!important}
+
+  .nosotros-page .hero-media img{object-position:56% center!important}
+  .aceites-page .hero-media img{object-position:58% center!important}
+  .jamones-page .hero-media img{object-position:60% center!important}
+  .productos-page .hero-media img{object-position:58% center!important}
+  .recetas-page .hero-media img{object-position:58% center!important}
+  .contacto-page .hero-media img{object-position:60% center!important}
+
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .footer-enterprise-main{grid-template-columns:1.2fr 1fr!important;gap:34px!important}
+}
+
+/* MOBILE ≤640 */
+@media (max-width:640px){
+  .site-header{height:68px!important}
+  .site-header .container.nav{height:68px!important;width:calc(100% - 24px)!important;padding:0!important;gap:7px!important}
+  .site-header .nav-links,.site-header .search-trigger,.site-header .lang-switch{display:none!important}
+  .mobile-menu-trigger{display:grid!important;width:38px!important;height:38px!important}
+  .site-header .nav-tools{margin-left:auto!important;gap:6px!important}
+  .site-header .brand-symbol{width:38px!important;height:38px!important;flex-basis:38px!important}
+  .site-header .brand-word{width:auto!important;min-width:0!important}
+  .site-header .brand-wordmark-text{font-size:17px!important;letter-spacing:.12em!important}
+  .site-header .brand-word small{display:none!important}
+  .site-header .cart-trigger{width:38px!important;height:38px!important}
+  .mobile-nav-panel{inset:68px 0 0!important}
+
+  /* Home: mobile art direction matching the approved mockup. */
+  body.home-page .home-hero-live{height:850px!important;min-height:850px!important;max-height:none!important;position:relative!important;overflow:hidden!important}
+  body.home-page .home-hero-live .hero-media{position:absolute!important;inset:0!important;z-index:0!important}
+  body.home-page .home-hero-live .hero-media img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:75% 50%!important;transform:none!important;animation:none!important}
+  body.home-page .home-hero-live .hero-media:after{content:""!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(180deg,rgba(2,7,4,.02) 0%,rgba(2,7,4,.02) 46%,rgba(2,7,4,.24) 59%,rgba(2,7,4,.80) 76%,rgba(2,7,4,.98) 100%)!important}
+  body.home-page .home-hero-live .hero-inner{position:relative!important;z-index:3!important;width:100%!important;max-width:none!important;height:850px!important;min-height:850px!important;margin:0!important;padding:0!important;display:block!important}
+  body.home-page .home-hero-live .hero-copy-live{position:absolute!important;inset:0!important;z-index:4!important;width:100%!important;max-width:none!important;height:850px!important;margin:0!important;padding:0!important;display:block!important;text-align:center!important;opacity:1!important;visibility:visible!important}
+  body.home-page .home-hero-live .hero-kicker-live{position:absolute!important;top:42px!important;left:50%!important;transform:translateX(-50%)!important;width:max-content!important;max-width:94%!important;margin:0!important;color:#fff!important;font-size:8px!important;line-height:1.2!important;letter-spacing:.19em!important;white-space:nowrap!important;text-align:center!important;opacity:1!important;visibility:visible!important}
+  body.home-page .home-hero-live .hero-kicker-line{position:absolute!important;top:68px!important;left:50%!important;transform:translateX(-50%)!important;width:38px!important;height:1px!important;margin:0!important;display:block!important}
+  body.home-page .home-hero-live .hero-copy-live h1{position:absolute!important;top:500px!important;left:50%!important;transform:translateX(-50%)!important;width:92%!important;max-width:390px!important;margin:0!important;padding:0!important;display:block!important;color:#fff!important;font-size:44px!important;line-height:.90!important;letter-spacing:-.035em!important;text-align:center!important;opacity:1!important;visibility:visible!important;z-index:6!important}
+  body.home-page .home-hero-live .hero-lead-live{position:absolute!important;top:590px!important;left:50%!important;transform:translateX(-50%)!important;width:86%!important;max-width:350px!important;margin:0!important;padding:0!important;display:block!important;color:#fff!important;font-size:13.5px!important;line-height:1.42!important;text-align:center!important;opacity:1!important;visibility:visible!important;z-index:6!important}
+  body.home-page .home-hero-live .hero-br{display:none!important}
+  body.home-page .home-hero-live .hero-actions-live2{position:absolute!important;top:657px!important;left:50%!important;transform:translateX(-50%)!important;width:86%!important;max-width:350px!important;margin:0!important;padding:0!important;display:grid!important;grid-template-columns:1fr!important;gap:9px!important;opacity:1!important;visibility:visible!important;z-index:6!important}
+  body.home-page .home-hero-live .hero-btn-live{width:100%!important;min-height:50px!important;font-size:10px!important;justify-content:center!important}
+  body.home-page .home-hero-live .hero-signature-live{position:absolute!important;top:776px!important;left:50%!important;transform:translateX(-50%)!important;width:86%!important;max-width:350px!important;margin:0!important;padding:0!important;display:grid!important;grid-template-columns:28px 1fr 28px!important;gap:9px!important;align-items:center!important;opacity:1!important;visibility:visible!important;z-index:6!important}
+  body.home-page .home-hero-live .hero-signature-live em{font-size:13.5px!important;line-height:1.3!important;text-align:center!important;white-space:normal!important}
+  body.home-page .home-hero-live .hero-trust-live2{display:none!important}
+
+  /* Inner heroes: readable editorial mobile layout, centered photographic focal point. */
+  body:not(.home-page) .hero{height:690px!important;min-height:690px!important;max-height:none!important;position:relative!important;overflow:hidden!important}
+  body:not(.home-page) .hero .hero-media{position:absolute!important;inset:0!important}
+  body:not(.home-page) .hero .hero-media img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% center!important;transform:none!important;animation:none!important}
+  body:not(.home-page) .hero .hero-media:after{background:linear-gradient(90deg,rgba(2,7,4,.88) 0%,rgba(2,7,4,.60) 62%,rgba(2,7,4,.20) 100%)!important}
+  body:not(.home-page) .hero .hero-inner{position:relative!important;z-index:3!important;width:calc(100% - 32px)!important;height:690px!important;min-height:690px!important;margin:0 auto!important;padding:0!important;display:flex!important;align-items:flex-start!important}
+  body:not(.home-page) .hero .hero-copy,body:not(.home-page) .hero .hero-copy-live{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:360px!important;height:auto!important;margin:0!important;padding:72px 0 0!important;display:block!important;text-align:left!important;opacity:1!important;visibility:visible!important}
+  body:not(.home-page) .hero h1,body:not(.home-page) .hero .hero-copy-live h1{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:350px!important;margin:0 0 16px!important;padding:0!important;display:block!important;font-size:clamp(43px,13vw,54px)!important;line-height:.92!important;text-align:left!important;opacity:1!important;visibility:visible!important}
+  body:not(.home-page) .hero .kicker,body:not(.home-page) .hero .hero-kicker-live{position:relative!important;inset:auto!important;transform:none!important;width:auto!important;margin:0 0 12px!important;font-size:8.5px!important;letter-spacing:.18em!important;text-align:left!important;opacity:1!important;visibility:visible!important}
+  body:not(.home-page) .hero .hero-kicker-line{position:relative!important;inset:auto!important;transform:none!important;margin:0 0 18px!important}
+  body:not(.home-page) .hero .lead,body:not(.home-page) .hero .hero-lead-live{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:320px!important;margin:0 0 20px!important;font-size:15px!important;line-height:1.48!important;text-align:left!important;opacity:1!important;visibility:visible!important}
+  body:not(.home-page) .hero .hero-actions-live2{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:320px!important;margin:18px 0 0!important;display:grid!important;grid-template-columns:1fr!important;gap:9px!important;opacity:1!important;visibility:visible!important}
+  body:not(.home-page) .hero .hero-signature-live{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:320px!important;margin:18px 0 0!important;opacity:1!important;visibility:visible!important}
+  body:not(.home-page) .hero .cta-row{margin-top:18px!important}
+  body:not(.home-page) .hero .btn{min-height:50px!important;padding:0 18px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
+
+  .nosotros-page .hero .hero-media img{object-position:56% center!important}
+  .aceites-page .hero .hero-media img{object-position:55% center!important}
+  .jamones-page .hero .hero-media img{object-position:58% center!important}
+  .productos-page .hero .hero-media img{object-position:55% center!important}
+  .recetas-page .hero .hero-media img{object-position:56% center!important}
+  .contacto-page .hero .hero-media img{object-position:58% center!important}
+
+  /* Content / footer */
+  .container{width:calc(100% - 32px)!important}
+  .cards,.feature-grid,.stats,.recipe-grid,.category-grid{grid-template-columns:1fr!important}
+  .footer-enterprise .footer-enterprise-main{display:grid!important;grid-template-columns:1fr!important;gap:28px!important;width:calc(100% - 36px)!important;padding:42px 0 34px!important}
+  .footer-enterprise .footer-enterprise-brand,.footer-enterprise .footer-enterprise-column,.footer-enterprise .footer-enterprise-newsletter{width:100%!important;max-width:none!important;margin:0!important}
+  .footer-enterprise .newsletter-input-row{display:grid!important;grid-template-columns:1fr!important;gap:8px!important}
+  .footer-enterprise .newsletter-input-row input,.footer-enterprise .newsletter-input-row button{width:100%!important;min-height:50px!important}
+  .footer-enterprise .footer-enterprise-bottom{width:calc(100% - 36px)!important;display:grid!important;gap:12px!important}
+
+  .alma-assistant{right:12px!important;bottom:12px!important}
+  .alma-assistant-launcher{width:50px!important;height:50px!important;min-width:50px!important;min-height:50px!important;padding:3px!important;border-radius:50%!important}
+  .alma-assistant-launcher>span:not(.alma-assistant-online){display:none!important}
+  .alma-assistant-avatar{width:42px!important;height:42px!important;border-radius:50%!important}
+}
+
+@media (max-width:390px){
+  body.home-page .home-hero-live,body.home-page .home-hero-live .hero-inner,body.home-page .home-hero-live .hero-copy-live{height:820px!important;min-height:820px!important}
+  body.home-page .home-hero-live .hero-copy-live h1{top:480px!important;font-size:40px!important}
+  body.home-page .home-hero-live .hero-lead-live{top:562px!important;font-size:12.5px!important}
+  body.home-page .home-hero-live .hero-actions-live2{top:628px!important}
+  body.home-page .home-hero-live .hero-signature-live{top:746px!important}
+}
+
+/* MOBILE HERO FINAL VERTICAL POLISH — 2026-09-17
+   Keeps desktop/tablet untouched. The photo has its own shorter stage so the
+   bottle is not oversized; the editorial content continues naturally below. */
+@media (min-width:391px) and (max-width:640px){
+  body.home-page .home-hero-live{
+    height:1060px!important;min-height:1060px!important;
+    background:#020704!important;overflow:hidden!important;
+  }
+  body.home-page .home-hero-live .hero-media{
+    height:820px!important;bottom:auto!important;overflow:hidden!important;
+  }
+  body.home-page .home-hero-live .hero-media img{
+    height:820px!important;object-position:75% 50%!important;
+  }
+  body.home-page .home-hero-live .hero-media:after{
+    height:820px!important;bottom:auto!important;
+    background:linear-gradient(180deg,rgba(2,7,4,.01) 0%,rgba(2,7,4,.02) 49%,rgba(2,7,4,.20) 64%,rgba(2,7,4,.82) 88%,#020704 100%)!important;
+  }
+  body.home-page .home-hero-live .hero-inner,
+  body.home-page .home-hero-live .hero-copy-live{
+    height:1060px!important;min-height:1060px!important;
+  }
+  body.home-page .home-hero-live .hero-kicker-live{top:46px!important;font-size:9px!important}
+  body.home-page .home-hero-live .hero-kicker-line{top:74px!important;width:44px!important}
+  body.home-page .home-hero-live .hero-copy-live h1{
+    top:620px!important;width:90%!important;max-width:400px!important;
+    font-size:46px!important;line-height:.91!important;
+  }
+  body.home-page .home-hero-live .hero-lead-live{
+    top:716px!important;width:84%!important;max-width:365px!important;
+    font-size:15px!important;line-height:1.48!important;
+  }
+  body.home-page .home-hero-live .hero-actions-live2{
+    top:790px!important;width:84%!important;max-width:365px!important;gap:11px!important;
+  }
+  body.home-page .home-hero-live .hero-btn-live{
+    min-height:54px!important;font-size:11px!important;
+  }
+  body.home-page .home-hero-live .hero-signature-live{
+    top:928px!important;width:84%!important;max-width:365px!important;
+    grid-template-columns:34px 1fr 34px!important;gap:11px!important;
+  }
+  body.home-page .home-hero-live .hero-signature-live em{
+    font-size:14px!important;line-height:1.35!important;
+  }
+}
+
+@media (max-width:390px){
+  body.home-page .home-hero-live{height:1000px!important;min-height:1000px!important;background:#020704!important}
+  body.home-page .home-hero-live .hero-media{height:770px!important;bottom:auto!important}
+  body.home-page .home-hero-live .hero-media img{height:770px!important;object-position:75% 50%!important}
+  body.home-page .home-hero-live .hero-media:after{height:770px!important;bottom:auto!important;background:linear-gradient(180deg,rgba(2,7,4,.01) 0%,rgba(2,7,4,.02) 49%,rgba(2,7,4,.20) 64%,rgba(2,7,4,.82) 88%,#020704 100%)!important}
+  body.home-page .home-hero-live .hero-inner,body.home-page .home-hero-live .hero-copy-live{height:1000px!important;min-height:1000px!important}
+  body.home-page .home-hero-live .hero-kicker-live{top:42px!important;font-size:8px!important}
+  body.home-page .home-hero-live .hero-kicker-line{top:68px!important}
+  body.home-page .home-hero-live .hero-copy-live h1{top:580px!important;font-size:41px!important;line-height:.91!important}
+  body.home-page .home-hero-live .hero-lead-live{top:666px!important;width:86%!important;font-size:13.5px!important;line-height:1.45!important}
+  body.home-page .home-hero-live .hero-actions-live2{top:736px!important;width:86%!important;gap:10px!important}
+  body.home-page .home-hero-live .hero-btn-live{min-height:52px!important;font-size:10.5px!important}
+  body.home-page .home-hero-live .hero-signature-live{top:866px!important;width:86%!important}
+  body.home-page .home-hero-live .hero-signature-live em{font-size:13px!important;line-height:1.35!important}
+}
+
+/* MOBILE HERO V4 — compact vertical composition approved at 440×956 / 100%.
+   Only mobile is changed. Desktop and tablet remain untouched. */
+@media (min-width:391px) and (max-width:640px){
+  body.home-page .home-hero-live{
+    height:980px!important;min-height:980px!important;
+  }
+  body.home-page .home-hero-live .hero-media,
+  body.home-page .home-hero-live .hero-media img,
+  body.home-page .home-hero-live .hero-media:after{
+    height:730px!important;
+  }
+  body.home-page .home-hero-live .hero-media img{
+    object-position:75% 48%!important;
+  }
+  body.home-page .home-hero-live .hero-media:after{
+    background:linear-gradient(180deg,rgba(2,7,4,.01) 0%,rgba(2,7,4,.02) 43%,rgba(2,7,4,.18) 57%,rgba(2,7,4,.72) 78%,#020704 100%)!important;
+  }
+  body.home-page .home-hero-live .hero-inner,
+  body.home-page .home-hero-live .hero-copy-live{
+    height:980px!important;min-height:980px!important;
+  }
+  body.home-page .home-hero-live .hero-kicker-live{top:42px!important}
+  body.home-page .home-hero-live .hero-kicker-line{top:70px!important}
+  body.home-page .home-hero-live .hero-copy-live h1{
+    top:535px!important;font-size:45px!important;line-height:.91!important;
+  }
+  body.home-page .home-hero-live .hero-lead-live{
+    top:628px!important;font-size:14.5px!important;line-height:1.46!important;
+  }
+  body.home-page .home-hero-live .hero-actions-live2{
+    top:704px!important;gap:10px!important;
+  }
+  body.home-page .home-hero-live .hero-signature-live{
+    top:842px!important;
+  }
+}
+
+/* =========================================================
+   HOME MOBILE FINAL ART DIRECTION — 2026-09-17
+   Approved reference: centered bottle + centered editorial stack.
+   This block intentionally comes LAST and wins over older mobile
+   experiments without changing tablet/desktop or inner pages.
+   ========================================================= */
+@media (max-width:640px){
+  body.home-page .home-hero-live,
+  body.home-page .home-hero-live .hero-inner,
+  body.home-page .home-hero-live .hero-copy-live{
+    height:1120px!important;
+    min-height:1120px!important;
+    max-height:none!important;
+  }
+  body.home-page .home-hero-live{overflow:hidden!important}
+  body.home-page .home-hero-live .hero-media img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:75% 50%!important;
+    transform:none!important;
+    animation:none!important;
+  }
+  body.home-page .home-hero-live .hero-media:after{
+    background:linear-gradient(180deg,
+      rgba(2,7,4,.02) 0%,
+      rgba(2,7,4,.02) 49%,
+      rgba(2,7,4,.20) 61%,
+      rgba(2,7,4,.78) 75%,
+      rgba(2,7,4,.98) 100%)!important;
+  }
+  body.home-page .home-hero-live .hero-kicker-live{
+    top:46px!important;
+    left:50%!important;
+    transform:translateX(-50%)!important;
+    width:max-content!important;
+    max-width:94%!important;
+    font-size:9px!important;
+    letter-spacing:.20em!important;
+    text-align:center!important;
+  }
+  body.home-page .home-hero-live .hero-kicker-line{
+    top:76px!important;
+    left:50%!important;
+    transform:translateX(-50%)!important;
+    width:42px!important;
+  }
+  body.home-page .home-hero-live .hero-copy-live h1{
+    top:720px!important;
+    left:50%!important;
+    transform:translateX(-50%)!important;
+    width:92%!important;
+    max-width:400px!important;
+    font-size:48px!important;
+    line-height:.90!important;
+    letter-spacing:-.035em!important;
+    text-align:center!important;
+  }
+  body.home-page .home-hero-live .hero-lead-live{
+    top:820px!important;
+    left:50%!important;
+    transform:translateX(-50%)!important;
+    width:86%!important;
+    max-width:370px!important;
+    font-size:14px!important;
+    line-height:1.45!important;
+    text-align:center!important;
+  }
+  body.home-page .home-hero-live .hero-actions-live2{
+    top:895px!important;
+    left:50%!important;
+    transform:translateX(-50%)!important;
+    width:86%!important;
+    max-width:370px!important;
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+  body.home-page .home-hero-live .hero-btn-live{
+    min-height:54px!important;
+    font-size:11px!important;
+  }
+  body.home-page .home-hero-live .hero-signature-live{
+    top:1022px!important;
+    left:50%!important;
+    transform:translateX(-50%)!important;
+    width:86%!important;
+    max-width:370px!important;
+    grid-template-columns:32px 1fr 32px!important;
+    gap:10px!important;
+  }
+  body.home-page .home-hero-live .hero-signature-live em{
+    font-size:14px!important;
+    line-height:1.3!important;
+    text-align:center!important;
+  }
+}
+@media (max-width:390px){
+  body.home-page .home-hero-live,
+  body.home-page .home-hero-live .hero-inner,
+  body.home-page .home-hero-live .hero-copy-live{
+    height:1080px!important;
+    min-height:1080px!important;
+  }
+  body.home-page .home-hero-live .hero-copy-live h1{top:690px!important;font-size:43px!important}
+  body.home-page .home-hero-live .hero-lead-live{top:782px!important;font-size:13px!important}
+  body.home-page .home-hero-live .hero-actions-live2{top:852px!important}
+  body.home-page .home-hero-live .hero-signature-live{top:978px!important}
+}
+
+/* HOME MOBILE — FINAL IMAGE FOCAL CENTERING 2026-09-17
+   Repositions only the photographic crop so the bottle sits on the
+   visual center axis at 440px mobile width. Content stack unchanged. */
+@media (max-width:640px){
+  body.home-page .home-hero-live .hero-media img{
+    object-position:88% 50%!important;
+  }
+}
+
+/* HOME MOBILE — SMALLER CENTERED PHOTO STAGE 2026-09-17
+   Keeps the approved horizontal focal point, but reduces the photographic
+   stage so the bottle reads substantially smaller and centered on mobile. */
+@media (max-width:640px){
+  body.home-page .home-hero-live .hero-media,
+  body.home-page .home-hero-live .hero-media:after{
+    height:760px!important;
+    bottom:auto!important;
+  }
+  body.home-page .home-hero-live .hero-media img{
+    width:100%!important;
+    height:760px!important;
+    object-fit:cover!important;
+    object-position:88% 50%!important;
+  }
+  body.home-page .home-hero-live .hero-media:after{
+    background:linear-gradient(180deg,
+      rgba(2,7,4,.02) 0%,
+      rgba(2,7,4,.02) 55%,
+      rgba(2,7,4,.18) 70%,
+      rgba(2,7,4,.72) 90%,
+      #020704 100%)!important;
+  }
+}
+
+/* HOME MOBILE — COMPLETE LOWER CTA STACK 2026-09-17
+   Preserve the approved centered photo. Extend the hero naturally below it
+   so the title, description, CTAs and signature remain visible by scrolling. */
+@media (max-width:640px){
+  body.home-page .home-hero-live,
+  body.home-page .home-hero-live .hero-inner,
+  body.home-page .home-hero-live .hero-copy-live{
+    height:1165px!important;
+    min-height:1165px!important;
+    max-height:none!important;
+  }
+  body.home-page .home-hero-live{
+    overflow:hidden!important;
+    background:#020704!important;
+  }
+  body.home-page .home-hero-live .hero-copy-live h1{
+    top:735px!important;
+  }
+  body.home-page .home-hero-live .hero-lead-live{
+    top:832px!important;
+  }
+  body.home-page .home-hero-live .hero-actions-live2{
+    top:902px!important;
+    width:88%!important;
+    max-width:385px!important;
+    gap:12px!important;
+  }
+  body.home-page .home-hero-live .hero-btn-live{
+    min-height:55px!important;
+  }
+  body.home-page .home-hero-live .hero-signature-live{
+    top:1042px!important;
+    width:86%!important;
+    max-width:365px!important;
+  }
+  body.home-page .home-hero-live .hero-signature-live em{
+    font-size:15px!important;
+    line-height:1.35!important;
+  }
+}
+@media (max-width:390px){
+  body.home-page .home-hero-live,
+  body.home-page .home-hero-live .hero-inner,
+  body.home-page .home-hero-live .hero-copy-live{
+    height:1135px!important;
+    min-height:1135px!important;
+  }
+  body.home-page .home-hero-live .hero-copy-live h1{top:720px!important;font-size:43px!important}
+  body.home-page .home-hero-live .hero-lead-live{top:810px!important;font-size:13px!important}
+  body.home-page .home-hero-live .hero-actions-live2{top:878px!important}
+  body.home-page .home-hero-live .hero-signature-live{top:1018px!important}
+}
+
+/* HOME MOBILE — FIRST VIEWPORT COMPLETE HERO 2026-09-17
+   Goal: at 440x956 the full hero content is visible on initial load,
+   including both CTAs and the closing signature. Desktop/tablet untouched. */
+@media (min-width:391px) and (max-width:640px){
+  body.home-page .home-hero-live,
+  body.home-page .home-hero-live .hero-inner,
+  body.home-page .home-hero-live .hero-copy-live{
+    height:888px!important;
+    min-height:888px!important;
+    max-height:888px!important;
+  }
+  body.home-page .home-hero-live .hero-media,
+  body.home-page .home-hero-live .hero-media img,
+  body.home-page .home-hero-live .hero-media:after{
+    height:620px!important;
+  }
+  body.home-page .home-hero-live .hero-media img{
+    object-position:88% 50%!important;
+  }
+  body.home-page .home-hero-live .hero-media:after{
+    background:linear-gradient(180deg,rgba(2,7,4,.01) 0%,rgba(2,7,4,.02) 48%,rgba(2,7,4,.18) 66%,rgba(2,7,4,.76) 88%,#020704 100%)!important;
+  }
+  body.home-page .home-hero-live .hero-kicker-live{top:38px!important;font-size:8px!important}
+  body.home-page .home-hero-live .hero-kicker-line{top:64px!important}
+  body.home-page .home-hero-live .hero-copy-live h1{
+    top:585px!important;font-size:38px!important;line-height:.88!important;
+  }
+  body.home-page .home-hero-live .hero-lead-live{
+    top:655px!important;width:88%!important;font-size:11.5px!important;line-height:1.28!important;
+  }
+  body.home-page .home-hero-live .hero-actions-live2{
+    top:708px!important;width:88%!important;max-width:388px!important;gap:8px!important;
+  }
+  body.home-page .home-hero-live .hero-btn-live{
+    min-height:42px!important;font-size:9px!important;
+  }
+  body.home-page .home-hero-live .hero-signature-live{
+    top:814px!important;width:82%!important;max-width:350px!important;
+    grid-template-columns:28px 1fr 28px!important;gap:8px!important;
+  }
+  body.home-page .home-hero-live .hero-signature-live em{
+    font-size:12.5px!important;line-height:1.2!important;
+  }
+}
+
+/* HOME MOBILE — LIFT LOWER CONTENT ONLY 2026-09-17
+   User-approved photo/header remain untouched. Moves title, description,
+   CTAs and signature upward as one visual stack in the 440px mobile view. */
+@media (min-width:391px) and (max-width:640px){
+  body.home-page .home-hero-live .hero-copy-live h1{top:565px!important;}
+  body.home-page .home-hero-live .hero-lead-live{top:635px!important;}
+  body.home-page .home-hero-live .hero-actions-live2{top:688px!important;}
+  body.home-page .home-hero-live .hero-signature-live{top:794px!important;}
+}
+
+/* MOBILE FOOTER CENTERED — 2026-09-17 */
+@media (max-width:640px){
+  .footer-enterprise .footer-enterprise-main{text-align:center!important;justify-items:center!important}
+  .footer-enterprise .footer-enterprise-brand,
+  .footer-enterprise .footer-enterprise-column,
+  .footer-enterprise .footer-enterprise-newsletter{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important}
+  .footer-enterprise .footer-brand{justify-content:center!important;text-align:center!important}
+  .footer-enterprise .footer-brand span{align-items:center!important}
+  .footer-enterprise .footer-wordmark{object-position:center center!important}
+  .footer-enterprise .footer-brand-claim,
+  .footer-enterprise .footer-newsletter-premium>p,
+  .footer-enterprise .footer-newsletter-premium h3{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+  .footer-enterprise .footer-brand-line{margin-left:auto!important;margin-right:auto!important}
+  .footer-enterprise .footer-enterprise-column ul{width:100%!important;margin-left:0!important;padding-left:0!important;text-align:center!important}
+  .footer-enterprise .footer-enterprise-column li{text-align:center!important}
+  .footer-enterprise .footer-enterprise-column a{display:inline-block!important;text-align:center!important}
+  .footer-enterprise .newsletter-input-row{margin-left:auto!important;margin-right:auto!important}
+  .footer-enterprise .footer-enterprise-socials{justify-content:center!important;width:100%!important}
+  .footer-enterprise .footer-enterprise-bottom{grid-template-columns:1fr!important;justify-items:center!important;text-align:center!important}
+  .footer-enterprise .footer-enterprise-copy{text-align:center!important}
+  .footer-enterprise .footer-enterprise-legal{justify-content:center!important;text-align:center!important;flex-wrap:wrap!important}
+  .footer-enterprise .footer-enterprise-credit{align-items:center!important;text-align:center!important}
+}
+
+/* MOBILE HEADER — DESKTOP BRAND GEOMETRY, SCALED 2026-09-17 */
+@media (max-width:640px){
+  .site-header{height:82px!important}
+  .site-header .container.nav{
+    width:calc(100% - 28px)!important;
+    height:82px!important;
+    margin-inline:auto!important;
+    padding:0!important;
+    gap:8px!important;
+  }
+  .site-header .brand-logo{gap:11px!important;min-width:0!important;align-items:center!important}
+  .site-header .brand-symbol{width:48px!important;height:48px!important;flex:0 0 48px!important}
+  .site-header .brand-word{width:auto!important;min-width:0!important;justify-content:center!important}
+  .site-header .brand-wordmark-text{font-size:21px!important;line-height:1!important;letter-spacing:.105em!important;white-space:nowrap!important}
+  .site-header .brand-word small{display:block!important;margin-top:5px!important;color:#fff!important;font-size:6.4px!important;line-height:1!important;letter-spacing:.17em!important;white-space:nowrap!important}
+  .site-header .nav-tools{margin-left:auto!important;gap:6px!important;flex:0 0 auto!important}
+  .site-header .cart-trigger,.mobile-menu-trigger{width:38px!important;height:38px!important}
+}
+@media (max-width:390px){
+  .site-header .container.nav{width:calc(100% - 20px)!important}
+  .site-header .brand-logo{gap:8px!important}
+  .site-header .brand-symbol{width:42px!important;height:42px!important;flex-basis:42px!important}
+  .site-header .brand-wordmark-text{font-size:18px!important;letter-spacing:.09em!important}
+  .site-header .brand-word small{display:block!important;font-size:5.5px!important;letter-spacing:.13em!important;margin-top:4px!important}
+  .site-header .cart-trigger,.mobile-menu-trigger{width:34px!important;height:34px!important}
+  .site-header .nav-tools{gap:4px!important}
+}
+\n\n/* MOBILE MENU — LANGUAGE SELECTOR 2026-09-17 */
+@media (max-width:980px){
+  .mobile-nav-utilities{max-width:520px;margin:24px auto 0;display:grid;gap:20px}
+  .mobile-search-open{width:100%;padding:14px 4px;border:0;border-bottom:1px solid rgba(200,168,94,.16);background:transparent;color:#f4efe5;text-align:left;font:600 11px Arial;letter-spacing:.14em;cursor:pointer}
+  .mobile-languages{padding:4px 4px 18px;border-bottom:1px solid rgba(200,168,94,.16)}
+  .mobile-languages-title{display:block;margin-bottom:13px;color:#d4b36a;font:700 9px Arial;letter-spacing:.22em}
+  .mobile-language-options{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .mobile-language-options button{min-width:43px;height:36px;padding:0 10px;border:1px solid rgba(200,168,94,.25);border-radius:20px;background:transparent;color:#f4efe5;font:700 10px Arial;letter-spacing:.10em;cursor:pointer;transition:.2s ease}
+  .mobile-language-options button:hover,.mobile-language-options button.active{border-color:#d4b36a;background:rgba(200,168,94,.10);color:#d4b36a}
+}
+@media (max-width:640px){
+  .mobile-nav-panel{inset:82px 0 0!important}
+  .mobile-language-options{justify-content:center}
+  .mobile-languages{text-align:center}
+}
+
+/* NOSOTROS MOBILE — HOME-STYLE HERO COMPOSITION 2026-09-17
+   Scoped only to Nosotros. Inicio and all other pages remain untouched. */
+@media (min-width:391px) and (max-width:640px){
+  body.nosotros-page .nosotros-hero-live{
+    height:850px!important;min-height:850px!important;max-height:none!important;
+    position:relative!important;overflow:hidden!important;background:#020704!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-media{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important}
+  body.nosotros-page .nosotros-hero-live .hero-media img{
+    position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+    object-fit:cover!important;object-position:50% 50%!important;transform:none!important;animation:none!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-media:after{
+    content:""!important;position:absolute!important;inset:0!important;z-index:1!important;
+    background:linear-gradient(180deg,rgba(2,7,4,.02) 0%,rgba(2,7,4,.02) 44%,rgba(2,7,4,.25) 59%,rgba(2,7,4,.82) 76%,rgba(2,7,4,.99) 100%)!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-inner{
+    position:relative!important;z-index:3!important;width:100%!important;max-width:none!important;
+    height:850px!important;min-height:850px!important;margin:0!important;padding:0!important;display:block!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-copy-live{
+    position:absolute!important;inset:0!important;z-index:4!important;width:100%!important;max-width:none!important;
+    height:850px!important;margin:0!important;padding:0!important;display:block!important;text-align:center!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-kicker-live{
+    position:absolute!important;top:38px!important;left:50%!important;transform:translateX(-50%)!important;
+    width:max-content!important;max-width:94%!important;margin:0!important;color:#fff!important;
+    font-size:8px!important;line-height:1.2!important;letter-spacing:.19em!important;white-space:nowrap!important;text-align:center!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-kicker-line{
+    position:absolute!important;top:64px!important;left:50%!important;transform:translateX(-50%)!important;
+    width:38px!important;height:1px!important;margin:0!important;display:block!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-copy-live h1{
+    position:absolute!important;top:565px!important;left:50%!important;transform:translateX(-50%)!important;
+    width:92%!important;max-width:390px!important;margin:0!important;padding:0!important;display:block!important;
+    color:#fff!important;font-size:38px!important;line-height:.88!important;letter-spacing:-.035em!important;text-align:center!important;z-index:6!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-lead-live{
+    position:absolute!important;top:642px!important;left:50%!important;transform:translateX(-50%)!important;
+    width:88%!important;max-width:370px!important;margin:0!important;padding:0!important;display:block!important;
+    color:#fff!important;font-size:12px!important;line-height:1.3!important;text-align:center!important;z-index:6!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-actions-live2{
+    position:absolute!important;top:684px!important;left:50%!important;transform:translateX(-50%)!important;
+    width:88%!important;max-width:388px!important;margin:0!important;padding:0!important;display:grid!important;
+    grid-template-columns:1fr!important;gap:8px!important;z-index:6!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-btn-live{
+    width:100%!important;min-height:42px!important;font-size:9px!important;justify-content:center!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-signature-live{
+    position:absolute!important;top:748px!important;left:50%!important;transform:translateX(-50%)!important;
+    width:82%!important;max-width:350px!important;margin:0!important;padding:0!important;display:grid!important;
+    grid-template-columns:28px 1fr 28px!important;gap:8px!important;align-items:center!important;z-index:6!important;
+  }
+  body.nosotros-page .nosotros-hero-live .hero-signature-live span{width:auto!important}
+  body.nosotros-page .nosotros-hero-live .hero-signature-live em{
+    font-size:12.5px!important;line-height:1.2!important;text-align:center!important;white-space:normal!important;
+  }
+}
+
+@media (max-width:390px){
+  body.nosotros-page .nosotros-hero-live{height:810px!important;min-height:810px!important;max-height:none!important;overflow:hidden!important;background:#020704!important}
+  body.nosotros-page .nosotros-hero-live .hero-media img{object-position:50% 50%!important}
+  body.nosotros-page .nosotros-hero-live .hero-media:after{background:linear-gradient(180deg,rgba(2,7,4,.02) 0%,rgba(2,7,4,.02) 42%,rgba(2,7,4,.28) 57%,rgba(2,7,4,.84) 75%,#020704 100%)!important}
+  body.nosotros-page .nosotros-hero-live .hero-inner,
+  body.nosotros-page .nosotros-hero-live .hero-copy-live{height:810px!important;min-height:810px!important;position:relative!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important;text-align:center!important}
+  body.nosotros-page .nosotros-hero-live .hero-kicker-live{position:absolute!important;top:34px!important;left:50%!important;transform:translateX(-50%)!important;font-size:7px!important;white-space:nowrap!important;text-align:center!important;margin:0!important}
+  body.nosotros-page .nosotros-hero-live .hero-kicker-line{position:absolute!important;top:58px!important;left:50%!important;transform:translateX(-50%)!important;margin:0!important}
+  body.nosotros-page .nosotros-hero-live .hero-copy-live h1{position:absolute!important;top:535px!important;left:50%!important;transform:translateX(-50%)!important;width:92%!important;margin:0!important;font-size:34px!important;line-height:.88!important;text-align:center!important}
+  body.nosotros-page .nosotros-hero-live .hero-lead-live{position:absolute!important;top:604px!important;left:50%!important;transform:translateX(-50%)!important;width:88%!important;margin:0!important;font-size:11px!important;line-height:1.28!important;text-align:center!important}
+  body.nosotros-page .nosotros-hero-live .hero-actions-live2{position:absolute!important;top:644px!important;left:50%!important;transform:translateX(-50%)!important;width:88%!important;margin:0!important;display:grid!important}
+  body.nosotros-page .nosotros-hero-live .hero-btn-live{width:100%!important;min-height:40px!important;font-size:8.5px!important}
+  body.nosotros-page .nosotros-hero-live .hero-signature-live{position:absolute!important;top:706px!important;left:50%!important;transform:translateX(-50%)!important;width:84%!important;margin:0!important;display:grid!important;grid-template-columns:24px 1fr 24px!important;gap:7px!important;align-items:center!important}
+  body.nosotros-page .nosotros-hero-live .hero-signature-live span{width:auto!important}
+  body.nosotros-page .nosotros-hero-live .hero-signature-live em{font-size:11.5px!important;line-height:1.2!important;text-align:center!important;white-space:normal!important}
+}
+
+/* ACEITES MOBILE — centered lower hero composition approved 2026-09-17.
+   Scoped ONLY to Aceites. Inicio and Nosotros remain untouched. */
+@media (min-width:391px) and (max-width:640px){
+  body.aceites-page .aceites-hero-premium{height:690px!important;min-height:690px!important;position:relative!important;overflow:hidden!important}
+  body.aceites-page .aceites-hero-premium .hero-media:after{
+    content:""!important;position:absolute!important;inset:0!important;z-index:1!important;
+    background:linear-gradient(180deg,rgba(2,7,4,.01) 0%,rgba(2,7,4,.02) 48%,rgba(2,7,4,.20) 62%,rgba(2,7,4,.58) 82%,rgba(2,7,4,.82) 100%)!important;
+  }
+  body.aceites-page .aceites-hero-premium .hero-inner{
+    position:relative!important;z-index:3!important;width:100%!important;max-width:none!important;height:690px!important;min-height:690px!important;
+    margin:0!important;padding:0!important;display:block!important;
+  }
+  body.aceites-page .aceites-hero-premium .hero-copy{
+    position:absolute!important;left:50%!important;top:438px!important;transform:translateX(-50%)!important;
+    width:92%!important;max-width:400px!important;height:auto!important;margin:0!important;padding:0!important;
+    display:block!important;text-align:center!important;z-index:5!important;
+  }
+  body.aceites-page .aceites-hero-premium .kicker{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;margin:0 0 10px!important;
+    color:#fff!important;font-size:8px!important;line-height:1.2!important;letter-spacing:.20em!important;text-align:center!important;
+  }
+  body.aceites-page .aceites-hero-premium .kicker:after{
+    content:"";display:block;width:38px;height:1px;background:#c8a85e;margin:10px auto 0;
+  }
+  body.aceites-page .aceites-hero-premium h1{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:none!important;
+    margin:0 0 10px!important;padding:0!important;font-size:39px!important;line-height:.88!important;letter-spacing:-.035em!important;text-align:center!important;
+  }
+  body.aceites-page .aceites-hero-premium .lead{
+    position:relative!important;inset:auto!important;transform:none!important;width:90%!important;max-width:350px!important;
+    margin:0 auto 12px!important;padding:0!important;color:#fff!important;font-size:12px!important;line-height:1.28!important;text-align:center!important;
+  }
+  body.aceites-page .aceites-hero-premium .cta-row{margin:0 auto!important;width:86%!important;max-width:350px!important;text-align:center!important}
+  body.aceites-page .aceites-hero-premium .btn{
+    width:100%!important;min-height:43px!important;padding:0 14px!important;display:flex!important;align-items:center!important;justify-content:center!important;
+    font-size:8.5px!important;line-height:1!important;white-space:nowrap!important;
+  }
+}
+@media (max-width:390px){
+  body.aceites-page .aceites-hero-premium{height:650px!important;min-height:650px!important}
+  body.aceites-page .aceites-hero-premium .hero-inner{height:650px!important;min-height:650px!important;width:100%!important;margin:0!important;padding:0!important;display:block!important}
+  body.aceites-page .aceites-hero-premium .hero-copy{position:absolute!important;left:50%!important;top:407px!important;transform:translateX(-50%)!important;width:92%!important;max-width:360px!important;padding:0!important;text-align:center!important}
+  body.aceites-page .aceites-hero-premium .kicker{margin:0 0 9px!important;font-size:7px!important;text-align:center!important}
+  body.aceites-page .aceites-hero-premium .kicker:after{width:34px;margin-top:8px}
+  body.aceites-page .aceites-hero-premium h1{margin:0 0 9px!important;font-size:35px!important;line-height:.88!important;text-align:center!important}
+  body.aceites-page .aceites-hero-premium .lead{width:92%!important;margin:0 auto 10px!important;font-size:10.5px!important;line-height:1.25!important;text-align:center!important}
+  body.aceites-page .aceites-hero-premium .cta-row{width:88%!important;margin:0 auto!important}
+  body.aceites-page .aceites-hero-premium .btn{width:100%!important;min-height:40px!important;font-size:7.7px!important;white-space:nowrap!important}
+}
+
+/* JAMONES MOBILE — centered premium hero composition approved 2026-09-17.
+   Scoped ONLY to Jamones. Inicio, Nosotros and Aceites remain untouched. */
+@media (min-width:391px) and (max-width:640px){
+  body.jamones-page .jamones-hero-premium{height:690px!important;min-height:690px!important;position:relative!important;overflow:hidden!important}
+  body.jamones-page .jamones-hero-premium .hero-media:after{
+    content:""!important;position:absolute!important;inset:0!important;z-index:1!important;
+    background:linear-gradient(180deg,rgba(2,7,4,.01) 0%,rgba(2,7,4,.03) 38%,rgba(2,7,4,.20) 53%,rgba(2,7,4,.58) 73%,rgba(2,7,4,.80) 100%)!important;
+  }
+  body.jamones-page .jamones-hero-premium .hero-inner{
+    position:relative!important;z-index:3!important;width:100%!important;max-width:none!important;height:690px!important;min-height:690px!important;
+    margin:0!important;padding:0!important;display:block!important;
+  }
+  body.jamones-page .jamones-hero-premium .hero-copy{
+    position:absolute!important;left:50%!important;top:355px!important;transform:translateX(-50%)!important;
+    width:92%!important;max-width:400px!important;height:auto!important;margin:0!important;padding:0!important;
+    display:block!important;text-align:center!important;z-index:5!important;
+  }
+  body.jamones-page .jamones-hero-premium .kicker{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;margin:0 0 10px!important;
+    color:#fff!important;font-size:8px!important;line-height:1.2!important;letter-spacing:.20em!important;text-align:center!important;
+  }
+  body.jamones-page .jamones-hero-premium .kicker:after{
+    content:"";display:block;width:38px;height:1px;background:#c8a85e;margin:10px auto 0;
+  }
+  body.jamones-page .jamones-hero-premium h1{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:none!important;
+    margin:0 0 10px!important;padding:0!important;font-size:39px!important;line-height:.88!important;letter-spacing:-.035em!important;text-align:center!important;
+  }
+  body.jamones-page .jamones-hero-premium .lead{
+    position:relative!important;inset:auto!important;transform:none!important;width:90%!important;max-width:350px!important;
+    margin:0 auto 12px!important;padding:0!important;color:#fff!important;font-size:12px!important;line-height:1.28!important;text-align:center!important;
+  }
+  body.jamones-page .jamones-hero-premium .cta-row{
+    width:86%!important;max-width:350px!important;margin:0 auto!important;display:grid!important;grid-template-columns:1fr!important;gap:8px!important;text-align:center!important;
+  }
+  body.jamones-page .jamones-hero-premium .btn{
+    width:100%!important;min-height:43px!important;padding:0 14px!important;display:flex!important;align-items:center!important;justify-content:center!important;
+    font-size:8.5px!important;line-height:1!important;white-space:nowrap!important;
+  }
+}
+@media (max-width:390px){
+  body.jamones-page .jamones-hero-premium{height:650px!important;min-height:650px!important}
+  body.jamones-page .jamones-hero-premium .hero-inner{height:650px!important;min-height:650px!important;width:100%!important;margin:0!important;padding:0!important;display:block!important}
+  body.jamones-page .jamones-hero-premium .hero-copy{position:absolute!important;left:50%!important;top:330px!important;transform:translateX(-50%)!important;width:92%!important;max-width:360px!important;padding:0!important;text-align:center!important}
+  body.jamones-page .jamones-hero-premium .kicker{margin:0 0 9px!important;font-size:7px!important;text-align:center!important}
+  body.jamones-page .jamones-hero-premium .kicker:after{width:34px;margin-top:8px}
+  body.jamones-page .jamones-hero-premium h1{margin:0 0 9px!important;font-size:35px!important;line-height:.88!important;text-align:center!important}
+  body.jamones-page .jamones-hero-premium .lead{width:92%!important;margin:0 auto 10px!important;font-size:10.5px!important;line-height:1.25!important;text-align:center!important}
+  body.jamones-page .jamones-hero-premium .cta-row{width:88%!important;margin:0 auto!important;display:grid!important;grid-template-columns:1fr!important;gap:7px!important}
+  body.jamones-page .jamones-hero-premium .btn{width:100%!important;min-height:40px!important;font-size:7.7px!important;white-space:nowrap!important}
+}
+
+/* PRODUCTOS MOBILE — centered premium hero composition approved 2026-09-17.
+   Scoped ONLY to Productos. Other pages and desktop remain untouched. */
+@media (min-width:391px) and (max-width:640px){
+  body.productos-page > .hero.hero-anim{height:690px!important;min-height:690px!important;position:relative!important;overflow:hidden!important}
+  body.productos-page > .hero.hero-anim .hero-media:after{
+    content:""!important;position:absolute!important;inset:0!important;z-index:1!important;
+    background:linear-gradient(180deg,rgba(2,7,4,.01) 0%,rgba(2,7,4,.02) 42%,rgba(2,7,4,.16) 56%,rgba(2,7,4,.52) 74%,rgba(2,7,4,.78) 100%)!important;
+  }
+  body.productos-page > .hero.hero-anim .hero-inner{
+    position:relative!important;z-index:3!important;width:100%!important;max-width:none!important;height:690px!important;min-height:690px!important;
+    margin:0!important;padding:0!important;display:block!important;
+  }
+  body.productos-page > .hero.hero-anim .hero-copy{
+    position:absolute!important;left:50%!important;top:405px!important;transform:translateX(-50%)!important;
+    width:92%!important;max-width:400px!important;height:auto!important;margin:0!important;padding:0!important;
+    display:block!important;text-align:center!important;z-index:5!important;
+  }
+  body.productos-page > .hero.hero-anim .kicker{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;margin:0 0 10px!important;
+    color:#fff!important;font-size:8px!important;line-height:1.2!important;letter-spacing:.20em!important;text-align:center!important;
+  }
+  body.productos-page > .hero.hero-anim .kicker:after{content:"";display:block;width:38px;height:1px;background:#c8a85e;margin:10px auto 0}
+  body.productos-page > .hero.hero-anim h1{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:none!important;
+    margin:0 0 10px!important;padding:0!important;font-size:39px!important;line-height:.88!important;letter-spacing:-.035em!important;text-align:center!important;
+  }
+  body.productos-page > .hero.hero-anim .lead{
+    position:relative!important;inset:auto!important;transform:none!important;width:90%!important;max-width:350px!important;
+    margin:0 auto 12px!important;padding:0!important;color:#fff!important;font-size:12px!important;line-height:1.28!important;text-align:center!important;
+  }
+  body.productos-page > .hero.hero-anim .cta-row{width:86%!important;max-width:350px!important;margin:0 auto!important;text-align:center!important}
+  body.productos-page > .hero.hero-anim .btn{
+    width:100%!important;min-height:43px!important;padding:0 14px!important;display:flex!important;align-items:center!important;justify-content:center!important;
+    font-size:8.5px!important;line-height:1!important;white-space:nowrap!important;
+  }
+}
+@media (max-width:390px){
+  body.productos-page > .hero.hero-anim{height:650px!important;min-height:650px!important}
+  body.productos-page > .hero.hero-anim .hero-inner{height:650px!important;min-height:650px!important;width:100%!important;margin:0!important;padding:0!important;display:block!important}
+  body.productos-page > .hero.hero-anim .hero-copy{position:absolute!important;left:50%!important;top:378px!important;transform:translateX(-50%)!important;width:92%!important;max-width:360px!important;padding:0!important;text-align:center!important}
+  body.productos-page > .hero.hero-anim .kicker{margin:0 0 9px!important;font-size:7px!important;text-align:center!important}
+  body.productos-page > .hero.hero-anim .kicker:after{width:34px;margin-top:8px}
+  body.productos-page > .hero.hero-anim h1{margin:0 0 9px!important;font-size:35px!important;line-height:.88!important;text-align:center!important}
+  body.productos-page > .hero.hero-anim .lead{width:92%!important;margin:0 auto 10px!important;font-size:10.5px!important;line-height:1.25!important;text-align:center!important}
+  body.productos-page > .hero.hero-anim .cta-row{width:88%!important;margin:0 auto!important}
+  body.productos-page > .hero.hero-anim .btn{width:100%!important;min-height:40px!important;font-size:7.7px!important;white-space:nowrap!important}
+}
+
+
+/* RECETAS MOBILE — centered premium hero composition approved 2026-09-17.
+   Scoped ONLY to Recetas. Desktop and all other pages remain untouched. */
+.recipes-hero-mobile-copy{display:none}
+@media (min-width:391px) and (max-width:640px){
+  body.recetas-page .recipes-hero-premium{height:690px!important;min-height:690px!important;position:relative!important;overflow:hidden!important}
+  body.recetas-page .recipes-hero-premium .hero-media:after{content:""!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(180deg,rgba(2,7,4,.01) 0%,rgba(2,7,4,.02) 42%,rgba(2,7,4,.16) 56%,rgba(2,7,4,.52) 74%,rgba(2,7,4,.78) 100%)!important}
+  body.recetas-page .recipes-hero-premium .hero-inner{position:relative!important;z-index:3!important;width:100%!important;max-width:none!important;height:690px!important;min-height:690px!important;margin:0!important;padding:0!important;display:block!important}
+  body.recetas-page .recipes-hero-premium .hero-copy{position:absolute!important;left:50%!important;top:405px!important;transform:translateX(-50%)!important;width:92%!important;max-width:400px!important;height:auto!important;margin:0!important;padding:0!important;display:block!important;text-align:center!important;z-index:5!important}
+  body.recetas-page .recipes-hero-premium .recipes-hero-desktop-copy{display:none!important}
+  body.recetas-page .recipes-hero-premium .recipes-hero-mobile-copy{display:block!important}
+  body.recetas-page .recipes-hero-premium .kicker{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;margin:0 0 10px!important;color:#fff!important;font-size:8px!important;line-height:1.2!important;letter-spacing:.20em!important;text-align:center!important}
+  body.recetas-page .recipes-hero-premium .kicker:after{content:"";display:block;width:38px;height:1px;background:#c8a85e;margin:10px auto 0}
+  body.recetas-page .recipes-hero-premium h1{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:none!important;margin:0 0 10px!important;padding:0!important;font-size:39px!important;line-height:.88!important;letter-spacing:-.035em!important;text-align:center!important}
+  body.recetas-page .recipes-hero-premium .lead{position:relative!important;inset:auto!important;transform:none!important;width:90%!important;max-width:350px!important;margin:0 auto 12px!important;padding:0!important;color:#fff!important;font-size:12px!important;line-height:1.28!important;text-align:center!important}
+  body.recetas-page .recipes-hero-premium .cta-row{width:86%!important;max-width:350px!important;margin:0 auto!important;text-align:center!important}
+  body.recetas-page .recipes-hero-premium .btn{width:100%!important;min-height:43px!important;padding:0 14px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:8.5px!important;line-height:1!important;white-space:nowrap!important}
+}
+@media (max-width:390px){
+  body.recetas-page .recipes-hero-premium{height:650px!important;min-height:650px!important}
+  body.recetas-page .recipes-hero-premium .hero-inner{height:650px!important;min-height:650px!important;width:100%!important;margin:0!important;padding:0!important;display:block!important}
+  body.recetas-page .recipes-hero-premium .hero-copy{position:absolute!important;left:50%!important;top:378px!important;transform:translateX(-50%)!important;width:92%!important;max-width:360px!important;padding:0!important;text-align:center!important}
+  body.recetas-page .recipes-hero-premium .recipes-hero-desktop-copy{display:none!important}
+  body.recetas-page .recipes-hero-premium .recipes-hero-mobile-copy{display:block!important}
+  body.recetas-page .recipes-hero-premium .kicker{margin:0 0 9px!important;font-size:7px!important;text-align:center!important}
+  body.recetas-page .recipes-hero-premium .kicker:after{width:34px;margin-top:8px}
+  body.recetas-page .recipes-hero-premium h1{margin:0 0 9px!important;font-size:35px!important;line-height:.88!important;text-align:center!important}
+  body.recetas-page .recipes-hero-premium .lead{width:92%!important;margin:0 auto 10px!important;font-size:10.5px!important;line-height:1.25!important;text-align:center!important}
+  body.recetas-page .recipes-hero-premium .cta-row{width:88%!important;margin:0 auto!important}
+  body.recetas-page .recipes-hero-premium .btn{width:100%!important;min-height:40px!important;font-size:7.7px!important;white-space:nowrap!important}
+}
+
+/* CONTACTO MOBILE — centered premium hero composition approved 2026-09-17.
+   Scoped ONLY to Contacto. Desktop and all other pages remain untouched. */
+@media (min-width:391px) and (max-width:640px){
+  body.contacto-page > .hero.hero-anim{height:690px!important;min-height:690px!important;position:relative!important;overflow:hidden!important}
+  body.contacto-page > .hero.hero-anim .hero-media:after{content:""!important;position:absolute!important;inset:0!important;z-index:1!important;background:linear-gradient(180deg,rgba(2,7,4,.01) 0%,rgba(2,7,4,.02) 42%,rgba(2,7,4,.16) 56%,rgba(2,7,4,.52) 74%,rgba(2,7,4,.80) 100%)!important}
+  body.contacto-page > .hero.hero-anim .hero-inner{position:relative!important;z-index:3!important;width:100%!important;max-width:none!important;height:690px!important;min-height:690px!important;margin:0!important;padding:0!important;display:block!important}
+  body.contacto-page > .hero.hero-anim .hero-copy{position:absolute!important;left:50%!important;top:390px!important;transform:translateX(-50%)!important;width:92%!important;max-width:400px!important;height:auto!important;margin:0!important;padding:0!important;display:block!important;text-align:center!important;z-index:5!important}
+  body.contacto-page > .hero.hero-anim .kicker{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;margin:0 0 10px!important;color:#fff!important;font-size:8px!important;line-height:1.2!important;letter-spacing:.20em!important;text-align:center!important}
+  body.contacto-page > .hero.hero-anim .kicker:after{content:"";display:block;width:38px;height:1px;background:#c8a85e;margin:10px auto 0}
+  body.contacto-page > .hero.hero-anim h1{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:none!important;margin:0 0 10px!important;padding:0!important;font-size:39px!important;line-height:.88!important;letter-spacing:-.035em!important;text-align:center!important}
+  body.contacto-page > .hero.hero-anim .lead{position:relative!important;inset:auto!important;transform:none!important;width:90%!important;max-width:350px!important;margin:0 auto 12px!important;padding:0!important;color:#fff!important;font-size:12px!important;line-height:1.28!important;text-align:center!important}
+  body.contacto-page > .hero.hero-anim .cta-row{width:86%!important;max-width:350px!important;margin:0 auto!important;text-align:center!important}
+  body.contacto-page > .hero.hero-anim .btn{width:100%!important;min-height:43px!important;padding:0 14px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:8.5px!important;line-height:1!important;white-space:nowrap!important}
+}
+@media (max-width:390px){
+  body.contacto-page > .hero.hero-anim{height:650px!important;min-height:650px!important}
+  body.contacto-page > .hero.hero-anim .hero-inner{height:650px!important;min-height:650px!important;width:100%!important;margin:0!important;padding:0!important;display:block!important}
+  body.contacto-page > .hero.hero-anim .hero-copy{position:absolute!important;left:50%!important;top:365px!important;transform:translateX(-50%)!important;width:92%!important;max-width:360px!important;padding:0!important;text-align:center!important}
+  body.contacto-page > .hero.hero-anim .kicker{margin:0 0 9px!important;font-size:7px!important;text-align:center!important}
+  body.contacto-page > .hero.hero-anim .kicker:after{width:34px;margin-top:8px}
+  body.contacto-page > .hero.hero-anim h1{margin:0 0 9px!important;font-size:35px!important;line-height:.88!important;text-align:center!important}
+  body.contacto-page > .hero.hero-anim .lead{width:92%!important;margin:0 auto 10px!important;font-size:10.5px!important;line-height:1.25!important;text-align:center!important}
+  body.contacto-page > .hero.hero-anim .cta-row{width:88%!important;margin:0 auto!important}
+  body.contacto-page > .hero.hero-anim .btn{width:100%!important;min-height:40px!important;font-size:7.7px!important;white-space:nowrap!important}
+}
