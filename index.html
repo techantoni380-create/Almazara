@@ -8,7 +8,7 @@ body.home-page .home-hero.is-photo-phase #heroVideoBuy{opacity:0!important;visib
 body.home-page .home-hero #heroVideoProductLabel{position:absolute!important;left:46px!important;bottom:126px!important;z-index:9999!important;margin:0!important;color:#fff!important;font-family:Georgia,"Times New Roman",serif!important;font-size:17px!important;font-weight:600!important;letter-spacing:.12em!important;text-shadow:0 2px 12px rgba(0,0,0,.72)!important;opacity:1!important;visibility:visible!important;transition:opacity .45s ease,transform .45s ease!important}
 body.home-page .home-hero.is-photo-phase #heroVideoProductLabel{opacity:0!important;visibility:hidden!important;transform:translateY(8px)!important}
 @media(max-width:640px){body.home-page .home-hero #heroVideoProductLabel{left:16px!important;bottom:82px!important;font-size:13px!important;letter-spacing:.08em!important}}
-</style></head><body class="home-page"><header class="site-header"><div class="container nav">
+</style><link href="assets/css/shop.css" rel="stylesheet"/></head><body class="home-page"><header class="site-header"><div class="container nav">
 <a aria-label="ALMAZARA · Inicio" class="brand brand-logo" href="index.html"><img alt="" class="brand-symbol" src="assets/img/logo-almazara.png"/><span class="brand-word"><span class="brand-wordmark-text">ALMAZARA</span><small>CALIDAD DE ORIGEN ESPAÑOL</small></span></a>
 <nav class="nav-links"><a class="active" href="index.html">INICIO</a><a class="" href="nosotros.html">NOSOTROS</a><a class="" href="aceites.html">ACEITES</a><a class="" href="jamones.html">JAMONES</a><a class="" href="productos.html">PRODUCTOS</a><a class="" href="recetas.html">RECETAS</a><a class="" href="contacto.html">CONTACTO</a></nav><div class="nav-tools premium-tools">
 <button aria-label="Buscar" class="head-tool search-trigger" type="button"><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.2 4.2"></path></svg></span></button>
@@ -17,7 +17,7 @@ body.home-page .home-hero.is-photo-phase #heroVideoProductLabel{opacity:0!import
 </div>
 </div></header><section aria-label="ALMAZARA · El sabor del origen" class="hero home-hero home-hero-live">
 <div class="hero-media home-hero-sequence" data-hero-sequence>
-<video class="home-hero-video hero-sequence-item is-active" autoplay muted playsinline preload="metadata" poster="assets/img/home-hero-slide-product.png" aria-hidden="true"><source src="assets/video/almazara-hero.mp4" type="video/mp4"/></video>
+<video class="home-hero-video hero-sequence-item is-active" autoplay muted playsinline preload="auto" aria-hidden="true"><source src="assets/video/almazara-hero.mp4" type="video/mp4"/></video>
 <img class="hero-sequence-item" alt="Aceite de oliva ALMAZARA con jamón ibérico en una mesa mediterránea" src="assets/img/home-hero-slide-product.png"/>
 <img class="hero-sequence-item" alt="Olivar mediterráneo con camino entre los olivos" src="assets/img/home-hero-slide-olivar.jpg"/>
 <img class="hero-sequence-item" alt="Jamón ibérico en jamonero con su etiqueta original" src="assets/img/home-hero-slide-ham.png"/>
@@ -50,16 +50,13 @@ body.home-page .home-hero.is-photo-phase #heroVideoProductLabel{opacity:0!import
 <div class="home-products-head"><h2 class="section-title">PRODUCTOS DESTACADOS</h2><a class="home-products-all" href="productos.html">VER TODOS LOS PRODUCTOS <span>→</span></a></div>
 <div aria-hidden="true" class="home-products-line"></div>
 <div class="cards reveal">
-<div class="card"><div class="card-media"><img alt="Aceite de Oliva Selección Premium" src="assets/img/aceite-seleccion-premium-real.jpeg"/></div><div class="card-body"><h3>Aceite de Oliva Selección Premium</h3><div class="meta">500 ml</div><div class="price">CHF 9,99</div><a class="btn btn-dark" href="productos.html">AÑADIR AL CARRITO</a></div></div>
-<div class="card"><div class="card-media"><img alt="Paleta ibérica" src="assets/img/paleta-iberica-real.jpg"/></div><div class="card-body"><h3>Paleta ibérica</h3><div class="price">CHF 169,00</div><a class="btn btn-dark" href="productos.html">AÑADIR AL CARRITO</a></div></div>
+<div class="card"><div class="card-media"><img alt="Aceite de Oliva Selección Premium" src="assets/img/aceite-seleccion-premium-real.jpeg"/></div><div class="card-body"><h3>Aceite de Oliva Selección Premium</h3><div class="meta">500 ml</div><div class="price">CHF 9,99</div><button class="btn btn-dark add-to-cart" type="button" data-product="aceite-premium-500">AÑADIR AL CARRITO</button></div></div>
+<div class="card"><div class="card-media"><img alt="Paleta ibérica" src="assets/img/paleta-iberica-real.jpg"/></div><div class="card-body"><h3>Paleta ibérica</h3><div class="price">CHF 169,00</div><button class="btn btn-dark add-to-cart" type="button" data-product="paleta-iberica">AÑADIR AL CARRITO</button></div></div>
 </div></div></section>
 <section aria-label="Una historia con raíces" class="home-story-premium reveal">
-<div aria-label="Vídeo ALMAZARA" class="home-story-visual home-story-video-wrap">
-<video class="home-story-video home-story-video-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-<source src="assets/video/almazara-story-vertical.mp4" type="video/mp4"/>
-</video>
-<video class="home-story-video home-story-video-main" autoplay muted loop playsinline preload="metadata" aria-label="ALMAZARA: tradición mediterránea y aceite de oliva">
-<source src="assets/video/almazara-story-vertical.mp4" type="video/mp4"/>
+<div aria-label="Vídeos ALMAZARA" class="home-story-visual home-story-video-wrap">
+<video id="almazaraStoryVideo" class="home-story-video home-story-video-main" autoplay muted playsinline preload="auto" aria-label="ALMAZARA: tradición mediterránea y aceite de oliva">
+<source src="assets/video/almazara-story-01.mp4" type="video/mp4"/>
 </video>
 </div>
 <div class="home-story-content">
@@ -144,5 +141,22 @@ body.home-page .home-hero.is-photo-phase #heroVideoProductLabel{opacity:0!import
 <a href="https://www.instagram.com/techantoni/" rel="noopener" target="_blank">Yonathan Alvarado · Full Stack Web Developer · Spain</a>
 </div>
 </div>
-</footer><script src="assets/js/app.js"></script>
+</footer><script src="assets/js/app.js"></script><script src="assets/js/catalog.js"></script><script src="assets/js/shop.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script>
+(function(){
+  const video=document.getElementById('almazaraStoryVideo');
+  if(!video) return;
+  const playlist=['assets/video/almazara-story-01.mp4','assets/video/almazara-story-02.mp4'];
+  let current=0;
+  video.addEventListener('ended',function(){
+    current=(current+1)%playlist.length;
+    video.src=playlist[current];
+    video.load();
+    const playPromise=video.play();
+    if(playPromise && playPromise.catch) playPromise.catch(function(){});
+  });
+})();
+</script>
+
 </body></html>

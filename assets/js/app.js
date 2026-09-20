@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const pages=[['Aceites','aceites.html'],['Jamones','jamones.html'],['Productos','productos.html'],['Recetas','recetas.html'],['Nosotros','nosotros.html'],['Contacto','contacto.html']];
   const inp=search.querySelector('input'), results=search.querySelector('.search-results');
   function render(){const q=inp.value.trim().toLowerCase();results.innerHTML=q?pages.filter(x=>x[0].toLowerCase().includes(q)||({'aceites':'oliva aove aceite','jamones':'iberico bellota jamon','productos':'tienda comprar gourmet','recetas':'cocina salmorejo gambas bacalao','nosotros':'historia almazara origen','contacto':'whatsapp email ayuda'}[x[0].toLowerCase()]||'').includes(q)).map(x=>`<a href="${x[1]}">${x[0]} <span>→</span></a>`).join(''):`<a href="productos.html">Productos <span>→</span></a><a href="recetas.html">Recetas <span>→</span></a>`} inp.addEventListener('input',render);render();
-  document.querySelectorAll('.lang-switch').forEach(sw=>{const trigger=sw.querySelector('.lang-trigger');trigger.addEventListener('click',e=>{e.stopPropagation();sw.classList.toggle('open');trigger.setAttribute('aria-expanded',sw.classList.contains('open'))});sw.querySelectorAll('.lang-menu button').forEach(btn=>btn.addEventListener('click',()=>{sw.querySelectorAll('button').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const flag=trigger.querySelector('.lang-flag'), code=trigger.querySelector('.lang-code'), menuFlag=btn.querySelector('.menu-flag'); if(flag&&menuFlag) flag.src=menuFlag.src; if(code) code.textContent=btn.dataset.lang;sw.classList.remove('open');if(btn.dataset.lang!=='ES') alert('Vista de demostración: '+btn.querySelector('small').textContent+' estará disponible en la versión multidioma.')}));});document.addEventListener('click',()=>document.querySelectorAll('.lang-switch').forEach(x=>x.classList.remove('open')));
+  document.querySelectorAll('.lang-switch').forEach(sw=>{const trigger=sw.querySelector('.lang-trigger');trigger.addEventListener('click',e=>{e.stopPropagation();sw.classList.toggle('open');trigger.setAttribute('aria-expanded',sw.classList.contains('open'))});sw.querySelectorAll('.lang-menu button').forEach(btn=>btn.addEventListener('click',()=>{sw.querySelectorAll('button').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const flag=trigger.querySelector('.lang-flag'), code=trigger.querySelector('.lang-code'), menuFlag=btn.querySelector('.menu-flag'); if(flag&&menuFlag) flag.src=menuFlag.src; if(code) code.textContent=btn.dataset.lang;sw.classList.remove('open');localStorage.setItem('almazara-lang',btn.dataset.lang); document.dispatchEvent(new CustomEvent('almazara:languagechange',{detail:{lang:btn.dataset.lang}}))}));});document.addEventListener('click',()=>document.querySelectorAll('.lang-switch').forEach(x=>x.classList.remove('open')));
 });
 
 // ALMAZARA · Navegación responsive global
@@ -146,6 +146,14 @@ document.addEventListener('DOMContentLoaded',()=>{
     let timer=null, index=0;
     const show=i=>{
       clearTimeout(timer); index=i;
+      // Al volver de las fotografías al vídeo, esperamos a que el frame esté listo
+      // antes de ocultar la imagen actual. Así evitamos el destello del poster/primer frame.
+      if(i===0 && video.readyState < 3){
+        const resume=()=>show(0);
+        video.addEventListener('canplay',resume,{once:true});
+        try{ video.load(); }catch(e){}
+        return;
+      }
       items.forEach((el,n)=>el.classList.toggle('is-active',n===i));
       media.classList.toggle('is-photo-phase',i!==0);
       const hero=media.closest('.home-hero');
