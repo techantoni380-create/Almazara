@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Inicio · ALMAZARA</title><link href="assets/css/style.css" rel="stylesheet"/><link href="assets/css/responsive-v2.css" rel="stylesheet"/></head><body class="home-page"><header class="site-header"><div class="container nav">
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Inicio · ALMAZARA</title><link href="assets/css/style.css" rel="stylesheet"/><link href="assets/css/responsive-v2.css" rel="stylesheet"/><style id="video-cta-fix">
+body.home-page .home-hero #heroVideoBuy{position:absolute!important;left:46px!important;bottom:48px!important;z-index:9999!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:28px!important;min-width:285px!important;min-height:64px!important;padding:0 34px!important;border-radius:999px!important;background:linear-gradient(180deg,#e8ca70,#d3ad4b)!important;color:#17150e!important;text-decoration:none!important;box-shadow:0 12px 30px rgba(0,0,0,.32)!important;font-family:Georgia,"Times New Roman",serif!important;font-size:15px!important;font-weight:700!important;letter-spacing:.04em!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;transition:opacity .45s ease,transform .45s ease!important}
+body.home-page .home-hero.is-photo-phase #heroVideoBuy{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(8px)!important}
+@media(max-width:640px){body.home-page .home-hero #heroVideoBuy{left:16px!important;bottom:20px!important;min-width:205px!important;min-height:52px!important;padding:0 24px!important;font-size:12px!important}}
+
+body.home-page .home-hero #heroVideoProductLabel{position:absolute!important;left:46px!important;bottom:126px!important;z-index:9999!important;margin:0!important;color:#fff!important;font-family:Georgia,"Times New Roman",serif!important;font-size:17px!important;font-weight:600!important;letter-spacing:.12em!important;text-shadow:0 2px 12px rgba(0,0,0,.72)!important;opacity:1!important;visibility:visible!important;transition:opacity .45s ease,transform .45s ease!important}
+body.home-page .home-hero.is-photo-phase #heroVideoProductLabel{opacity:0!important;visibility:hidden!important;transform:translateY(8px)!important}
+@media(max-width:640px){body.home-page .home-hero #heroVideoProductLabel{left:16px!important;bottom:82px!important;font-size:13px!important;letter-spacing:.08em!important}}
+</style></head><body class="home-page"><header class="site-header"><div class="container nav">
 <a aria-label="ALMAZARA · Inicio" class="brand brand-logo" href="index.html"><img alt="" class="brand-symbol" src="assets/img/logo-almazara.png"/><span class="brand-word"><span class="brand-wordmark-text">ALMAZARA</span><small>CALIDAD DE ORIGEN ESPAÑOL</small></span></a>
 <nav class="nav-links"><a class="active" href="index.html">INICIO</a><a class="" href="nosotros.html">NOSOTROS</a><a class="" href="aceites.html">ACEITES</a><a class="" href="jamones.html">JAMONES</a><a class="" href="productos.html">PRODUCTOS</a><a class="" href="recetas.html">RECETAS</a><a class="" href="contacto.html">CONTACTO</a></nav><div class="nav-tools premium-tools">
-<button aria-label="Buscar" class="head-tool search-trigger" type="button"><span class="tool-icon">⌕</span></button>
-<button aria-label="Abrir cesta" class="head-tool cart-trigger" type="button"><span class="tool-icon">🛒</span><span class="cart-count">0</span></button>
-<div class="lang-switch"><button aria-expanded="false" aria-haspopup="true" class="head-tool lang-trigger" type="button"><span>ES</span><span class="chev">⌄</span></button><div class="lang-menu" role="menu"><button class="active" data-lang="ES">ES <small>Español</small><b>✓</b></button><button data-lang="DE">DE <small>Deutsch</small></button><button data-lang="FR">FR <small>Français</small></button><button data-lang="IT">IT <small>Italiano</small></button><button data-lang="EN">EN <small>English</small></button></div></div>
+<button aria-label="Buscar" class="head-tool search-trigger" type="button"><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4.2 4.2"></path></svg></span></button>
+<button aria-label="Abrir cesta" class="head-tool cart-trigger" type="button"><span class="tool-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 5h2l1.8 9.1h9.9l2-6.2H7"></path><circle cx="9" cy="18.5" r="1"></circle><circle cx="17" cy="18.5" r="1"></circle></svg></span><span class="cart-count">0</span></button>
+<div class="lang-switch"><button aria-expanded="false" aria-haspopup="true" class="head-tool lang-trigger" type="button"><img class="lang-flag" src="assets/flags/es.svg" alt="" aria-hidden="true"/><span class="lang-code">ES</span><span class="chev">⌄</span></button><div class="lang-menu" role="menu"><button class="active" data-lang="ES"><img class="menu-flag" src="assets/flags/es.svg" alt="" aria-hidden="true"/><span class="menu-code">ES</span><small>Español</small><b>✓</b></button><button data-lang="DE"><img class="menu-flag" src="assets/flags/de.svg" alt="" aria-hidden="true"/><span class="menu-code">DE</span><small>Deutsch</small></button><button data-lang="FR"><img class="menu-flag" src="assets/flags/fr.svg" alt="" aria-hidden="true"/><span class="menu-code">FR</span><small>Français</small></button><button data-lang="IT"><img class="menu-flag" src="assets/flags/it.svg" alt="" aria-hidden="true"/><span class="menu-code">IT</span><small>Italiano</small></button><button data-lang="EN"><img class="menu-flag" src="assets/flags/en.svg" alt="" aria-hidden="true"/><span class="menu-code">EN</span><small>English</small></button></div></div>
 </div>
 </div></header><section aria-label="ALMAZARA · El sabor del origen" class="hero home-hero home-hero-live">
-<div class="hero-media">
-<img alt="Paisaje mediterráneo con aceite de oliva ALMAZARA, aceitunas, jamón, queso y pan" src="assets/img/home-hero.jpg"/>
+<div class="hero-media home-hero-sequence" data-hero-sequence>
+<video class="home-hero-video hero-sequence-item is-active" autoplay muted playsinline preload="metadata" poster="assets/img/home-hero-slide-product.png" aria-hidden="true"><source src="assets/video/almazara-hero.mp4" type="video/mp4"/></video>
+<img class="hero-sequence-item" alt="Aceite de oliva ALMAZARA con jamón ibérico en una mesa mediterránea" src="assets/img/home-hero-slide-product.png"/>
+<img class="hero-sequence-item" alt="Olivar mediterráneo con camino entre los olivos" src="assets/img/home-hero-slide-olivar.jpg"/>
+<img class="hero-sequence-item" alt="Jamón ibérico en jamonero con su etiqueta original" src="assets/img/home-hero-slide-ham.png"/>
 </div>
 <div class="container hero-inner">
-<div class="hero-copy-live">
-<div class="hero-kicker-live">TRADICIÓN <span>·</span> ORIGEN <span>·</span> EXCELENCIA</div>
-<div aria-hidden="true" class="hero-kicker-line"></div>
-<h1>EL SABOR<br/>DEL <span class="gold">ORIGEN</span></h1>
-<p class="hero-lead-live">Aceites de oliva, jamones ibéricos y productos gourmet<br class="hero-br"/> seleccionados por su origen, carácter y excelencia.</p>
+<div class="hero-copy-live hero-photo-message" aria-live="polite">
+<h1>EL SABOR<br/>DEL ORIGEN</h1>
+<p class="hero-lead-live">Aceite de oliva <span>·</span> Jamón ibérico</p>
 <div class="hero-actions-live2">
-<a class="hero-btn-live hero-btn-primary" href="#main"><span>DESCUBRIR ALMAZARA</span><span class="hero-arrow">→</span></a>
-<a class="hero-btn-live hero-btn-secondary" href="productos.html"><span aria-hidden="true" class="hero-cart">🛒</span><span>COMPRAR AHORA</span></a>
-</div>
-<div class="hero-signature-live"><span></span><em>Una tierra. Una tradición. Un sabor excepcional.</em><span></span></div>
-<div aria-label="Valores de ALMAZARA" class="hero-trust-live2">
-<div class="hero-trust-item">
-<svg aria-hidden="true" viewbox="0 0 64 64"><path d="M51 9C30 12 17 21 11 39c10 2 23 0 31-9 7-7 9-15 9-21Z"></path><path d="M12 48c8-12 18-21 33-30"></path></svg>
-<b>CALIDAD<br/>DE ORIGEN<br/>ESPAÑOL</b>
-</div>
-<div class="hero-trust-item">
-<svg aria-hidden="true" viewbox="0 0 64 64"><path d="M32 6c-10 0-18 8-18 18 0 13 18 34 18 34s18-21 18-34C50 14 42 6 32 6Z"></path><circle cx="32" cy="24" r="6"></circle><path d="M21 52h22"></path></svg>
-<b>ORIGEN<br/>GARANTIZADO</b>
-</div>
-<div class="hero-trust-item">
-<svg aria-hidden="true" viewbox="0 0 64 64"><path d="m8 20 10 12 14-18 14 18 10-12-5 31H13L8 20Z"></path><circle cx="8" cy="17" r="3"></circle><circle cx="32" cy="11" r="3"></circle><circle cx="56" cy="17" r="3"></circle><path d="M14 55h36"></path></svg>
-<b>EXPERIENCIA<br/>GOURMET</b>
+<a class="hero-btn-live hero-btn-primary" href="productos.html"><span>COMPRAR AHORA</span><span class="hero-arrow">→</span></a>
 </div>
 </div>
 </div>
-</div>
+<p id="heroVideoProductLabel">Aceite de oliva <span aria-hidden="true">·</span> Jamón ibérico</p>
+<a id="heroVideoBuy" class="hero-video-buy" href="productos.html" aria-label="Comprar ahora"><span>COMPRAR AHORA</span><span aria-hidden="true">→</span></a>
 </section>
 <section class="values">
 <div class="value"><div class="ico"><img alt="Denominación de Origen Protegida" class="value-icon-img origin-icon" src="assets/img/denominacion-origen-protegida.png"/></div><b>ORIGEN CONTROLADO</b><small>Selección cuidada</small></div>
@@ -48,23 +43,25 @@
 </section>
 <main id="main">
 <section class="feature-grid feature-grid-home-final reveal">
-<article class="feature-card"><img alt="Aceite de oliva" src="assets/img/home-oil-clean.jpg"/><div class="copy"><h3>ACEITES<br/>DE OLIVA</h3><span aria-hidden="true" class="feature-accent"></span><p>El alma del Mediterráneo<br/>en cada gota.</p><a class="btn" href="aceites.html">DESCUBRIR ACEITES <span aria-hidden="true">→</span></a></div></article>
-<article class="feature-card"><img alt="Jamón ibérico" src="assets/img/home-ham-clean.jpg"/><div class="copy"><h3>JAMONES<br/>IBÉRICOS</h3><span aria-hidden="true" class="feature-accent"></span><p>Tradición, paciencia<br/>y un sabor inigualable.</p><a class="btn" href="jamones.html">DESCUBRIR JAMONES <span aria-hidden="true">→</span></a></div></article>
+<article class="feature-card feature-card-oil"><video class="feature-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="assets/video/almazara-aceites-loop.mp4" type="video/mp4"/></video><div class="copy"><h3>ACEITES<br/>DE OLIVA</h3><span aria-hidden="true" class="feature-accent"></span><p>El alma del Mediterráneo<br/>en cada gota.</p><a class="btn" href="aceites.html">DESCUBRIR ACEITES <span aria-hidden="true">→</span></a></div></article>
+<article class="feature-card feature-card-ham"><video class="feature-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="assets/video/almazara-jamones-loop.mp4" type="video/mp4"/></video><div class="copy"><h3>JAMONES<br/>IBÉRICOS</h3><span aria-hidden="true" class="feature-accent"></span><p>Tradición, paciencia<br/>y un sabor inigualable.</p><a class="btn" href="jamones.html">DESCUBRIR JAMONES <span aria-hidden="true">→</span></a></div></article>
 </section>
 <section class="product-strip home-products-premium"><div class="container">
 <div class="home-products-head"><h2 class="section-title">PRODUCTOS DESTACADOS</h2><a class="home-products-all" href="productos.html">VER TODOS LOS PRODUCTOS <span>→</span></a></div>
 <div aria-hidden="true" class="home-products-line"></div>
 <div class="cards reveal">
-<div class="card"><div class="card-media"><img alt="Aceite de oliva virgen extra" src="assets/img/prod-oil-premium.png"/></div><div class="card-body"><h3>ACEITE DE OLIVA<br/>VIRGEN EXTRA</h3><div class="meta">Selección Premium · 500 ml</div><div class="card-bottom"><div class="price">CHF 24,90</div><a aria-label="Ver aceite de oliva virgen extra" class="product-cart" href="productos.html">🛒</a></div></div></div>
-<div class="card"><div class="card-media"><img alt="Jamón ibérico de bellota" src="assets/img/prod-ham-premium.png"/></div><div class="card-body"><h3>JAMÓN IBÉRICO<br/>DE BELLOTA</h3><div class="meta">Corte a mano · 100 g</div><div class="card-bottom"><div class="price">CHF 26,90</div><a aria-label="Ver jamón ibérico" class="product-cart" href="productos.html">🛒</a></div></div></div>
-<div class="card"><div class="card-media"><img alt="Paleta ibérica de bellota" src="assets/img/prod-paleta-premium.png"/></div><div class="card-body"><h3>PALETA IBÉRICA<br/>DE BELLOTA</h3><div class="meta">Corte a mano · 100 g</div><div class="card-bottom"><div class="price">CHF 19,90</div><a aria-label="Ver paleta ibérica" class="product-cart" href="productos.html">🛒</a></div></div></div>
-<div class="card"><div class="card-media"><img alt="Pack gourmet Almazara" src="assets/img/prod-gourmet-premium.png"/></div><div class="card-body"><h3>PACK GOURMET<br/>ALMAZARA</h3><div class="meta">Aceite + Jamón + Selección</div><div class="card-bottom"><div class="price">CHF 59,90</div><a aria-label="Ver pack gourmet Almazara" class="product-cart" href="productos.html">🛒</a></div></div></div>
-<div class="card"><div class="card-media"><img alt="Quesos artesanos" src="assets/img/prod-cheese-premium.png"/></div><div class="card-body"><h3>QUESOS ARTESANOS</h3><div class="meta">Selección especial</div><div class="card-bottom"><div class="price">CHF 14,90</div><a aria-label="Ver quesos artesanos" class="product-cart" href="productos.html">🛒</a></div></div></div>
+<div class="card"><div class="card-media"><img alt="Aceite de oliva virgen extra" src="assets/img/prod-oil-landscape-almazara-v2.png"/></div><div class="card-body"><h3>ACEITE DE OLIVA<br/>VIRGEN EXTRA</h3><div class="meta">Selección Premium · 500 ml</div><div class="card-bottom"><div class="price">CHF 9,99</div><a aria-label="Ver aceite de oliva virgen extra" class="product-cart" href="productos.html">🛒</a></div></div></div>
+<div class="card"><div class="card-media"><img alt="Jamón ibérico de bellota" src="assets/img/prod-ham-real-bright.jpg"/></div><div class="card-body"><h3>JAMÓN IBÉRICO<br/>DE BELLOTA</h3><div class="meta">Corte a mano · 100 g</div><div class="card-bottom"><div class="price">CHF 177</div><a aria-label="Ver jamón ibérico" class="product-cart" href="productos.html">🛒</a></div></div></div>
 </div></div></section>
 <section aria-label="Una historia con raíces" class="home-story-premium reveal">
-<a aria-label="Ver la historia de ALMAZARA" class="home-story-visual" href="nosotros.html">
-<img alt="ALMAZARA: aceite de oliva, jamón ibérico y paisaje mediterráneo al atardecer" src="assets/img/home-history-premium.png"/>
-</a>
+<div aria-label="Vídeo ALMAZARA" class="home-story-visual home-story-video-wrap">
+<video class="home-story-video home-story-video-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+<source src="assets/video/almazara-story-vertical.mp4" type="video/mp4"/>
+</video>
+<video class="home-story-video home-story-video-main" autoplay muted loop playsinline preload="metadata" aria-label="ALMAZARA: tradición mediterránea y aceite de oliva">
+<source src="assets/video/almazara-story-vertical.mp4" type="video/mp4"/>
+</video>
+</div>
 <div class="home-story-content">
 <div class="home-story-copy">
 <h2>UNA HISTORIA<br/>CON RAÍCES</h2>

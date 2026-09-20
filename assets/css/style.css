@@ -578,11 +578,11 @@ button,input,textarea,select{font:inherit}
 .home-page .home-hero-live .hero-media{position:absolute;inset:0;z-index:0}
 .home-page .home-hero-live .hero-media img{
   width:100%;height:100%;object-fit:cover;object-position:center center;
-  transform:none!important;animation:none!important;filter:saturate(1.02) contrast(1.02);
+  transform:none!important;animation:none!important;filter:brightness(1.13) saturate(1.08) contrast(1.03) sepia(.025);
 }
 .home-page .home-hero-live .hero-media:after{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(2,6,4,.86) 0%,rgba(2,6,4,.72) 28%,rgba(2,6,4,.28) 46%,rgba(2,6,4,.05) 64%,rgba(2,6,4,.02) 100%);
+  background:linear-gradient(90deg,rgba(2,6,4,.14) 0%,rgba(2,6,4,.08) 28%,rgba(2,6,4,.025) 48%,rgba(2,6,4,0) 68%,rgba(2,6,4,0) 100%);
 }
 .home-page .home-hero-live .hero-inner{
   position:relative;z-index:2;height:100%;min-height:100%;display:flex;align-items:flex-start;
@@ -1913,3 +1913,246 @@ html{overflow-x:hidden}body{overflow-x:hidden}img,video,svg{max-width:100%}input
   body.home-page .home-hero-live .hero-actions-live2{top:676px!important}
   body.home-page .home-hero-live .hero-signature-live{top:794px!important}
 }
+
+
+/* FASE 1 · Video cinematografico solo en la cabecera de Inicio (escritorio) */
+.home-page .home-hero-live .home-hero-video{display:none}
+@media (min-width:1101px){
+  .home-page .home-hero-live .home-hero-video{
+    display:block;position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;object-position:center center;z-index:0;
+  }
+  .home-page .home-hero-live .hero-media>img{visibility:hidden}
+}
+
+/* FASE 2 · El video es el protagonista: sin textos superpuestos en escritorio.
+   Mobile queda exactamente como estaba. */
+@media (min-width:1101px){
+  .home-page .home-hero-live .hero-copy-live{
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+}
+
+/* ALMAZARA · Secuencia cinematográfica del hero de Inicio */
+.home-page .home-hero-sequence{overflow:hidden;background:#0b0e0b}
+.home-page .home-hero-sequence .hero-sequence-item{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;visibility:hidden;transition:opacity 1.25s ease,visibility 0s linear 1.25s;transform:none;filter:saturate(1.03) contrast(1.03)}
+.home-page .home-hero-sequence .hero-sequence-item.is-active{opacity:1;visibility:visible;transition:opacity 1.25s ease;z-index:1}
+.home-page .home-hero-sequence .home-hero-video{object-position:center center}
+.home-page .home-hero-sequence img:nth-of-type(1){object-position:center center}
+.home-page .home-hero-sequence img:nth-of-type(2){object-position:center center}
+.home-page .home-hero-sequence img:nth-of-type(3){object-position:center center}
+.home-page .home-hero-sequence:after{z-index:3;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.home-page .home-hero-sequence .hero-sequence-item{transition:none}}
+\n\n/* ALMAZARA 2026 · Hero minimalista: vídeo limpio + mensaje solo en fotografías */\n.home-page .home-hero .hero-photo-message{\n  opacity:0;visibility:hidden;transform:translateY(12px);pointer-events:none;\n  transition:opacity .85s ease,transform .85s ease,visibility 0s linear .85s;\n}\n.home-page .home-hero:has(.home-hero-sequence.is-photo-phase) .hero-photo-message{\n  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;\n  transition:opacity .85s ease .25s,transform .85s ease .25s;\n}\n.home-page .home-hero .hero-photo-message h1{margin-bottom:14px}\n.home-page .home-hero .hero-photo-message .hero-lead-live{margin-bottom:24px;text-transform:uppercase;letter-spacing:.16em;font-family:Arial,sans-serif;font-size:13px;font-weight:700}\n.home-page .home-hero .hero-photo-message .hero-lead-live span{color:var(--gold,#d8b447);padding:0 7px}\n.home-page .home-hero .hero-photo-message .hero-actions-live2{margin-top:0}\n@media (max-width:640px){\n  .home-page .home-hero .hero-photo-message{text-align:center!important;width:min(92%,430px)!important;margin-inline:auto!important}\n  .home-page .home-hero .hero-photo-message h1{font-size:clamp(38px,11vw,54px)!important;line-height:.94!important}\n  .home-page .home-hero .hero-photo-message .hero-lead-live{font-size:10px!important;letter-spacing:.11em!important;margin-bottom:17px!important}\n  .home-page .home-hero .hero-photo-message .hero-actions-live2{justify-content:center!important}\n}\n@media (prefers-reduced-motion:reduce){.home-page .home-hero .hero-photo-message{transition:none!important}}\n
+/* =========================================================
+   INICIO · HEADER + HERO PREMIUM APROBADOS · 2026-09-19
+   Solo afecta a la página de Inicio.
+   ========================================================= */
+@media (min-width:1101px){
+  .home-page .site-header{
+    position:sticky;top:0;
+    background:rgba(10,13,10,.76);
+    -webkit-backdrop-filter:blur(9px) saturate(115%);
+    backdrop-filter:blur(9px) saturate(115%);
+    border-bottom:1px solid rgba(216,180,71,.18);
+  }
+  .home-page .site-header .container.nav{width:min(1440px,calc(100% - 72px));height:84px;gap:22px}
+  .home-page .site-header .brand-logo{gap:13px}
+  .home-page .site-header .brand-symbol{width:56px;height:56px;flex-basis:56px}
+  .home-page .site-header .brand-word{width:242px;min-width:242px}
+  .home-page .site-header .brand-wordmark-text{
+    font-family:"Abril Display","Abril Fatface",Georgia,"Times New Roman",serif;
+    font-size:29px;font-weight:400;line-height:.92;letter-spacing:.105em;color:#d9b33d;
+  }
+  .home-page .site-header .brand-wordmark-text + small{
+    margin-top:7px;color:#d9b33d;font-family:"Abril Display",Georgia,"Times New Roman",serif;
+    font-size:9px;font-weight:400;letter-spacing:.12em;text-transform:none;
+  }
+  .home-page .site-header .nav-links{gap:27px}
+  .home-page .site-header .nav-links a{font-family:Georgia,"Times New Roman",serif;font-size:10px;letter-spacing:.07em;padding:33px 0 28px;color:#f6f0e5}
+  .home-page .site-header .nav-links a:hover:after,.home-page .site-header .nav-links a.active:after{bottom:21px;background:#d9b33d}
+  .home-page .site-header .premium-tools{gap:4px!important}
+  .home-page .site-header .head-tool{border:0;width:39px;height:39px;color:#fff;border-radius:0}
+  .home-page .site-header .head-tool:hover,.home-page .site-header .head-tool:focus-visible{background:transparent;color:#d9b33d;transform:none}
+  .home-page .site-header .tool-icon{width:19px;height:19px;display:block}
+  .home-page .site-header .tool-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .home-page .site-header .cart-count{display:none}
+  .home-page .site-header .lang-trigger{display:flex;align-items:center;gap:5px;width:auto;min-width:65px;padding:0 4px;color:#fff}
+  .home-page .site-header .lang-trigger .lang-flag{font-size:17px!important;line-height:1}
+  .home-page .site-header .lang-trigger .lang-code{font-size:9px!important;letter-spacing:.08em}
+  .home-page .site-header .lang-trigger .chev{font-size:10px!important;margin-left:0}
+}
+
+.home-page .home-hero .hero-photo-message{max-width:560px}
+.home-page .home-hero .hero-photo-message h1{
+  position:relative;margin:0 0 20px;padding-top:24px;
+  color:#fff;font-family:"Abril Display",Georgia,"Times New Roman",serif;
+  font-size:clamp(54px,4.7vw,78px);font-weight:400;line-height:.94;letter-spacing:.035em;
+}
+.home-page .home-hero .hero-photo-message h1:before{
+  content:"";position:absolute;top:0;left:0;width:58px;height:1px;background:#d9b33d;
+}
+.home-page .home-hero .hero-photo-message .hero-lead-live{
+  margin:0 0 25px;color:#fff;font-family:Georgia,"Times New Roman",serif;font-size:12px;font-weight:400;line-height:1.2;letter-spacing:.28em;
+}
+.home-page .home-hero .hero-photo-message .hero-btn-primary{
+  min-width:210px;min-height:48px;padding:0 26px;border:0;border-radius:999px;background:linear-gradient(180deg,#e4c56f,#cda94e);color:#17150e;
+  box-shadow:0 9px 28px rgba(0,0,0,.18);font-family:Georgia,"Times New Roman",serif;font-size:10px;font-weight:700;letter-spacing:.12em;
+}
+.home-page .home-hero .hero-photo-message .hero-btn-primary:hover{background:linear-gradient(180deg,#ecd27e,#d5b355);transform:translateY(-1px)}
+.home-page .home-hero-sequence.is-photo-phase:after{
+  background:linear-gradient(90deg,rgba(5,8,5,.60) 0%,rgba(5,8,5,.32) 34%,rgba(5,8,5,.06) 66%,rgba(5,8,5,.10) 100%);
+}
+
+
+/* ALMAZARA · Mensaje premium visible únicamente tras el vídeo */
+.home-page .home-hero.is-photo-phase .hero-photo-message{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
+  transition:opacity .85s ease .25s,transform .85s ease .25s;
+}
+.home-page .home-hero:not(.is-photo-phase) .hero-photo-message{
+  opacity:0;visibility:hidden;transform:translateY(12px);pointer-events:none;
+}
+
+/* FIX 2026-09-19 · Mostrar mensaje del hero durante las fotografías en escritorio */
+@media (min-width:1101px){
+  .home-page .home-hero-live.is-photo-phase .hero-photo-message{
+    opacity:1!important;
+    visibility:visible!important;
+    transform:translateY(0)!important;
+    pointer-events:auto!important;
+  }
+}
+
+/* Imagen 1: mostrar el mensaje HTML premium superpuesto, igual que en las demás fotografías. */
+.home-page .home-hero.is-product-photo .hero-photo-message{opacity:1!important;visibility:visible!important;transform:translateY(0)!important;pointer-events:auto!important;display:block!important;}
+\n\n/* ALMAZARA 2026 · CTA exclusivo del vídeo de Inicio */
+.home-page .home-hero .hero-video-buy{
+  position:absolute;left:max(22px,calc((100vw - 1500px)/2));bottom:22px;z-index:8;
+  display:flex;align-items:center;justify-content:space-between;gap:26px;
+  min-width:238px;min-height:58px;padding:0 30px;border-radius:999px;
+  background:linear-gradient(180deg,#e4c56f,#cda94e);color:#17150e;text-decoration:none;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);font-family:Georgia,"Times New Roman",serif;
+  font-size:14px;font-weight:700;letter-spacing:.035em;
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
+  transition:opacity .55s ease,visibility 0s linear 0s,transform .25s ease,background .25s ease;
+}
+.home-page .home-hero .hero-video-buy:hover{background:linear-gradient(180deg,#ecd27e,#d5b355);transform:translateY(-2px)}
+.home-page .home-hero.is-photo-phase .hero-video-buy{
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);
+  transition:opacity .45s ease,visibility 0s linear .45s,transform .45s ease;
+}
+@media(max-width:640px){
+  .home-page .home-hero .hero-video-buy{left:14px;bottom:12px;min-width:190px;min-height:50px;padding:0 22px;font-size:11px;gap:20px}
+}
+@media(prefers-reduced-motion:reduce){.home-page .home-hero .hero-video-buy{transition:none!important}}
+
+/* Imagen 1 · restaurar título, subtítulo y CTA HTML sobre la fotografía */
+body.home-page .home-hero.is-product-photo .hero-photo-message{
+  display:block!important;
+  opacity:1!important;
+  visibility:visible!important;
+  transform:translateY(0)!important;
+  pointer-events:auto!important;
+}
+
+/* FIX 2026-09-19 · CTA visible exclusivamente durante el vídeo */
+body.home-page .home-hero.home-hero-live .hero-video-buy{
+  display:flex!important;
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  z-index:50!important;
+}
+body.home-page .home-hero.home-hero-live.is-photo-phase .hero-video-buy{
+  display:none!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
+
+
+/* HOME · HISTORIA — vídeo vertical 1080x1920 integrado */
+.home-page .home-story-premium{grid-template-columns:48% 52%;min-height:620px}
+.home-page .home-story-visual{min-height:620px;background:#07100a}
+.home-page .home-story-video-wrap{position:relative;isolation:isolate;overflow:hidden}
+.home-page .home-story-video{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.home-page .home-story-video-bg{z-index:0;object-fit:cover;object-position:center;filter:blur(24px) brightness(.48) saturate(1.12);transform:scale(1.09)}
+.home-page .home-story-video-main{z-index:1;object-fit:contain;object-position:center;background:transparent}
+.home-page .home-story-video-wrap:after{z-index:2;background:linear-gradient(90deg,rgba(3,7,4,.10),rgba(3,7,4,0) 70%,rgba(248,244,234,.18) 100%)}
+.home-page .home-story-content{padding:54px 4.4vw 52px 4vw;grid-template-columns:minmax(0,1fr) 132px;gap:34px}
+@media(max-width:1100px){
+ .home-page .home-story-premium{grid-template-columns:1fr;min-height:0}
+ .home-page .home-story-visual{min-height:720px}
+ .home-page .home-story-content{padding:44px 7vw}
+}
+@media(max-width:680px){
+ .home-page .home-story-visual{min-height:min(145vw,680px)}
+ .home-page .home-story-content{padding:38px 24px 42px}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-page .home-story-video{animation:none!important}
+}
+
+/* HOME · Aceites — vídeo real de fondo en loop */
+.home-page .feature-grid-home-final .feature-card>video.feature-bg-video{
+  position:absolute;inset:0;width:100%;height:100%;display:block;
+  object-fit:cover;object-position:center center;z-index:0;
+  filter:saturate(1.05) contrast(1.03) brightness(1.04);
+}
+.home-page .feature-grid-home-final .feature-card-oil:after{z-index:1;}
+.home-page .feature-grid-home-final .feature-card-oil .copy{z-index:2;}
+
+
+/* HOME · PRODUCTOS DESTACADOS — solo Aceite + Jamón, centrados */
+.home-page .home-products-premium .cards{
+  grid-template-columns:repeat(2,minmax(280px,344px));
+  justify-content:center;
+  gap:24px;
+}
+@media(max-width:760px){
+  .home-page .home-products-premium .cards{grid-template-columns:repeat(2,minmax(0,344px));gap:18px}
+}
+@media(max-width:620px){
+  .home-page .home-products-premium .cards{grid-template-columns:1fr;max-width:360px;margin-left:auto;margin-right:auto}
+}
+
+/* HOME · Producto destacado Aceite — mostrar fotografía vertical completa */
+.home-page .home-products-premium .card:first-child .card-media{
+  background:#07130d;
+}
+.home-page .home-products-premium .card:first-child .card-media img{
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:none!important;
+}
+
+
+/* HOME · Aceite destacado — imagen horizontal nueva, botella completa y centrada */
+.home-page .home-products-premium .card:first-child .card-media img{
+  object-fit:cover!important;
+  object-position:center center!important;
+  transform:none!important;
+}
+.home-page .home-products-premium .card:first-child:hover .card-media img{transform:none!important;}
+
+
+/* === Header icons + language flags visibility fix === */
+.site-header .search-trigger .tool-icon,
+.site-header .cart-trigger .tool-icon{display:block!important;width:19px!important;height:19px!important;color:#f6f1e7!important;font-size:17px!important;line-height:19px!important;text-align:center!important}
+.site-header .tool-icon svg{display:block!important;width:19px!important;height:19px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.8!important;stroke-linecap:round!important;stroke-linejoin:round!important;overflow:visible!important}
+.site-header .search-trigger:hover .tool-icon,.site-header .cart-trigger:hover .tool-icon{color:#d9b33d!important}
+.site-header .lang-trigger{display:flex!important;align-items:center!important;justify-content:center!important;gap:5px!important;min-width:66px!important}
+.site-header .lang-trigger .lang-flag{display:inline-block!important;font-size:17px!important;line-height:1!important}
+.site-header .lang-trigger .lang-code{display:inline-block!important;font-size:9px!important;letter-spacing:.08em!important;color:#f6f1e7!important}
+.lang-menu button{grid-template-columns:23px 27px 1fr 15px!important;column-gap:4px!important}
+.lang-menu .menu-flag{font-size:15px!important;line-height:1!important;letter-spacing:0!important}
+.lang-menu .menu-code{font:700 11px Arial,sans-serif!important;letter-spacing:.08em!important;color:#eee8da!important}
+.lang-menu button small{grid-column:3!important}
+.lang-menu button b{grid-column:4!important}
+
+/* Real SVG language flags — Windows/Chrome compatible */
+.site-header .lang-flag{display:block!important;width:20px!important;height:14px!important;object-fit:cover!important;border-radius:2px!important;box-shadow:0 0 0 1px rgba(255,255,255,.14)!important;flex:0 0 auto!important}
+.lang-menu .menu-flag{display:block!important;width:20px!important;height:13px!important;object-fit:cover!important;border-radius:2px!important;box-shadow:0 0 0 1px rgba(255,255,255,.12)!important}

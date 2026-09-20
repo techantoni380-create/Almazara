@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const pages=[['Aceites','aceites.html'],['Jamones','jamones.html'],['Productos','productos.html'],['Recetas','recetas.html'],['Nosotros','nosotros.html'],['Contacto','contacto.html']];
   const inp=search.querySelector('input'), results=search.querySelector('.search-results');
   function render(){const q=inp.value.trim().toLowerCase();results.innerHTML=q?pages.filter(x=>x[0].toLowerCase().includes(q)||({'aceites':'oliva aove aceite','jamones':'iberico bellota jamon','productos':'tienda comprar gourmet','recetas':'cocina salmorejo gambas bacalao','nosotros':'historia almazara origen','contacto':'whatsapp email ayuda'}[x[0].toLowerCase()]||'').includes(q)).map(x=>`<a href="${x[1]}">${x[0]} <span>→</span></a>`).join(''):`<a href="productos.html">Productos <span>→</span></a><a href="recetas.html">Recetas <span>→</span></a>`} inp.addEventListener('input',render);render();
-  document.querySelectorAll('.lang-switch').forEach(sw=>{const trigger=sw.querySelector('.lang-trigger');trigger.addEventListener('click',e=>{e.stopPropagation();sw.classList.toggle('open');trigger.setAttribute('aria-expanded',sw.classList.contains('open'))});sw.querySelectorAll('.lang-menu button').forEach(btn=>btn.addEventListener('click',()=>{sw.querySelectorAll('button').forEach(x=>x.classList.remove('active'));btn.classList.add('active');trigger.querySelector('span').textContent=btn.dataset.lang;sw.classList.remove('open');if(btn.dataset.lang!=='ES') alert('Vista de demostración: '+btn.querySelector('small').textContent+' estará disponible en la versión multidioma.')}));});document.addEventListener('click',()=>document.querySelectorAll('.lang-switch').forEach(x=>x.classList.remove('open')));
+  document.querySelectorAll('.lang-switch').forEach(sw=>{const trigger=sw.querySelector('.lang-trigger');trigger.addEventListener('click',e=>{e.stopPropagation();sw.classList.toggle('open');trigger.setAttribute('aria-expanded',sw.classList.contains('open'))});sw.querySelectorAll('.lang-menu button').forEach(btn=>btn.addEventListener('click',()=>{sw.querySelectorAll('button').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const flag=trigger.querySelector('.lang-flag'), code=trigger.querySelector('.lang-code'), menuFlag=btn.querySelector('.menu-flag'); if(flag&&menuFlag) flag.src=menuFlag.src; if(code) code.textContent=btn.dataset.lang;sw.classList.remove('open');if(btn.dataset.lang!=='ES') alert('Vista de demostración: '+btn.querySelector('small').textContent+' estará disponible en la versión multidioma.')}));});document.addEventListener('click',()=>document.querySelectorAll('.lang-switch').forEach(x=>x.classList.remove('open')));
 });
 
 // ALMAZARA · Navegación responsive global
@@ -132,4 +132,49 @@ document.addEventListener('DOMContentLoaded',()=>{
     trigger.addEventListener('click',()=>setOpen(!panel.classList.contains('open'))); panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false))); document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)}); window.addEventListener('resize',()=>{if(innerWidth>980)setOpen(false)});
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileNav); else initMobileNav();
+})();
+
+// ALMAZARA · Hero Inicio: vídeo completo -> 3 imágenes -> vídeo
+(function(){
+  function initHomeHeroSequence(){
+    const media=document.querySelector('[data-hero-sequence]');
+    if(!media) return;
+    const items=[...media.querySelectorAll('.hero-sequence-item')];
+    const video=items[0];
+    if(!(video instanceof HTMLVideoElement)||items.length<2) return;
+    const imageDuration=6500;
+    let timer=null, index=0;
+    const show=i=>{
+      clearTimeout(timer); index=i;
+      items.forEach((el,n)=>el.classList.toggle('is-active',n===i));
+      media.classList.toggle('is-photo-phase',i!==0);
+      const hero=media.closest('.home-hero');
+      hero?.classList.toggle('is-photo-phase',i!==0);
+      hero?.classList.toggle('is-product-photo',i===1);
+      const videoBuy=hero?.querySelector('.hero-video-buy');
+      if(videoBuy){
+        videoBuy.style.setProperty('display',i===0?'flex':'none','important');
+        videoBuy.setAttribute('aria-hidden',i===0?'false':'true');
+      }
+      // El título, subtítulo y CTA son HTML real superpuesto en todas las fotografías.
+      const photoMessage=hero?.querySelector('.hero-photo-message');
+      if(photoMessage) photoMessage.style.removeProperty('display');
+      if(i===0){
+        try{ video.currentTime=0; const play=video.play(); if(play?.catch) play.catch(()=>{}); }catch(e){}
+      }else{
+        video.pause();
+        timer=setTimeout(()=>show(i===items.length-1?0:i+1),imageDuration);
+      }
+    };
+    video.loop=false;
+    video.addEventListener('ended',()=>show(1));
+    video.addEventListener('error',()=>show(1),{once:true});
+    document.addEventListener('visibilitychange',()=>{
+      if(document.hidden){ clearTimeout(timer); if(index===0) video.pause(); }
+      else if(index===0){ video.play().catch(()=>{}); }
+      else { timer=setTimeout(()=>show(index===items.length-1?0:index+1),imageDuration); }
+    });
+    show(0);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initHomeHeroSequence); else initHomeHeroSequence();
 })();
