@@ -2169,3 +2169,408 @@ body.home-page .home-hero.home-hero-live.is-photo-phase .hero-video-buy{
 /* Jamones · Nuestros Ibéricos: dos productos centrados */
 #ibericos .cards{grid-template-columns:repeat(2,minmax(0,350px));justify-content:center}
 #ibericos .card-media img{width:100%;height:100%;object-fit:cover}
+
+/* PRODUCTOS — cabecera foto real: encuadre y overlay refinados */
+@media (min-width: 769px){
+  body.productos-page > .hero.hero-anim .hero-media img{
+    width:100%;height:100%;object-fit:cover!important;
+    object-position:50% 0%!important;
+    transform:none!important;animation:none!important;
+    filter:saturate(1.03) contrast(1.02)!important;
+  }
+  body.productos-page > .hero.hero-anim .hero-media:after{
+    background:linear-gradient(90deg,
+      rgba(3,8,5,.82) 0%,
+      rgba(3,8,5,.66) 24%,
+      rgba(3,8,5,.34) 43%,
+      rgba(3,8,5,.10) 64%,
+      rgba(3,8,5,.03) 100%)!important;
+  }
+  body.productos-page > .hero.hero-anim .hero-copy{max-width:650px!important;}
+}
+
+/* PRODUCTOS — corrección final: conservar la imagen actual sin oscurecerla */
+body.productos-page > .hero.hero-anim .hero-media:after{
+  background:transparent!important;
+  opacity:0!important;
+}
+body.productos-page > .hero.hero-anim .hero-media img{
+  filter:none!important;
+}
+
+
+/* PRODUCTOS · cabecera limpia con texto HTML, mismo lenguaje visual que Jamones */
+.productos-hero-premium .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center center;transform:none!important;animation:none!important;filter:saturate(1.04) contrast(1.03)}
+.productos-hero-premium .hero-media:after{background:linear-gradient(90deg,rgba(4,8,5,.88) 0%,rgba(4,8,5,.72) 27%,rgba(4,8,5,.30) 47%,rgba(4,8,5,.05) 68%,rgba(4,8,5,.02) 100%)!important}
+.productos-hero-premium .hero-copy{max-width:610px!important;padding:52px 0!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important}
+.productos-hero-premium .hero-copy h1{color:#fff}
+.productos-hero-premium .hero-copy .gold{color:var(--gold)}
+@media(max-width:760px){.productos-hero-premium .hero-media img{object-position:64% center}.productos-hero-premium .hero-media:after{background:linear-gradient(90deg,rgba(4,8,5,.90) 0%,rgba(4,8,5,.68) 50%,rgba(4,8,5,.18) 100%)!important}.productos-hero-premium .hero-copy{padding:40px 0!important}}
+
+/* PRODUCTOS · FINAL — imagen limpia y texto exclusivamente HTML/CSS */
+body.productos-page .productos-hero-premium .hero-media img{
+  width:100%;height:100%;object-fit:cover!important;object-position:center 72%!important;
+  transform:none!important;animation:none!important;filter:none!important;
+}
+body.productos-page .productos-hero-premium .hero-media:after{
+  opacity:1!important;
+  background:linear-gradient(90deg,rgba(3,8,5,.72) 0%,rgba(3,8,5,.50) 23%,rgba(3,8,5,.18) 42%,rgba(3,8,5,.02) 61%,rgba(3,8,5,0) 72%)!important;
+}
+body.productos-page .productos-hero-premium .hero-copy{
+  position:relative;z-index:2;max-width:610px!important;padding:52px 0!important;
+  opacity:1!important;visibility:visible!important;
+}
+@media(max-width:760px){
+ body.productos-page .productos-hero-premium .hero-media img{object-position:68% center!important}
+ body.productos-page .productos-hero-premium .hero-media:after{background:linear-gradient(90deg,rgba(3,8,5,.82),rgba(3,8,5,.46) 55%,rgba(3,8,5,.10))!important}
+}
+
+/* PRODUCTOS · AJUSTE DE ENCUADRE FINAL — prioriza la mesa y productos */
+@media (min-width: 761px){
+  body.productos-page .productos-hero-premium .hero-media img{
+    object-position:center bottom!important;
+  }
+}
+
+/* PRODUCTOS — ajuste final solicitado: subir la fotografía para mostrar más la mesa */
+@media (min-width: 769px){
+  body.productos-page > .hero.hero-anim .hero-media img{
+    object-position:50% 100%!important;
+  }
+}
+
+/* PRODUCTOS — ajuste solicitado: bajar ligeramente la foto para mostrar la botella completa */
+@media (min-width: 769px){
+  body.productos-page > .hero.hero-anim.productos-hero-premium .hero-media img{
+    object-position:50% 78%!important;
+  }
+}
+
+/* Ibéricos: fotografía completa y centrada dentro de la tarjeta */
+#ibericos .card-media,
+.productos-page .filter-layout .cards .card:nth-child(3) .card-media,
+.productos-page .filter-layout .cards .card:nth-child(4) .card-media{
+  height:260px;
+  padding:10px;
+  box-sizing:border-box;
+  background:#f8f5ed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+#ibericos .card-media img,
+.productos-page .filter-layout .cards .card:nth-child(3) .card-media img,
+.productos-page .filter-layout .cards .card:nth-child(4) .card-media img{
+  width:100%;
+  height:100%;
+  object-fit:contain!important;
+  object-position:center!important;
+  display:block;
+}
+@media(max-width:760px){
+  #ibericos .card-media,
+  .productos-page .filter-layout .cards .card:nth-child(3) .card-media,
+  .productos-page .filter-layout .cards .card:nth-child(4) .card-media{height:250px;}
+}
+
+/* PRODUCTOS — tarjetas premium amplias, coherentes con Aceites e Ibéricos */
+.productos-page .filter-layout{grid-template-columns:250px minmax(0,1fr);gap:36px;align-items:start}
+.productos-page .filter-layout > div .cards{
+  grid-template-columns:repeat(2,minmax(0,430px));
+  gap:24px;
+  justify-content:start;
+}
+.productos-page .filter-layout .card{background:#fff;border:1px solid var(--line);min-width:0}
+.productos-page .filter-layout .card-media{
+  height:300px!important;
+  padding:0!important;
+  background:#f8f5ed;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.productos-page .filter-layout .card-media img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  display:block;
+}
+.productos-page .filter-layout .card-body{padding:20px 22px 22px}
+.productos-page .filter-layout .card-body h3{font-size:29px;line-height:1.04;margin:0 0 8px}
+.productos-page .filter-layout .card-body .meta{margin-bottom:14px}
+.productos-page .filter-layout .card-body .price{font-size:30px;margin:12px 0 16px}
+.productos-page .filter-layout .card-body .btn{min-width:168px;text-align:center}
+@media(max-width:1050px){
+  .productos-page .filter-layout{grid-template-columns:1fr}
+  .productos-page .filter-layout > div .cards{justify-content:center}
+}
+@media(max-width:760px){
+  .productos-page .filter-layout > div .cards{grid-template-columns:1fr;max-width:430px;margin-left:auto;margin-right:auto}
+  .productos-page .filter-layout .card-media{height:280px!important}
+}
+
+/* PRODUCTOS — aceites con el mismo encuadre visual que en NUESTROS ACEITES */
+.productos-page .filter-layout .cards .card:nth-child(1) .card-media img,
+.productos-page .filter-layout .cards .card:nth-child(2) .card-media img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+
+/* CONTACTO · ajuste final de encuadre desktop 2026-09-20
+   Baja la fotografía dentro de la cabecera para mostrar completa la torre de Berna. */
+@media (min-width: 761px){
+  body.contacto-page > .hero.hero-anim .hero-media img{
+    object-position:center 28%!important;
+    transform:scale(1.01)!important;
+  }
+}
+
+/* CABECERAS INTERIORES · UNIFICACIÓN VISUAL 2026-09-20
+   Todas las páginas salvo Inicio: mismo sombreado premium y misma altura/posición del bloque de texto. */
+@media (min-width: 981px){
+  body.aceites-page > .hero,
+  body.jamones-page > .hero,
+  body.productos-page > .hero,
+  body.recetas-page > .hero,
+  body.contacto-page > .hero,
+  body.nosotros-page > .hero{
+    min-height:700px!important;
+    height:700px!important;
+    max-height:700px!important;
+  }
+
+  body.aceites-page > .hero .hero-inner,
+  body.jamones-page > .hero .hero-inner,
+  body.productos-page > .hero .hero-inner,
+  body.recetas-page > .hero .hero-inner,
+  body.contacto-page > .hero .hero-inner,
+  body.nosotros-page > .hero .hero-inner{
+    min-height:700px!important;
+    height:700px!important;
+    align-items:flex-start!important;
+  }
+
+  body.aceites-page > .hero .hero-copy,
+  body.jamones-page > .hero .hero-copy,
+  body.productos-page > .hero .hero-copy,
+  body.recetas-page > .hero .hero-copy,
+  body.contacto-page > .hero .hero-copy,
+  body.nosotros-page > .hero .hero-copy-live{
+    padding-top:82px!important;
+    padding-bottom:0!important;
+  }
+
+  body.aceites-page > .hero .hero-media:after,
+  body.jamones-page > .hero .hero-media:after,
+  body.productos-page > .hero .hero-media:after,
+  body.recetas-page > .hero .hero-media:after,
+  body.contacto-page > .hero .hero-media:after,
+  body.nosotros-page > .hero .hero-media:after{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    opacity:1!important;
+    background:linear-gradient(90deg,
+      rgba(2,6,4,.90) 0%,
+      rgba(2,6,4,.76) 28%,
+      rgba(2,6,4,.34) 47%,
+      rgba(2,6,4,.08) 66%,
+      rgba(2,6,4,.02) 100%)!important;
+  }
+}
+
+/* PRODUCTOS · sombreado premium reforzado 2026-09-20 */
+@media (min-width:981px){
+  body.productos-page > .hero.productos-hero-premium .hero-media::after{
+    display:block!important;
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:1!important;
+    opacity:1!important;
+    background:linear-gradient(90deg,
+      rgba(2,6,4,.94) 0%,
+      rgba(2,6,4,.84) 24%,
+      rgba(2,6,4,.56) 38%,
+      rgba(2,6,4,.24) 51%,
+      rgba(2,6,4,.06) 66%,
+      rgba(2,6,4,0) 82%)!important;
+    pointer-events:none!important;
+  }
+  body.productos-page > .hero.productos-hero-premium .hero-inner{
+    position:relative!important;
+    z-index:2!important;
+  }
+}
+
+
+/* HOME · PRODUCTOS DESTACADOS — mismo estilo visual que la página PRODUCTOS */
+.home-page .home-products-premium .card{
+  background:#fff!important;
+  border:1px solid var(--line)!important;
+  min-width:0;
+  box-shadow:none!important;
+}
+.home-page .home-products-premium .card-media{
+  height:300px!important;
+  padding:0!important;
+  background:#f8f5ed!important;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.home-page .home-products-premium .card-media img{
+  width:100%!important;height:100%!important;object-fit:cover!important;
+  object-position:center!important;transform:none!important;display:block;
+}
+.home-page .home-products-premium .card:hover .card-media img{transform:none!important;}
+.home-page .home-products-premium .card-body{padding:20px 22px 22px!important;background:#fff!important;color:#171713!important;}
+.home-page .home-products-premium .card-body h3{font-size:29px!important;line-height:1.04!important;margin:0 0 8px!important;color:#171713!important;text-transform:none!important;}
+.home-page .home-products-premium .card-body .meta{margin-bottom:14px!important;color:#6f695f!important;}
+.home-page .home-products-premium .card-body .price{font-size:30px!important;margin:12px 0 16px!important;color:#171713!important;}
+.home-page .home-products-premium .card-body .btn{min-width:168px;text-align:center;}
+.home-page .home-products-premium .card-body .btn-dark{background:#07130d!important;color:#fff!important;border-color:#d9b33d!important;}
+.home-page .home-products-premium .card-body .btn-red{background:#a51f2a!important;color:#fff!important;border-color:#a51f2a!important;}
+@media(max-width:760px){.home-page .home-products-premium .card-media{height:280px!important;}}
+
+/* PRODUCTOS · tarjetas y botones unificados 2026-09-20
+   Inicio, Aceites, Jamones y Productos: misma altura y CTA negro/dorado alineado abajo. */
+.home-page .home-products-premium .card,
+body.aceites-page .cards > .card,
+body.jamones-page .cards > .card,
+body.productos-page .cards > .card{
+  display:flex!important;
+  flex-direction:column!important;
+  height:100%!important;
+}
+.home-page .home-products-premium .card-body,
+body.aceites-page .cards > .card .card-body,
+body.jamones-page .cards > .card .card-body,
+body.productos-page .cards > .card .card-body{
+  display:flex!important;
+  flex-direction:column!important;
+  flex:1 1 auto!important;
+}
+.home-page .home-products-premium .card-body h3,
+body.aceites-page .cards > .card .card-body h3,
+body.jamones-page .cards > .card .card-body h3,
+body.productos-page .cards > .card .card-body h3{
+  min-height:2.1em!important;
+}
+.home-page .home-products-premium .card-body .price,
+body.aceites-page .cards > .card .card-body .price,
+body.jamones-page .cards > .card .card-body .price,
+body.productos-page .cards > .card .card-body .price{
+  margin-top:auto!important;
+}
+.home-page .home-products-premium .card-body .btn,
+body.aceites-page .cards > .card .card-body .btn,
+body.jamones-page .cards > .card .card-body .btn,
+body.productos-page .cards > .card .card-body .btn{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  min-height:54px!important;
+  margin-top:14px!important;
+  padding:14px 18px!important;
+  box-sizing:border-box!important;
+  background:#07130d!important;
+  color:#fff!important;
+  border:1px solid #d9b33d!important;
+  border-radius:0!important;
+  text-align:center!important;
+}
+.home-page .home-products-premium .card-body .btn:hover,
+body.aceites-page .cards > .card .card-body .btn:hover,
+body.jamones-page .cards > .card .card-body .btn:hover,
+body.productos-page .cards > .card .card-body .btn:hover{
+  background:#0c1b13!important;
+  color:#fff!important;
+  border-color:#e3c45d!important;
+}
+
+/* INICIO · Productos destacados — tarjeta final estilo PRODUCTOS 2026-09-20 */
+.home-page .home-products-premium .cards{
+  grid-template-columns:repeat(2,minmax(0,430px))!important;
+  justify-content:center!important;
+  align-items:stretch!important;
+  gap:30px!important;
+}
+.home-page .home-products-premium .card-media{
+  height:375px!important;
+}
+.home-page .home-products-premium .card-body{
+  padding:24px 28px 28px!important;
+}
+.home-page .home-products-premium .card-body h3{
+  min-height:0!important;
+  font-size:32px!important;
+  line-height:1.08!important;
+  margin:0 0 12px!important;
+}
+.home-page .home-products-premium .card-body .meta{
+  margin:0 0 14px!important;
+}
+.home-page .home-products-premium .card-body .price{
+  margin-top:auto!important;
+  margin-bottom:0!important;
+  font-size:34px!important;
+}
+.home-page .home-products-premium .card-body .btn,
+.home-page .home-products-premium .card-body .btn-red,
+.home-page .home-products-premium .card-body .btn-dark{
+  width:100%!important;
+  min-height:56px!important;
+  margin-top:20px!important;
+  background:#07130d!important;
+  color:#fff!important;
+  border:1px solid #d9b33d!important;
+}
+@media(max-width:960px){
+  .home-page .home-products-premium .cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important;}
+  .home-page .home-products-premium .card-media{height:320px!important;}
+}
+@media(max-width:620px){
+  .home-page .home-products-premium .cards{grid-template-columns:1fr!important;max-width:430px!important;margin-left:auto!important;margin-right:auto!important;}
+  .home-page .home-products-premium .card-media{height:340px!important;}
+}
+
+/* PRODUCTOS · imágenes completas + carrito visual final 2026-09-20 */
+.home-page .home-products-premium .card-media img,
+body.aceites-page .cards > .card .card-media img,
+body.jamones-page .cards > .card .card-media img,
+body.productos-page .cards > .card .card-media img{
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:none!important;
+}
+.home-page .home-products-premium .card-media,
+body.aceites-page .cards > .card .card-media,
+body.jamones-page .cards > .card .card-media,
+body.productos-page .cards > .card .card-media{
+  background:#f8f5ed!important;
+}
+.home-page .home-products-premium .card-body .btn::before,
+body.aceites-page .cards > .card .card-body .btn::before,
+body.jamones-page .cards > .card .card-body .btn::before,
+body.productos-page .cards > .card .card-body .btn::before{
+  content:"🛒";
+  display:inline-block;
+  margin-right:10px;
+  font-size:18px;
+  line-height:1;
+}
+
+/* ACEITES · información de producto y proceso */
+.oil-process-steps{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:22px 30px;max-width:760px}
+.oil-process-steps p{margin:0;line-height:1.65;color:rgba(255,255,255,.82)}
+.oil-process-steps strong{color:#d6b45a;letter-spacing:.03em}
+@media (max-width:760px){.oil-process-steps{grid-template-columns:1fr;gap:18px;margin-top:22px}}
+
+/* JAMONES · contenido informativo resumido */
+.jamon-process-copy{margin-top:24px;display:grid;gap:16px}.jamon-process-copy p{margin:0;line-height:1.65}.jamon-process-copy strong{letter-spacing:.04em}
