@@ -826,3 +826,10 @@
   body.home-page .home-hero-live .hero-photo-message .hero-actions-live2{top:646px!important;width:220px!important}
   body.home-page .home-hero-live .hero-photo-message .hero-btn-primary{min-height:46px!important;border-radius:999px!important}
 }
+
+/* INICIO MOVIL · posicion final del bloque hero marcada por cliente · 2026-09-21 */
+@media (max-width:640px){
+  body.home-page .home-hero-live .hero-photo-message h1{top:475px!important;}
+  body.home-page .home-hero-live .hero-photo-message .hero-lead-live{top:568px!important;}
+  body.home-page .home-hero-live .hero-photo-message .hero-actions-live2{top:605px!important;}
+}

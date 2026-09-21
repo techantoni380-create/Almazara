@@ -1,0 +1,805 @@
+/* ALMAZARA · MOBILE GLOBAL FINAL — 2026-09-21
+   Capa final responsive. No modifica escritorio (> 640px). */
+@media (max-width:640px){
+  html,body{max-width:100%;overflow-x:hidden}
+  *,*::before,*::after{box-sizing:border-box}
+  img,video,svg{max-width:100%}
+  img,video{height:auto}
+  main,section,article,aside,footer{min-width:0}
+  .container{width:calc(100% - 32px)!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important}
+
+  /* Cabecera + navegación: marca, cesta y menú siempre accesibles */
+  .site-header{position:relative;z-index:10000;width:100%!important}
+  .site-header .container.nav{display:flex!important;align-items:center!important;flex-wrap:nowrap!important;overflow:visible!important}
+  .site-header .brand{min-width:0!important;max-width:calc(100% - 92px)!important;overflow:hidden!important}
+  .site-header .brand-wordmark-text{white-space:nowrap!important}
+  .site-header .nav-tools{display:flex!important;flex:0 0 auto!important}
+  .mobile-menu-trigger{display:grid!important;flex:0 0 38px!important;z-index:10002!important}
+  .mobile-nav-panel{position:fixed!important;left:0!important;right:0!important;top:68px!important;bottom:0!important;width:100%!important;max-width:100%!important;overflow-y:auto!important;overscroll-behavior:contain;z-index:9999!important}
+  .mobile-nav-panel nav a{white-space:normal!important;overflow-wrap:anywhere}
+  .mobile-language-options{display:flex!important;flex-wrap:wrap!important;gap:8px!important}
+
+  /* Vídeos e imágenes: nunca desbordan el teléfono */
+  .hero-media,.hero-media img,.hero-media video,.feature-bg-video,.home-story-video-wrap,.home-story-video{max-width:100%!important}
+  .feature-bg-video{width:100%!important;height:100%!important;object-fit:cover!important}
+  .home-story-premium{display:grid!important;grid-template-columns:1fr!important;width:100%!important;min-height:0!important}
+  .home-story-visual{position:relative!important;width:100%!important;min-height:0!important;height:min(145vw,680px)!important;overflow:hidden!important;background:#07100a!important}
+  .home-story-video-main{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
+  .home-story-content{display:grid!important;grid-template-columns:1fr!important;width:100%!important;padding:36px 22px 40px!important;gap:24px!important}
+  .home-story-copy,.home-story-values{min-width:0!important;max-width:100%!important}
+  .home-story-copy h2{font-size:clamp(34px,11vw,48px)!important;line-height:.95!important;overflow-wrap:anywhere}
+  .home-story-copy p{font-size:15px!important;line-height:1.65!important}
+  .home-story-btn{display:inline-flex!important;max-width:100%!important;white-space:normal!important;text-align:center!important;justify-content:center!important}
+  .home-story-values{display:flex!important;flex-wrap:wrap!important;gap:10px 16px!important}
+
+  /* Rejillas, tarjetas, imágenes y bloques informativos */
+  .feature-grid,.feature-grid-home-final,.cards,.product-grid,.recipe-grid,.category-grid,.stats{display:grid!important;grid-template-columns:1fr!important;width:100%!important;max-width:100%!important}
+  .feature-card{width:100%!important;min-width:0!important;overflow:hidden!important}
+  .card,.product-card,.recipe-card{width:100%!important;min-width:0!important;max-width:100%!important}
+  .card-media,.product-card-media,.recipe-card-media{overflow:hidden!important}
+  .card-media img,.product-card img,.recipe-card img{max-width:100%!important;object-fit:contain}
+  h1,h2,h3,h4,p,a,button,label,span{overflow-wrap:break-word}
+  .btn,.add-to-cart{max-width:100%!important;white-space:normal!important;text-align:center!important;line-height:1.25!important}
+
+  /* Tablas/listados largos, formularios y modales */
+  table{display:block!important;width:100%!important;max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+  input,select,textarea,button{max-width:100%;font-size:16px}
+  .premium-modal,.recipe-modal,.modal-content{max-width:calc(100vw - 28px)!important;max-height:calc(100vh - 32px)!important;overflow:auto!important}
+
+  /* Cesta lateral */
+  .premium-drawer,.shop-cart-drawer,.cart-drawer{width:min(92vw,420px)!important;max-width:92vw!important}
+  .shop-cart-items{max-height:48vh!important;overflow-y:auto!important}
+  .shop-cart-item{grid-template-columns:58px minmax(0,1fr)!important;gap:12px!important}
+  .shop-cart-item img{width:58px!important;height:58px!important}
+  .shop-line{grid-column:2!important;text-align:left!important}
+  .shop-remove{margin-left:0!important}
+
+  /* Checkout completo en una columna */
+  .checkout-page .site-header .container.nav{width:calc(100% - 24px)!important}
+  .checkout-page .site-header .nav>div:last-child{min-width:0!important;gap:6px!important}
+  .checkout-page #checkoutLang{padding:8px!important;min-width:58px!important}
+  .checkout-page .site-header .btn{padding:0 9px!important;min-height:38px!important;font-size:9px!important}
+  .checkout-wrap{width:100%!important;max-width:100%!important;padding:92px 16px 48px!important}
+  .checkout-head{margin-bottom:26px!important}
+  .checkout-head h1{font-size:clamp(34px,11vw,48px)!important;line-height:1!important}
+  .checkout-grid{display:grid!important;grid-template-columns:1fr!important;gap:18px!important}
+  .checkout-panel{width:100%!important;min-width:0!important;padding:20px 16px!important}
+  .checkout-fields{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}
+  .checkout-full{grid-column:auto!important}
+  .checkout-order-item{grid-template-columns:50px minmax(0,1fr) auto!important;gap:9px!important}
+  .checkout-order-item img{width:50px!important;height:50px!important}
+  .checkout-summary-row{gap:12px!important}
+
+  /* Footer: absolutamente todo visible y apilado */
+  .footer-enterprise-main{grid-template-columns:1fr!important}
+  .footer-enterprise-column,.footer-enterprise-brand,.footer-enterprise-newsletter{min-width:0!important;width:100%!important}
+  .footer-enterprise-column a,.footer-enterprise-legal a{white-space:normal!important}
+  .newsletter-input-row{grid-template-columns:1fr!important}
+}
+
+@media (max-width:390px){
+  .home-story-visual{height:145vw!important;max-height:600px!important}
+  .checkout-wrap{padding-left:12px!important;padding-right:12px!important}
+  .checkout-panel{padding:18px 13px!important}
+}
+
+/* FIX 2026-09-21 · Hero Inicio: el vídeo también debe mostrarse en móvil.
+   La hoja histórica lo ocultaba por defecto y solo lo activaba desde 1101px. */
+@media (max-width:1100px){
+  body.home-page .home-hero-live .home-hero-video{
+    display:block!important;
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    object-fit:cover!important;
+    object-position:center center!important;
+    z-index:1!important;
+  }
+  body.home-page .home-hero-sequence .hero-sequence-item.is-active{
+    opacity:1!important;
+    visibility:visible!important;
+  }
+}
+
+/* FIX 2026-09-21 · Inicio móvil: misma narrativa que escritorio.
+   VÍDEO = solo descriptor + CTA. FOTOS = título + descriptor + CTA. */
+@media (max-width:640px){
+  body.home-page .home-hero-live:not(.is-photo-phase) .hero-photo-message{
+    display:block!important;
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+  body.home-page .home-hero-live.is-photo-phase .hero-photo-message{
+    display:block!important;
+    opacity:1!important;
+    visibility:visible!important;
+    transform:none!important;
+    pointer-events:auto!important;
+  }
+  body.home-page .home-hero-live:not(.is-photo-phase) #heroVideoProductLabel,
+  body.home-page .home-hero-live:not(.is-photo-phase) #heroVideoBuy{
+    opacity:1!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+  }
+  body.home-page .home-hero-live.is-photo-phase #heroVideoProductLabel,
+  body.home-page .home-hero-live.is-photo-phase #heroVideoBuy{
+    display:none!important;
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+  body.home-page .home-hero-live #heroVideoProductLabel{
+    left:16px!important;
+    bottom:82px!important;
+    font-size:13px!important;
+    letter-spacing:.08em!important;
+    white-space:nowrap!important;
+  }
+  body.home-page .home-hero-live #heroVideoBuy{
+    left:16px!important;
+    bottom:20px!important;
+    min-width:205px!important;
+    min-height:52px!important;
+    padding:0 24px!important;
+    font-size:12px!important;
+  }
+}
+
+/* ALMAZARA · Inicio móvil — encuadre completo del vídeo y fotografías.
+   Solo móvil: no altera el hero de escritorio. */
+@media (max-width:640px){
+  body.home-page .home-hero-live .home-hero-sequence{
+    background:#020704!important;
+    overflow:hidden!important;
+  }
+  /* El vídeo se ve entero, sin zoom ni recorte. */
+  body.home-page .home-hero-live .home-hero-sequence .home-hero-video,
+  body.home-page .home-hero-live .home-hero-video{
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    transform:none!important;
+  }
+  /* Las tres fotografías se muestran completas y centradas. */
+  body.home-page .home-hero-live .home-hero-sequence img.hero-sequence-item{
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    transform:none!important;
+  }
+}
+
+/* FIX 2026-09-21 · Hero Inicio móvil: una única composición centrada.
+   Vídeo y fotografías comparten EL SABOR DEL ORIGEN + descriptor + CTA.
+   Se eliminan visualmente los antiguos label/CTA inferiores exclusivos del vídeo. */
+@media (max-width:640px){
+  body.home-page .home-hero-live #heroVideoProductLabel,
+  body.home-page .home-hero-live #heroVideoBuy{
+    display:none!important;
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+
+  body.home-page .home-hero-live .hero-photo-message,
+  body.home-page .home-hero-live:not(.is-photo-phase) .hero-photo-message,
+  body.home-page .home-hero-live.is-photo-phase .hero-photo-message{
+    display:flex!important;
+    position:absolute!important;
+    left:50%!important;
+    right:auto!important;
+    top:auto!important;
+    bottom:96px!important;
+    width:calc(100% - 44px)!important;
+    max-width:360px!important;
+    height:auto!important;
+    min-height:0!important;
+    padding:0!important;
+    margin:0!important;
+    transform:translateX(-50%)!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    text-align:center!important;
+    opacity:1!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+    z-index:20!important;
+  }
+
+  body.home-page .home-hero-live .hero-photo-message h1{
+    position:static!important;
+    inset:auto!important;
+    margin:0 0 5px!important;
+    padding-top:13px!important;
+    font-size:clamp(34px,10.5vw,43px)!important;
+    line-height:.90!important;
+    letter-spacing:-.02em!important;
+    text-align:center!important;
+  }
+  body.home-page .home-hero-live .hero-photo-message h1::before{
+    content:"";
+    display:block;
+    width:28px;
+    height:1px;
+    margin:0 auto 13px;
+    background:#c9a84f;
+  }
+  body.home-page .home-hero-live .hero-photo-message .hero-lead-live{
+    position:static!important;
+    inset:auto!important;
+    margin:0 0 14px!important;
+    font-size:11px!important;
+    line-height:1.25!important;
+    letter-spacing:.04em!important;
+    text-align:center!important;
+    white-space:nowrap!important;
+  }
+  body.home-page .home-hero-live .hero-photo-message .hero-actions-live2{
+    position:static!important;
+    inset:auto!important;
+    width:auto!important;
+    max-width:none!important;
+    margin:0!important;
+    display:block!important;
+  }
+  body.home-page .home-hero-live .hero-photo-message .hero-btn-live{
+    min-width:200px!important;
+    min-height:48px!important;
+    padding:0 22px!important;
+    justify-content:center!important;
+    gap:24px!important;
+    font-size:10px!important;
+    white-space:nowrap!important;
+  }
+}
+
+/* FIX FINAL · Hero Inicio móvil perfectamente centrado en viewport */
+@media (max-width:640px){
+  html body.home-page section.home-hero.home-hero-live #heroVideoProductLabel,
+  html body.home-page section.home-hero.home-hero-live #heroVideoBuy{
+    display:none!important;
+  }
+  html body.home-page section.home-hero.home-hero-live .container.hero-inner{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:0!important;
+    pointer-events:none!important;
+  }
+  html body.home-page section.home-hero.home-hero-live .hero-copy-live.hero-photo-message{
+    position:absolute!important;
+    left:0!important;
+    right:0!important;
+    top:auto!important;
+    bottom:78px!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:0 22px!important;
+    box-sizing:border-box!important;
+    transform:none!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+    overflow:visible!important;
+    pointer-events:auto!important;
+  }
+  html body.home-page section.home-hero.home-hero-live .hero-copy-live.hero-photo-message h1{
+    position:static!important;
+    left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin:0 0 6px!important;
+    padding:13px 0 0!important;
+    transform:none!important;
+    text-align:center!important;
+    white-space:normal!important;
+    overflow:visible!important;
+  }
+  html body.home-page section.home-hero.home-hero-live .hero-copy-live.hero-photo-message .hero-lead-live{
+    position:static!important;
+    width:100%!important;
+    margin:0 0 14px!important;
+    transform:none!important;
+    text-align:center!important;
+  }
+  html body.home-page section.home-hero.home-hero-live .hero-copy-live.hero-photo-message .hero-actions-live2{
+    position:static!important;
+    width:100%!important;
+    margin:0!important;
+    transform:none!important;
+    display:flex!important;
+    justify-content:center!important;
+    align-items:center!important;
+  }
+}
+
+/* =========================================================
+   ALMAZARA · CABECERAS MÓVIL UNIFICADAS · 2026-09-21
+   Patrón visual: título centrado, línea dorada, subtítulo y CTA.
+   ========================================================= */
+@media (max-width:640px){
+  /* Inicio: jamás mostrar el CTA/descriptor legacy inferior. */
+  html body.home-page section.home-hero.home-hero-live > #heroVideoProductLabel,
+  html body.home-page section.home-hero.home-hero-live > #heroVideoBuy{
+    display:none!important;
+    opacity:0!important;
+    visibility:hidden!important;
+    pointer-events:none!important;
+  }
+
+  /* Inicio: bloque único, centrado y con la misma escala del patrón. */
+  html body.home-page section.home-hero.home-hero-live .hero-copy-live.hero-photo-message{
+    left:0!important;right:0!important;bottom:58px!important;
+    width:100%!important;max-width:none!important;
+    padding:0 32px!important;box-sizing:border-box!important;
+    align-items:center!important;text-align:center!important;
+  }
+  html body.home-page section.home-hero.home-hero-live .hero-copy-live.hero-photo-message h1{
+    width:100%!important;max-width:360px!important;
+    margin:0 auto 7px!important;padding:17px 0 0!important;
+    font-size:34px!important;line-height:.91!important;
+    letter-spacing:-.025em!important;text-align:center!important;
+    position:relative!important;
+  }
+  html body.home-page section.home-hero.home-hero-live .hero-copy-live.hero-photo-message h1::before{
+    content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:31px;height:1px;background:#c9a33e;
+  }
+  html body.home-page section.home-hero.home-hero-live .hero-copy-live.hero-photo-message .hero-lead-live{
+    margin:0 auto 14px!important;font-size:11px!important;line-height:1.3!important;
+    width:100%!important;text-align:center!important;
+  }
+  html body.home-page section.home-hero.home-hero-live .hero-copy-live.hero-photo-message .hero-btn-live{
+    width:min(100%,320px)!important;min-width:0!important;height:48px!important;min-height:48px!important;
+    margin:0 auto!important;padding:0 24px!important;border-radius:0!important;
+    justify-content:center!important;gap:28px!important;font-size:10px!important;
+  }
+
+  /* Todas las demás cabeceras: misma tipografía/ritmo visual que Inicio. */
+  html body:not(.home-page) section.hero .hero-copy,
+  html body.nosotros-page section.nosotros-hero-live .hero-copy-live,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy{
+    left:50%!important;right:auto!important;transform:translateX(-50%)!important;
+    width:calc(100% - 44px)!important;max-width:396px!important;
+    text-align:center!important;box-sizing:border-box!important;
+  }
+  html body:not(.home-page) section.hero .hero-copy h1,
+  html body.nosotros-page section.nosotros-hero-live .hero-copy-live h1,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy h1{
+    width:100%!important;max-width:380px!important;margin:0 auto 8px!important;
+    font-size:34px!important;line-height:.91!important;letter-spacing:-.025em!important;
+    text-align:center!important;
+  }
+  html body:not(.home-page) section.hero .hero-copy .lead,
+  html body.nosotros-page section.nosotros-hero-live .hero-lead-live,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .lead{
+    width:100%!important;max-width:350px!important;margin:0 auto 15px!important;
+    font-size:12px!important;line-height:1.35!important;text-align:center!important;
+  }
+  html body:not(.home-page) section.hero .hero-copy .cta-row,
+  html body.nosotros-page section.nosotros-hero-live .hero-actions-live2,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .cta-row{
+    width:100%!important;margin:0!important;display:flex!important;justify-content:center!important;align-items:center!important;
+  }
+  html body:not(.home-page) section.hero .hero-copy .cta-row .btn,
+  html body.nosotros-page section.nosotros-hero-live .hero-btn-live,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .btn{
+    width:min(100%,320px)!important;min-width:0!important;min-height:48px!important;
+    margin:0 auto!important;padding:0 18px!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;text-align:center!important;
+    font-size:10px!important;line-height:1.15!important;box-sizing:border-box!important;
+  }
+  /* Jamones: en cabecera móvil dejamos un solo CTA principal para no romper el patrón. */
+  html body.jamones-page section.jamones-hero-premium .hero-copy .cta-row .btn + .btn{display:none!important;}
+
+  /* Kicker/línea superior homogéneos. */
+  html body:not(.home-page) section.hero .hero-copy .kicker,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .kicker,
+  html body.nosotros-page section.nosotros-hero-live .hero-kicker-live{
+    margin:0 auto 9px!important;font-size:9px!important;line-height:1.2!important;
+    letter-spacing:.16em!important;text-align:center!important;
+  }
+  html body.nosotros-page section.nosotros-hero-live .hero-kicker-line{
+    width:31px!important;height:1px!important;margin:0 auto 13px!important;
+  }
+}
+
+/* INICIO MÓVIL · bloque hero elevado según referencia 2026-09-21
+   Sube línea + título + descriptor + CTA como una sola unidad, sin tocar vídeo/desktop. */
+@media (max-width:640px){
+  html body.home-page section.home-hero.home-hero-live .hero-copy-live.hero-photo-message{
+    bottom:118px!important;
+  }
+}
+
+/* =========================================================
+   FIX FINAL 2026-09-21 · JAMONES / PRODUCTOS / RECETAS / CONTACTO
+   Inicio es la referencia visual. SOLO móvil. No afecta escritorio.
+   ========================================================= */
+@media (max-width:640px){
+  /* Los cuatro heroes comparten altura, fondo y encuadre completo 16:9 de Inicio. */
+  html body.jamones-page section.jamones-hero-premium,
+  html body.productos-page > section.hero.productos-hero-premium,
+  html body.recetas-page section.recipes-hero-premium,
+  html body.contacto-page > section.hero.hero-anim{
+    height:690px!important;
+    min-height:690px!important;
+    max-height:690px!important;
+    position:relative!important;
+    overflow:hidden!important;
+    background:#020704!important;
+  }
+  html body.jamones-page section.jamones-hero-premium .hero-media,
+  html body.productos-page > section.hero.productos-hero-premium .hero-media,
+  html body.recetas-page section.recipes-hero-premium .hero-media,
+  html body.contacto-page > section.hero.hero-anim .hero-media{
+    position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+    background:#020704!important;overflow:hidden!important;
+  }
+  html body.jamones-page section.jamones-hero-premium .hero-media img,
+  html body.productos-page > section.hero.productos-hero-premium .hero-media img,
+  html body.recetas-page section.recipes-hero-premium .hero-media img,
+  html body.contacto-page > section.hero.hero-anim .hero-media img{
+    width:100%!important;height:100%!important;max-width:none!important;
+    object-fit:contain!important;object-position:center center!important;
+    transform:none!important;animation:none!important;
+  }
+  /* Sin degradados que oscurezcan/deformen visualmente la foto completa. */
+  html body.jamones-page section.jamones-hero-premium .hero-media:after,
+  html body.productos-page > section.hero.productos-hero-premium .hero-media:after,
+  html body.recetas-page section.recipes-hero-premium .hero-media:after,
+  html body.contacto-page > section.hero.hero-anim .hero-media:after{
+    background:transparent!important;
+  }
+  html body.jamones-page section.jamones-hero-premium .hero-inner,
+  html body.productos-page > section.hero.productos-hero-premium .hero-inner,
+  html body.recetas-page section.recipes-hero-premium .hero-inner,
+  html body.contacto-page > section.hero.hero-anim .hero-inner{
+    position:absolute!important;inset:0!important;width:100%!important;max-width:none!important;
+    height:690px!important;min-height:690px!important;margin:0!important;padding:0!important;
+    display:block!important;z-index:3!important;
+  }
+  /* Misma zona de contenido que Inicio. */
+  html body.jamones-page section.jamones-hero-premium .hero-copy,
+  html body.productos-page > section.hero.productos-hero-premium .hero-copy,
+  html body.recetas-page section.recipes-hero-premium .hero-copy,
+  html body.contacto-page > section.hero.hero-anim .hero-copy{
+    position:absolute!important;left:50%!important;right:auto!important;top:460px!important;bottom:auto!important;
+    transform:translateX(-50%)!important;width:calc(100% - 44px)!important;max-width:396px!important;
+    margin:0!important;padding:0!important;text-align:center!important;box-sizing:border-box!important;z-index:5!important;
+  }
+  html body.jamones-page section.jamones-hero-premium .kicker,
+  html body.productos-page > section.hero.productos-hero-premium .kicker,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .kicker,
+  html body.contacto-page > section.hero.hero-anim .kicker{
+    width:100%!important;margin:0 auto 9px!important;font-size:9px!important;line-height:1.2!important;
+    letter-spacing:.16em!important;text-align:center!important;color:#fff!important;
+  }
+  html body.jamones-page section.jamones-hero-premium .kicker:after,
+  html body.productos-page > section.hero.productos-hero-premium .kicker:after,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .kicker:after,
+  html body.contacto-page > section.hero.hero-anim .kicker:after{
+    content:""!important;display:block!important;width:31px!important;height:1px!important;background:#c9a33e!important;margin:9px auto 0!important;
+  }
+  html body.jamones-page section.jamones-hero-premium h1,
+  html body.productos-page > section.hero.productos-hero-premium h1,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy h1,
+  html body.contacto-page > section.hero.hero-anim h1{
+    width:100%!important;max-width:380px!important;margin:0 auto 8px!important;padding:0!important;
+    font-size:34px!important;line-height:.91!important;letter-spacing:-.025em!important;text-align:center!important;
+    position:relative!important;inset:auto!important;transform:none!important;
+  }
+  html body.jamones-page section.jamones-hero-premium .lead,
+  html body.productos-page > section.hero.productos-hero-premium .lead,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .lead,
+  html body.contacto-page > section.hero.hero-anim .lead{
+    width:100%!important;max-width:350px!important;margin:0 auto 14px!important;padding:0!important;
+    font-size:11px!important;line-height:1.3!important;text-align:center!important;color:#fff!important;
+    position:relative!important;inset:auto!important;transform:none!important;
+  }
+  html body.jamones-page section.jamones-hero-premium .cta-row,
+  html body.productos-page > section.hero.productos-hero-premium .cta-row,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .cta-row,
+  html body.contacto-page > section.hero.hero-anim .cta-row{
+    width:100%!important;max-width:none!important;margin:0!important;display:flex!important;flex-direction:column!important;
+    justify-content:center!important;align-items:center!important;gap:8px!important;text-align:center!important;
+  }
+  html body.jamones-page section.jamones-hero-premium .cta-row .btn,
+  html body.productos-page > section.hero.productos-hero-premium .cta-row .btn,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .cta-row .btn,
+  html body.contacto-page > section.hero.hero-anim .cta-row .btn{
+    display:flex!important;width:min(100%,320px)!important;min-width:0!important;height:48px!important;min-height:48px!important;
+    margin:0 auto!important;padding:0 18px!important;align-items:center!important;justify-content:center!important;
+    font-size:10px!important;line-height:1.15!important;text-align:center!important;box-sizing:border-box!important;white-space:nowrap!important;
+  }
+  /* Jamones: recuperar expresamente el CTA de compra que el patrón anterior ocultaba. */
+  html body.jamones-page section.jamones-hero-premium .hero-copy{top:430px!important;}
+  html body.jamones-page section.jamones-hero-premium .hero-copy .cta-row .btn + .btn{
+    display:flex!important;visibility:visible!important;opacity:1!important;
+    background:rgba(2,7,4,.45)!important;border:1px solid #c9a33e!important;color:#fff!important;
+  }
+  /* Recetas: anular cualquier desplazamiento legacy y usar exclusivamente el copy móvil. */
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-desktop-copy{display:none!important;}
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy{
+    display:block!important;position:static!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+    transform:none!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important;text-align:center!important;
+  }
+}
+
+/* =========================================================
+   MASTER HERO MOBILE v2 · 2026-09-21
+   Inicio = plantilla maestra literal. Solo responsive movil.
+   ========================================================= */
+@media (max-width:640px){
+  html body.aceites-page section.aceites-hero-premium,
+  html body.jamones-page section.jamones-hero-premium,
+  html body.productos-page > section.hero.productos-hero-premium,
+  html body.recetas-page section.recipes-hero-premium,
+  html body.contacto-page > section.hero.hero-anim{
+    position:relative!important;height:888px!important;min-height:888px!important;max-height:888px!important;
+    overflow:hidden!important;background:#020704!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .hero-media,
+  html body.jamones-page section.jamones-hero-premium .hero-media,
+  html body.productos-page > section.hero.productos-hero-premium .hero-media,
+  html body.recetas-page section.recipes-hero-premium .hero-media,
+  html body.contacto-page > section.hero.hero-anim .hero-media{
+    position:absolute!important;left:0!important;top:0!important;width:100%!important;height:620px!important;
+    overflow:hidden!important;background:#020704!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .hero-media img,
+  html body.jamones-page section.jamones-hero-premium .hero-media img,
+  html body.productos-page > section.hero.productos-hero-premium .hero-media img,
+  html body.recetas-page section.recipes-hero-premium .hero-media img,
+  html body.contacto-page > section.hero.hero-anim .hero-media img{
+    position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;
+    object-fit:cover!important;object-position:center center!important;transform:none!important;animation:none!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .hero-media:after,
+  html body.jamones-page section.jamones-hero-premium .hero-media:after,
+  html body.productos-page > section.hero.productos-hero-premium .hero-media:after,
+  html body.recetas-page section.recipes-hero-premium .hero-media:after,
+  html body.contacto-page > section.hero.hero-anim .hero-media:after{
+    content:""!important;position:absolute!important;inset:0!important;z-index:1!important;
+    background:linear-gradient(180deg,rgba(2,7,4,.01) 0%,rgba(2,7,4,.02) 48%,rgba(2,7,4,.18) 66%,rgba(2,7,4,.76) 88%,#020704 100%)!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .hero-inner,
+  html body.jamones-page section.jamones-hero-premium .hero-inner,
+  html body.productos-page > section.hero.productos-hero-premium .hero-inner,
+  html body.recetas-page section.recipes-hero-premium .hero-inner,
+  html body.contacto-page > section.hero.hero-anim .hero-inner{
+    position:absolute!important;inset:0!important;width:100%!important;max-width:none!important;height:888px!important;min-height:888px!important;
+    margin:0!important;padding:0!important;display:block!important;z-index:3!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .hero-copy,
+  html body.jamones-page section.jamones-hero-premium .hero-copy,
+  html body.productos-page > section.hero.productos-hero-premium .hero-copy,
+  html body.recetas-page section.recipes-hero-premium .hero-copy,
+  html body.contacto-page > section.hero.hero-anim .hero-copy{
+    position:absolute!important;left:50%!important;right:auto!important;top:475px!important;bottom:auto!important;
+    transform:translateX(-50%)!important;width:calc(100% - 44px)!important;max-width:396px!important;
+    margin:0!important;padding:0!important;text-align:center!important;z-index:5!important;box-sizing:border-box!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .kicker,
+  html body.jamones-page section.jamones-hero-premium .kicker,
+  html body.productos-page > section.hero.productos-hero-premium .kicker,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .kicker,
+  html body.contacto-page > section.hero.hero-anim .kicker{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;
+    margin:0 auto 9px!important;font-size:9px!important;line-height:1.2!important;letter-spacing:.16em!important;text-align:center!important;color:#fff!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .kicker:after,
+  html body.jamones-page section.jamones-hero-premium .kicker:after,
+  html body.productos-page > section.hero.productos-hero-premium .kicker:after,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .kicker:after,
+  html body.contacto-page > section.hero.hero-anim .kicker:after{
+    content:""!important;display:block!important;width:48px!important;height:1px!important;background:#c9a33e!important;margin:9px auto 0!important;
+  }
+  html body.aceites-page section.aceites-hero-premium h1,
+  html body.jamones-page section.jamones-hero-premium h1,
+  html body.productos-page > section.hero.productos-hero-premium h1,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy h1,
+  html body.contacto-page > section.hero.hero-anim h1{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:380px!important;
+    margin:0 auto 8px!important;padding:0!important;font-size:43px!important;line-height:.94!important;letter-spacing:.025em!important;text-align:center!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .lead,
+  html body.jamones-page section.jamones-hero-premium .lead,
+  html body.productos-page > section.hero.productos-hero-premium .lead,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .lead,
+  html body.contacto-page > section.hero.hero-anim .lead{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:350px!important;
+    margin:0 auto 14px!important;padding:0!important;font-size:11px!important;line-height:1.3!important;text-align:center!important;color:#fff!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .cta-row,
+  html body.jamones-page section.jamones-hero-premium .cta-row,
+  html body.productos-page > section.hero.productos-hero-premium .cta-row,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .cta-row,
+  html body.contacto-page > section.hero.hero-anim .cta-row{
+    width:100%!important;max-width:none!important;margin:0!important;display:flex!important;flex-direction:column!important;
+    align-items:center!important;justify-content:center!important;gap:8px!important;text-align:center!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .cta-row .btn,
+  html body.jamones-page section.jamones-hero-premium .cta-row .btn,
+  html body.productos-page > section.hero.productos-hero-premium .cta-row .btn,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .cta-row .btn,
+  html body.contacto-page > section.hero.hero-anim .cta-row .btn{
+    display:flex!important;width:min(100%,320px)!important;min-width:0!important;height:48px!important;min-height:48px!important;
+    margin:0 auto!important;padding:0 18px!important;align-items:center!important;justify-content:center!important;
+    font-size:10px!important;line-height:1.15!important;text-align:center!important;box-sizing:border-box!important;white-space:nowrap!important;
+  }
+  html body.jamones-page section.jamones-hero-premium .hero-copy .cta-row .btn + .btn{
+    display:flex!important;visibility:visible!important;opacity:1!important;background:rgba(2,7,4,.45)!important;border:1px solid #c9a33e!important;color:#fff!important;
+  }
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-desktop-copy{display:none!important}
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy{
+    display:block!important;position:static!important;inset:auto!important;transform:none!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important;text-align:center!important;
+  }
+}
+
+/* =========================================================
+   ALMAZARA · HERO MOBILE MASTER FINAL · 2026-09-21
+   Referencia exacta: Inicio móvil.
+   Header -> negro -> imagen 16:9 completa -> negro -> copy centrado.
+   SOLO móvil. No afecta escritorio ni contenido interior.
+   ========================================================= */
+@media (max-width:640px){
+  html body.nosotros-page section.nosotros-hero-live,
+  html body.aceites-page section.aceites-hero-premium,
+  html body.jamones-page section.jamones-hero-premium,
+  html body.productos-page > section.productos-hero-premium,
+  html body.recetas-page section.recipes-hero-premium,
+  html body.contacto-page > section.hero.hero-anim{
+    position:relative!important;
+    height:888px!important;min-height:888px!important;max-height:888px!important;
+    overflow:hidden!important;background:#020704!important;
+  }
+
+  /* Imagen: misma banda 16:9 completa de Inicio, con aire negro arriba. */
+  html body.nosotros-page section.nosotros-hero-live .hero-media,
+  html body.aceites-page section.aceites-hero-premium .hero-media,
+  html body.jamones-page section.jamones-hero-premium .hero-media,
+  html body.productos-page > section.productos-hero-premium .hero-media,
+  html body.recetas-page section.recipes-hero-premium .hero-media,
+  html body.contacto-page > section.hero.hero-anim .hero-media{
+    position:absolute!important;left:0!important;right:0!important;top:115px!important;
+    width:100%!important;height:56.25vw!important;max-height:360px!important;min-height:0!important;
+    margin:0!important;padding:0!important;overflow:hidden!important;background:#020704!important;
+    z-index:1!important;
+  }
+  html body.nosotros-page section.nosotros-hero-live .hero-media img,
+  html body.aceites-page section.aceites-hero-premium .hero-media img,
+  html body.jamones-page section.jamones-hero-premium .hero-media img,
+  html body.productos-page > section.productos-hero-premium .hero-media img,
+  html body.recetas-page section.recipes-hero-premium .hero-media img,
+  html body.contacto-page > section.hero.hero-anim .hero-media img{
+    position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+    max-width:none!important;max-height:none!important;margin:0!important;padding:0!important;
+    object-fit:contain!important;object-position:center center!important;
+    transform:none!important;animation:none!important;filter:none!important;
+  }
+  html body.nosotros-page section.nosotros-hero-live .hero-media:after,
+  html body.aceites-page section.aceites-hero-premium .hero-media:after,
+  html body.jamones-page section.jamones-hero-premium .hero-media:after,
+  html body.productos-page > section.productos-hero-premium .hero-media:after,
+  html body.recetas-page section.recipes-hero-premium .hero-media:after,
+  html body.contacto-page > section.hero.hero-anim .hero-media:after{
+    display:none!important;content:none!important;background:none!important;
+  }
+
+  html body.nosotros-page section.nosotros-hero-live .hero-inner,
+  html body.aceites-page section.aceites-hero-premium .hero-inner,
+  html body.jamones-page section.jamones-hero-premium .hero-inner,
+  html body.productos-page > section.productos-hero-premium .hero-inner,
+  html body.recetas-page section.recipes-hero-premium .hero-inner,
+  html body.contacto-page > section.hero.hero-anim .hero-inner{
+    position:absolute!important;inset:0!important;width:100%!important;max-width:none!important;
+    height:888px!important;min-height:888px!important;margin:0!important;padding:0!important;
+    display:block!important;z-index:3!important;
+  }
+
+  /* Copy: misma zona y centrado que Inicio. */
+  html body.nosotros-page section.nosotros-hero-live .hero-copy-live,
+  html body.aceites-page section.aceites-hero-premium .hero-copy,
+  html body.jamones-page section.jamones-hero-premium .hero-copy,
+  html body.productos-page > section.productos-hero-premium .hero-copy,
+  html body.recetas-page section.recipes-hero-premium .hero-copy,
+  html body.contacto-page > section.hero.hero-anim .hero-copy{
+    position:absolute!important;left:50%!important;right:auto!important;top:475px!important;bottom:auto!important;
+    transform:translateX(-50%)!important;width:calc(100% - 44px)!important;max-width:396px!important;
+    margin:0!important;padding:0!important;text-align:center!important;z-index:5!important;box-sizing:border-box!important;
+  }
+
+  /* Kicker y línea dorada */
+  html body.nosotros-page section.nosotros-hero-live .hero-kicker-live,
+  html body.aceites-page section.aceites-hero-premium .kicker,
+  html body.jamones-page section.jamones-hero-premium .kicker,
+  html body.productos-page > section.productos-hero-premium .kicker,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .kicker,
+  html body.contacto-page > section.hero.hero-anim .kicker{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;
+    margin:0 auto 9px!important;font-size:9px!important;line-height:1.2!important;letter-spacing:.16em!important;
+    text-align:center!important;color:#fff!important;
+  }
+  html body.nosotros-page section.nosotros-hero-live .hero-kicker-line{
+    display:block!important;width:48px!important;height:1px!important;background:#c9a33e!important;margin:9px auto 9px!important;
+  }
+  html body.aceites-page section.aceites-hero-premium .kicker:after,
+  html body.jamones-page section.jamones-hero-premium .kicker:after,
+  html body.productos-page > section.productos-hero-premium .kicker:after,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .kicker:after,
+  html body.contacto-page > section.hero.hero-anim .kicker:after{
+    content:""!important;display:block!important;width:48px!important;height:1px!important;background:#c9a33e!important;margin:9px auto 9px!important;
+  }
+
+  html body.nosotros-page section.nosotros-hero-live h1,
+  html body.aceites-page section.aceites-hero-premium h1,
+  html body.jamones-page section.jamones-hero-premium h1,
+  html body.productos-page > section.productos-hero-premium h1,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy h1,
+  html body.contacto-page > section.hero.hero-anim h1{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:380px!important;
+    margin:0 auto 8px!important;padding:0!important;font-size:43px!important;line-height:.94!important;
+    letter-spacing:.025em!important;text-align:center!important;
+  }
+  html body.nosotros-page section.nosotros-hero-live .hero-lead-live,
+  html body.aceites-page section.aceites-hero-premium .lead,
+  html body.jamones-page section.jamones-hero-premium .lead,
+  html body.productos-page > section.productos-hero-premium .lead,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .lead,
+  html body.contacto-page > section.hero.hero-anim .lead{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:350px!important;
+    margin:0 auto 14px!important;padding:0!important;font-size:11px!important;line-height:1.3!important;text-align:center!important;color:#fff!important;
+  }
+
+  html body.nosotros-page section.nosotros-hero-live .hero-actions-live2,
+  html body.aceites-page section.aceites-hero-premium .cta-row,
+  html body.jamones-page section.jamones-hero-premium .cta-row,
+  html body.productos-page > section.productos-hero-premium .cta-row,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .cta-row,
+  html body.contacto-page > section.hero.hero-anim .cta-row{
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:none!important;
+    margin:0!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+    gap:8px!important;text-align:center!important;
+  }
+  html body.nosotros-page section.nosotros-hero-live .hero-btn-live,
+  html body.aceites-page section.aceites-hero-premium .cta-row .btn,
+  html body.jamones-page section.jamones-hero-premium .cta-row .btn,
+  html body.productos-page > section.productos-hero-premium .cta-row .btn,
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy .cta-row .btn,
+  html body.contacto-page > section.hero.hero-anim .cta-row .btn{
+    display:flex!important;width:min(100%,320px)!important;min-width:0!important;height:48px!important;min-height:48px!important;
+    margin:0 auto!important;padding:0 18px!important;align-items:center!important;justify-content:center!important;
+    font-size:10px!important;line-height:1.15!important;text-align:center!important;box-sizing:border-box!important;white-space:nowrap!important;
+  }
+
+  /* Jamones conserva los dos CTA. */
+  html body.jamones-page section.jamones-hero-premium .cta-row .btn + .btn{
+    display:flex!important;visibility:visible!important;opacity:1!important;background:rgba(2,7,4,.45)!important;
+    border:1px solid #c9a33e!important;color:#fff!important;
+  }
+
+  /* Recetas usa exclusivamente su copy móvil. */
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-desktop-copy{display:none!important}
+  html body.recetas-page section.recipes-hero-premium .recipes-hero-mobile-copy{
+    display:block!important;position:static!important;inset:auto!important;transform:none!important;width:100%!important;
+    max-width:none!important;margin:0!important;padding:0!important;text-align:center!important;
+  }
+
+  /* Nosotros: firma debajo del CTA, sin alterar su contenido. */
+  html body.nosotros-page section.nosotros-hero-live .hero-signature-live{margin:12px auto 0!important;position:relative!important;inset:auto!important;transform:none!important}
+}

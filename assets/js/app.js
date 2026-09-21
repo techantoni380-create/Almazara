@@ -164,6 +164,11 @@ document.addEventListener('DOMContentLoaded',()=>{
         videoBuy.style.setProperty('display',i===0?'flex':'none','important');
         videoBuy.setAttribute('aria-hidden',i===0?'false':'true');
       }
+      const videoLabel=hero?.querySelector('#heroVideoProductLabel');
+      if(videoLabel){
+        videoLabel.style.setProperty('display',i===0?'block':'none','important');
+        videoLabel.setAttribute('aria-hidden',i===0?'false':'true');
+      }
       // El título, subtítulo y CTA son HTML real superpuesto en todas las fotografías.
       const photoMessage=hero?.querySelector('.hero-photo-message');
       if(photoMessage) photoMessage.style.removeProperty('display');
