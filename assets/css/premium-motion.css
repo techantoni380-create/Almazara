@@ -1,0 +1,232 @@
+/* ALMAZARA · Quiet editorial motion. Load after the existing page styles. */
+
+/* A soft gold reflection for the informational values strip. No button styling. */
+:is(.values > .value, .nosotros-page .stats > .stat) {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  cursor:default;
+}
+:is(.values > .value, .nosotros-page .stats > .stat)::before,
+:is(.values > .value, .nosotros-page .stats > .stat)::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+}
+:is(.values > .value, .nosotros-page .stats > .stat)::before {
+  background:
+    radial-gradient(ellipse 240px 150px at var(--value-light-x,50%) var(--value-light-y,40%),
+      rgba(225,192,113,.19),rgba(196,169,98,.07) 47%,transparent 78%),
+    linear-gradient(150deg,rgba(90,125,59,.09),transparent 70%);
+  box-shadow:inset 0 1px rgba(231,202,135,.30),inset 0 -1px rgba(196,169,98,.18);
+  opacity:0;
+  transition:opacity .5s ease;
+}
+:is(.values > .value, .nosotros-page .stats > .stat)::after {
+  background:linear-gradient(110deg,transparent 27%,rgba(248,224,166,.025) 43%,
+    rgba(248,224,166,.15) 50%,rgba(248,224,166,.025) 57%,transparent 73%);
+  opacity:0;
+  transform:translateX(-110%);
+}
+:is(.values > .value, .nosotros-page .stats > .stat) > .ico {
+  transition:filter .45s ease,text-shadow .45s ease;
+}
+:is(.values > .value, .nosotros-page .stats > .stat) > b {
+  transition:color .45s ease,text-shadow .45s ease;
+}
+@keyframes almazara-value-reflection {
+  0% { transform:translateX(-110%);opacity:0; }
+  18% { opacity:1; }
+  78% { opacity:1; }
+  100% { transform:translateX(110%);opacity:0; }
+}
+@media (hover:hover) and (pointer:fine) {
+  :is(.values > .value, .nosotros-page .stats > .stat):hover::before { opacity:1; }
+  :is(.values > .value, .nosotros-page .stats > .stat):hover::after {
+    animation:almazara-value-reflection 1.25s cubic-bezier(.22,.61,.36,1) both;
+  }
+  :is(.values > .value, .nosotros-page .stats > .stat):hover > .ico {
+    filter:brightness(1.12) drop-shadow(0 0 7px rgba(212,177,83,.24));
+    text-shadow:0 0 14px rgba(212,177,83,.22);
+  }
+  html body :is(.values > .value, .nosotros-page .stats > .stat):hover > b {
+    color:#eddbab;
+    text-shadow:0 0 18px rgba(196,169,98,.18);
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  :is(.values > .value, .nosotros-page .stats > .stat)::before,
+  :is(.values > .value, .nosotros-page .stats > .stat) > .ico,
+  :is(.values > .value, .nosotros-page .stats > .stat) > b { transition:none; }
+  :is(.values > .value, .nosotros-page .stats > .stat):hover::after { animation:none;opacity:0; }
+}
+@media (forced-colors:active) {
+  :is(.values > .value, .nosotros-page .stats > .stat)::before,
+  :is(.values > .value, .nosotros-page .stats > .stat)::after { display:none; }
+  :is(.values > .value, .nosotros-page .stats > .stat):hover > .ico { filter:none;text-shadow:none; }
+  html body :is(.values > .value, .nosotros-page .stats > .stat):hover > b { color:CanvasText;text-shadow:none; }
+}
+
+/* Nosotros: the same reflection on the existing cream panels. */
+.nosotros-page .stats > .stat::before {
+  background:
+    radial-gradient(ellipse 240px 150px at var(--value-light-x,50%) var(--value-light-y,40%),
+      rgba(184,144,54,.22),rgba(196,169,98,.10) 47%,transparent 78%),
+    linear-gradient(150deg,rgba(196,169,98,.06),transparent 70%);
+  box-shadow:inset 0 1px rgba(184,144,54,.42),inset 0 -1px rgba(184,144,54,.28);
+}
+.nosotros-page .stats > .stat::after {
+  background:linear-gradient(110deg,transparent 27%,rgba(219,178,83,.06) 43%,
+    rgba(255,251,228,.8) 50%,rgba(219,178,83,.06) 57%,transparent 73%);
+}
+.nosotros-page .stats > .stat > strong {
+  transition:text-shadow .45s ease;
+}
+@media (hover:hover) and (pointer:fine) {
+  .nosotros-page .stats > .stat:hover > strong {
+    text-shadow:0 0 16px rgba(184,144,54,.24);
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  .nosotros-page .stats > .stat > strong { transition:none; }
+}
+@media (forced-colors:active) {
+  .nosotros-page .stats > .stat:hover > strong { text-shadow:none; }
+}
+
+/* The script animates individual scale, leaving composition transforms intact.
+   This only retires the older, much larger transform-based Ken Burns effect. */
+img[data-premium-photo] { animation:none!important; }
+.premium-motion-frame { overflow:hidden; overflow:clip; }
+
+/* Photo backgrounds move behind their original, stationary shades and copy. */
+.banner[data-premium-background] {
+  isolation:isolate;
+  overflow:hidden;
+  background-image:none!important;
+}
+.premium-motion-background,
+.premium-motion-background-shade {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  border-radius:inherit;
+}
+.premium-motion-background { z-index:-2; }
+.premium-motion-background-shade { z-index:-1; }
+
+/* Recipe photographs keep the same quiet pace when the card is hovered. */
+.recetas-page .recipe-premium-card:hover img[data-premium-photo] {
+  transform:none;
+}
+
+/* Light appears in response to a person, never as a repeating flash. */
+.btn,
+.recipe-premium-btn,
+.newsletter-input-row button {
+  transition:box-shadow .45s ease,transform .3s ease,border-color .35s ease,
+    background-color .35s ease,color .35s ease,opacity .35s ease;
+}
+html body.home-page .home-hero #heroVideoBuy {
+  transition:opacity .45s ease,transform .45s ease,box-shadow .45s ease!important;
+}
+html body :is(.btn,.hero-btn-live,.hero-video-buy,.recipe-premium-btn,.home-story-btn,
+  .contact-purchase-whatsapp,button):not(:disabled):not([aria-disabled="true"]):not(.alma-assistant-launcher):not(.alma-assistant-close):focus-visible {
+  outline:2px solid #dec17b;
+  outline-offset:4px;
+  box-shadow:0 0 0 1px rgba(226,196,125,.32),0 5px 22px rgba(190,146,54,.25),inset 0 1px 0 rgba(255,237,187,.24)!important;
+}
+
+html body.home-page .home-hero #heroVideoBuy:focus-visible {
+  box-shadow:0 12px 30px rgba(0,0,0,.26),0 0 25px rgba(227,189,94,.38),inset 0 1px 0 rgba(255,244,204,.52)!important;
+}
+
+.site-header .nav-links a,
+.mobile-nav-panel nav a {
+  transition:color .35s ease,text-shadow .4s ease;
+}
+.site-header .nav-links a:focus-visible,
+.mobile-nav-panel nav a:focus-visible {
+  color:#ecd18a;
+  text-shadow:0 0 15px rgba(220,181,83,.32);
+  outline:1px solid #d8ba72;
+  outline-offset:5px;
+}
+.site-header .brand-wordmark-text {
+  animation:none!important;
+  background-position:50% 50%;
+  transition:filter .55s ease,background-position .8s ease;
+}
+.site-header .brand-symbol { transition:filter .55s ease; }
+.site-header .brand:focus-visible { outline:1px solid #d8ba72;outline-offset:6px; }
+.site-header .brand:focus-visible .brand-wordmark-text {
+  background-position:0% 50%;
+  filter:drop-shadow(0 0 6px rgba(227,188,87,.42));
+}
+.site-header .brand:focus-visible .brand-symbol {
+  filter:brightness(1.27) saturate(1.08) drop-shadow(0 0 6px rgba(227,188,87,.4));
+}
+
+@media (hover:hover) and (pointer:fine) {
+  html body :is(.btn,.hero-btn-live,.hero-video-buy,.recipe-premium-btn,.home-story-btn,
+    .contact-purchase-whatsapp,button):not(:disabled):not([aria-disabled="true"]):not(.alma-assistant-launcher):not(.alma-assistant-close):hover {
+    box-shadow:0 0 0 1px rgba(226,196,125,.24),0 6px 24px rgba(190,146,54,.22),inset 0 1px 0 rgba(255,237,187,.24)!important;
+  }
+  html body.home-page .home-hero #heroVideoBuy:hover {
+    box-shadow:0 12px 30px rgba(0,0,0,.26),0 0 25px rgba(227,189,94,.38),inset 0 1px 0 rgba(255,244,204,.52)!important;
+  }
+  .site-header .nav-links a:hover,
+  .mobile-nav-panel nav a:hover {
+    color:#ecd18a;
+    text-shadow:0 0 15px rgba(220,181,83,.32);
+  }
+  .site-header .brand:hover .brand-wordmark-text {
+    background-position:0% 50%;
+    filter:drop-shadow(0 0 6px rgba(227,188,87,.42));
+  }
+  .site-header .brand:hover .brand-symbol {
+    filter:brightness(1.27) saturate(1.08) drop-shadow(0 0 6px rgba(227,188,87,.4));
+  }
+}
+
+@media (hover:none), (pointer:coarse) {
+  html body :is(.btn,.hero-btn-live,.hero-video-buy,.recipe-premium-btn,.home-story-btn,
+    .contact-purchase-whatsapp,button):not(:disabled):not([aria-disabled="true"]):not(.alma-assistant-launcher):not(.alma-assistant-close):active {
+    box-shadow:0 0 18px rgba(214,175,78,.3),inset 0 1px 0 rgba(255,237,187,.3)!important;
+  }
+  html body.home-page .home-hero #heroVideoBuy:active {
+    box-shadow:0 10px 26px rgba(0,0,0,.25),0 0 24px rgba(227,189,94,.34)!important;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  [data-premium-photo],.premium-motion-background { scale:1!important; }
+  .site-header .brand-wordmark-text,
+  .site-header .brand-symbol,
+  .site-header .nav-links a,
+  .mobile-nav-panel nav a,
+  .btn,.recipe-premium-btn,.newsletter-input-row button,
+  html body.home-page .home-hero #heroVideoBuy { transition:none!important; }
+}
+
+@media (forced-colors:active) {
+  .site-header .brand-wordmark-text,
+  .site-header .brand-symbol { filter:none!important; }
+  .site-header .nav-links a,
+  .mobile-nav-panel nav a { text-shadow:none; }
+}
+
+/* Keep the recipe backdrop edge-to-edge and the long ingredient list scrollable. */
+@media (max-width:600px) {
+  body.recetas-page .recipe-modal {
+    inset:0;max-width:none!important;max-height:none!important;
+    overflow:hidden!important;
+  }
+  body.recetas-page .recipe-modal-dialog {
+    max-height:calc(100vh - 28px);
+    max-height:calc(100dvh - 28px);
+    overscroll-behavior:contain;
+  }
+}

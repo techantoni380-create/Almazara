@@ -1,0 +1,25 @@
+ALMAZARA · BOTELLA INDIVIDUAL SOBRE BLANCO
+
+Se ha colocado tu fotografía de la botella central sobre fondo blanco en:
+- Inicio: Productos destacados.
+- Aceites: Nuestros aceites.
+- Productos: Todos nuestros productos.
+- Miniaturas del carrito y del resumen de compra.
+
+Se conserva el producto de 500 ml, su nombre, identificador y precio CHF 9,99.
+La botella se muestra entera, centrada y fija, sin zoom de la fotografía.
+Las cabeceras, collages y la imagen del pack de tres botellas se mantienen.
+
+IMAGEN
+Tu PNG ya incluía un recorte con transparencia. Se ha compuesto sobre blanco puro y centrado en un lienzo de 600 × 1120 píxeles, conservando los píxeles opacos originales, la etiqueta y las proporciones. No se han generado ni reconstruido imágenes con IA, ni se ha ampliado artificialmente la resolución.
+
+Archivo PNG: assets/img/producto-aceite-almazara-blanco.png
+Versión ligera utilizada en la web: assets/img/optimized/producto-aceite-almazara-blanco.webp
+
+INSTALACIÓN
+1. Guarda una copia de tu proyecto actual.
+2. Descomprime Almazara_Botella_Fondo_Blanco.zip.
+3. Copia el contenido de su carpeta AlmazaraWeb2026 dentro de tu proyecto. Combina las carpetas y sustituye los archivos coincidentes; conserva los demás archivos de assets.
+4. Abre la página y pulsa Ctrl + F5 para actualizar la caché.
+
+Comprobado en escritorio y móvil: las tres tarjetas muestran la botella completa sobre blanco, las miniaturas se actualizan y el carrito conserva el producto y su precio. El pago online sigue en demostración.

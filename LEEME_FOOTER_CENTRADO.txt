@@ -1,0 +1,17 @@
+ALMAZARA · PIE DE PÁGINA CENTRADO
+
+Se han eliminado las columnas Tienda, Almazara y Atención del footer en
+las siete páginas principales y las cuatro páginas legales.
+
+El logo y la frase de marca, y la newsletter con sus redes sociales, se
+distribuyen en dos columnas equilibradas. En móvil aparecen en una sola
+columna centrada. Los enlaces legales, copyright y firma quedan centrados
+debajo. El pie reducido del checkout conserva sus enlaces legales.
+
+Se conservan el formulario, el consentimiento y los textos en los cinco
+idiomas. El formulario mantiene su funcionamiento de demostración.
+
+INSTALACIÓN
+Descomprime Almazara_Footer_Centrado.zip. Copia el contenido de su carpeta
+AlmazaraWeb2026 dentro de tu proyecto, combina las carpetas y reemplaza
+los archivos coincidentes. Recarga la página con Ctrl + F5.

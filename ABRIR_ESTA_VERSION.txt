@@ -1,0 +1,6 @@
+ALMAZARA · PRODUCTOS CON NUEVAS FOTOS VERTICALES
+
+Extrae todo el ZIP y abre productos.html dentro de Almazara_Productos_Verticales.
+La tercera foto es _DSC0080.NEF y la cuarta _DSC0085.NEF, convertidas para la web.
+Ambas llenan sus recuadros. Las aceitunas y las botellas mantienen su diseño.
+Se conservan todos los cambios anteriores.

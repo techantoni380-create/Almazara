@@ -1,0 +1,8 @@
+ALMAZARA · ICONO ENVÍO SEGURO SIN FONDO NEGRO
+
+Copia el contenido de Almazara_Envio_Sin_Fondo.zip dentro de tu carpeta AlmazaraWeb2026 Premium, acepta reemplazar los archivos y combinar las carpetas. No borres la carpeta assets existente.
+Después abre la web y pulsa Ctrl + F5.
+
+El icono de Envío seguro ahora es un camión dorado vectorial (SVG) de fondo transparente. Se muestra en Inicio, Nosotros, Aceites, Jamones y Contacto. Conserva el tamaño del icono y el reflejo del bloque al pasar el ratón.
+
+Este parche está preparado para la versión actual del proyecto Premium. El ZIP completo AlmazaraWeb2026_Premium.zip incluye este cambio y todos los anteriores.

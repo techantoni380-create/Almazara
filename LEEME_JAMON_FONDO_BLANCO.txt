@@ -1,0 +1,19 @@
+ALMAZARA · FOTOGRAFÍA DE JAMÓN CON FONDO BLANCO
+
+Instalación de la actualización:
+1. Descomprime Almazara_Jamon_Fondo_Blanco.zip.
+2. Copia el contenido de su carpeta AlmazaraWeb2026 dentro de tu carpeta
+   AlmazaraWeb2026 y acepta reemplazar los archivos coincidentes.
+3. Abre index.html y recarga con Ctrl + F5.
+
+La fotografía real retocada sustituye las fotos anteriores en las fichas
+de venta de Inicio, Jamones y Productos. Incluye la sustitución de la foto
+del jamón con la tela blanca. El carrito y el resumen de compra muestran
+también la nueva foto.
+
+El jamón y el jamonero aparecen completos, centrados, sobre blanco y sin
+animación ni ampliación al pasar el ratón. Se mantienen nombres, precios,
+identificadores de producto y el resto del diseño.
+
+Archivo maestro: assets/img/producto-jamon-almazara-blanco.png (2048 × 1365).
+Imagen utilizada en la web: assets/img/optimized/producto-jamon-almazara-blanco.webp.

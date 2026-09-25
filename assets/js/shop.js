@@ -86,7 +86,7 @@
           '<span>' + qty + '</span>' +
           '<button type="button" data-act="plus" data-id="' + id + '">+</button></div></div>' +
           '<div class="shop-line"><b>' + money(p.price * qty) + '</b>' +
-          '<button type="button" class="shop-remove" data-act="remove" data-id="' + id + '">Eliminar</button></div>' +
+          '<button type="button" class="shop-remove" data-act="remove" data-id="' + id + '">' + t.remove + '</button></div>' +
           '</article>';
       });
       content += '</div>' +
@@ -96,6 +96,7 @@
     }
 
     drawer.innerHTML = content;
+    document.dispatchEvent(new CustomEvent('almazara:cartchange'));
     drawer.querySelector('.premium-close')?.addEventListener('click', closeCart);
     drawer.querySelectorAll('[data-act]').forEach(btn => {
       btn.addEventListener('click', () => {

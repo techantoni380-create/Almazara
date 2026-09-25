@@ -1,0 +1,565 @@
+{
+  "results": [
+    {
+      "page": "index",
+      "width": 390,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "18px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "1.62px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "5.5px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "10px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 82,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "nosotros",
+      "width": 390,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "18px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "1.62px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "5.5px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "10px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 82,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "aceites",
+      "width": 390,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "18px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "1.62px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "5.5px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "10px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 82,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "jamones",
+      "width": 390,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "18px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "1.62px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "5.5px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "10px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 82,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "productos",
+      "width": 390,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "18px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "1.62px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "5.5px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "10px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 82,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "recetas",
+      "width": 390,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "18px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "1.62px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "5.5px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "10px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 82,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "contacto",
+      "width": 390,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "18px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "1.62px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "5.5px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "10px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 82,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "checkout",
+      "width": 390,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "18px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "1.62px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "5.5px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "10px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 82,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "index",
+      "width": 1440,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "27px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "4.185px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "9px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "11.232px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 77,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "nosotros",
+      "width": 1440,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "27px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "4.185px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "9px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "11.232px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 77,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "aceites",
+      "width": 1440,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "27px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "4.185px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "9px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "11.232px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 77,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "jamones",
+      "width": 1440,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "27px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "4.185px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "9px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "11.232px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 77,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "productos",
+      "width": 1440,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "27px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "4.185px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "9px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "11.232px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 77,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "recetas",
+      "width": 1440,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "27px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "4.185px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "9px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "11.232px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 77,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "contacto",
+      "width": 1440,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "27px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "4.185px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "9px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "11.232px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 77,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "page": "checkout",
+      "width": 1440,
+      "background": "rgb(11, 13, 11)",
+      "word": {
+        "font": "\"Abril Display Brand\", \"Abril Display\", Georgia, serif",
+        "weight": "400",
+        "size": "27px",
+        "color": "rgba(0, 0, 0, 0)",
+        "spacing": "4.185px"
+      },
+      "slogan": {
+        "font": "Arial, sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "size": "9px",
+        "display": "block"
+      },
+      "nav": {
+        "font": "Inter, Arial, Helvetica, sans-serif",
+        "size": "11.232px",
+        "color": "rgb(246, 241, 231)",
+        "spacing": "normal",
+        "padding": "30px 0px 24px"
+      },
+      "height": 77,
+      "headerOverflow": false,
+      "renderedFonts": [
+        {
+          "familyName": "Abril Display",
+          "postScriptName": "AbrilDisplay-Regular",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

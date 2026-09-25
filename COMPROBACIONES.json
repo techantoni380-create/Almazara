@@ -1,0 +1,162 @@
+{
+  "pages": [
+    {
+      "page": "index",
+      "width": 390,
+      "scroll": 390,
+      "broken": []
+    },
+    {
+      "page": "nosotros",
+      "width": 390,
+      "scroll": 390,
+      "broken": []
+    },
+    {
+      "page": "aceites",
+      "width": 390,
+      "scroll": 390,
+      "broken": []
+    },
+    {
+      "page": "jamones",
+      "width": 390,
+      "scroll": 390,
+      "broken": []
+    },
+    {
+      "page": "productos",
+      "width": 390,
+      "scroll": 390,
+      "broken": []
+    },
+    {
+      "page": "recetas",
+      "width": 390,
+      "scroll": 390,
+      "broken": []
+    },
+    {
+      "page": "contacto",
+      "width": 390,
+      "scroll": 390,
+      "broken": []
+    },
+    {
+      "page": "checkout",
+      "width": 390,
+      "scroll": 390,
+      "broken": []
+    },
+    {
+      "page": "index",
+      "width": 834,
+      "scroll": 834,
+      "broken": []
+    },
+    {
+      "page": "nosotros",
+      "width": 834,
+      "scroll": 834,
+      "broken": []
+    },
+    {
+      "page": "aceites",
+      "width": 834,
+      "scroll": 834,
+      "broken": []
+    },
+    {
+      "page": "jamones",
+      "width": 834,
+      "scroll": 834,
+      "broken": []
+    },
+    {
+      "page": "productos",
+      "width": 834,
+      "scroll": 834,
+      "broken": []
+    },
+    {
+      "page": "recetas",
+      "width": 834,
+      "scroll": 834,
+      "broken": []
+    },
+    {
+      "page": "contacto",
+      "width": 834,
+      "scroll": 834,
+      "broken": []
+    },
+    {
+      "page": "checkout",
+      "width": 834,
+      "scroll": 834,
+      "broken": []
+    },
+    {
+      "page": "index",
+      "width": 1440,
+      "scroll": 1440,
+      "broken": []
+    },
+    {
+      "page": "nosotros",
+      "width": 1440,
+      "scroll": 1440,
+      "broken": []
+    },
+    {
+      "page": "aceites",
+      "width": 1440,
+      "scroll": 1440,
+      "broken": []
+    },
+    {
+      "page": "jamones",
+      "width": 1440,
+      "scroll": 1440,
+      "broken": []
+    },
+    {
+      "page": "productos",
+      "width": 1440,
+      "scroll": 1440,
+      "broken": []
+    },
+    {
+      "page": "recetas",
+      "width": 1440,
+      "scroll": 1440,
+      "broken": []
+    },
+    {
+      "page": "contacto",
+      "width": 1440,
+      "scroll": 1440,
+      "broken": []
+    },
+    {
+      "page": "checkout",
+      "width": 1440,
+      "scroll": 1440,
+      "broken": []
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "24 page/viewport combinations",
+    "about translations ES DE FR IT EN and Spanish title restoration",
+    "oil wording after language switches",
+    "real catalogue categories",
+    "category and price filters incl empty/reset",
+    "cart quantity/subtotal/persistence/checkout",
+    "mobile language menu and Escape",
+    "320px CTA width",
+    "recipe dialog open/close",
+    "removed story videos",
+    "hero advances to photos"
+  ]
+}

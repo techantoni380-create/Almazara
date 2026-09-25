@@ -64,7 +64,7 @@ document.querySelectorAll('.reveal').forEach(el=>{
         <a class="alma-assistant-action" href="${wa}" target="_blank" rel="noopener"><span class="ai">☎</span><span><b>Hablar por WhatsApp</b><small>+41 76 785 05 06</small></span><span class="arrow">›</span></a>
         <a class="alma-assistant-action" href="mailto:almazara.olive@gmail.com"><span class="ai">✉</span><span><b>Escríbenos</b><small>almazara.olive@gmail.com</small></span><span class="arrow">›</span></a>
       </div></div><div class="alma-assistant-foot">Un placer ayudarte ♡</div></div>
-    <button class="alma-assistant-launcher" aria-label="Abrir asistente virtual" aria-expanded="false"><img class="alma-assistant-avatar" src="assets/img/asistente-almazara.png" alt="Asistente virtual ALMAZARA"><span class="alma-assistant-online"></span><span><strong>¿Te ayudo?</strong><small>ASISTENTE ALMAZARA</small></span></button>`;
+    <button class="alma-assistant-launcher" aria-label="Abrir asistente virtual" aria-expanded="false"><img class="alma-assistant-avatar" src="assets/img/optimized/asistente-almazara.webp" alt="Asistente virtual ALMAZARA"><span class="alma-assistant-online"></span><span><strong>¿Te ayudo?</strong><small>ASISTENTE ALMAZARA</small></span></button>`;
   document.body.appendChild(wrap);
   const launcher=wrap.querySelector('.alma-assistant-launcher'), close=wrap.querySelector('.alma-assistant-close');
   function setOpen(v){wrap.classList.toggle('open',v);launcher.setAttribute('aria-expanded',String(v));}
@@ -134,60 +134,108 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileNav); else initMobileNav();
 })();
 
-// ALMAZARA · Hero Inicio: vídeo completo -> 3 imágenes -> vídeo
+// ALMAZARA · Secuencia: cada fotografía entra solo cuando está decodificada.
 (function(){
   function initHomeHeroSequence(){
     const media=document.querySelector('[data-hero-sequence]');
     if(!media) return;
     const items=[...media.querySelectorAll('.hero-sequence-item')];
-    const video=items[0];
+    const video=items[0],hero=media.closest('.home-hero');
     if(!(video instanceof HTMLVideoElement)||items.length<2) return;
+    const reduced=matchMedia('(prefers-reduced-motion: reduce)');
     const imageDuration=6500;
-    let timer=null, index=0;
-    const show=i=>{
-      clearTimeout(timer); index=i;
-      // Al volver de las fotografías al vídeo, esperamos a que el frame esté listo
-      // antes de ocultar la imagen actual. Así evitamos el destello del poster/primer frame.
-      if(i===0 && video.readyState < 3){
-        const resume=()=>show(0);
-        video.addEventListener('canplay',resume,{once:true});
-        try{ video.load(); }catch(e){}
-        return;
+    let timer=null,index=0,request=0,videoFailed=false,inView=true,pending=false;
+    const imageReady=image=>new Promise(resolve=>{
+      if(image.complete){resolve();return;}
+      const settle=()=>{image.removeEventListener('load',settle);image.removeEventListener('error',settle);resolve();};
+      image.addEventListener('load',settle,{once:true});
+      image.addEventListener('error',settle,{once:true});
+    }).then(()=>image.naturalWidth&&image.decode?image.decode().catch(()=>{}):undefined);
+    // Prepare all photographs while the opening video is playing.
+    const ready=items.map((item,i)=>i===0?Promise.resolve():Promise.all(
+      (item.matches('img')?[item]:[...item.querySelectorAll('img')]).map(image=>{
+        image.loading='eager';return imageReady(image);
+      })
+    ));
+    function arm(){
+      clearTimeout(timer);
+      if(pending||document.hidden||!inView||reduced.matches){video.pause();return;}
+      if(index===0){const play=video.play();if(play)play.catch(()=>{});}
+      else timer=setTimeout(()=>show(index===items.length-1?0:index+1),imageDuration);
+    }
+    async function show(next){
+      const ticket=++request;clearTimeout(timer);pending=true;
+      if(next===0&&(videoFailed||reduced.matches))next=1;
+      if(next>0)await ready[next];
+      else if(video.readyState<3&&!video.error){
+        await new Promise(resolve=>{
+          const settle=()=>{video.removeEventListener('canplay',settle);video.removeEventListener('error',settle);resolve();};
+          video.addEventListener('canplay',settle,{once:true});
+          video.addEventListener('error',settle,{once:true});
+          if(video.networkState===HTMLMediaElement.NETWORK_EMPTY)video.load();
+        });
       }
-      items.forEach((el,n)=>el.classList.toggle('is-active',n===i));
-      media.classList.toggle('is-photo-phase',i!==0);
-      const hero=media.closest('.home-hero');
-      hero?.classList.toggle('is-photo-phase',i!==0);
-      hero?.classList.toggle('is-product-photo',i===1);
+      if(ticket!==request)return;
+      if(next===0&&video.error){videoFailed=true;show(1);return;}
+      index=next;pending=false;
+      items.forEach((el,n)=>el.classList.toggle('is-active',n===index));
+      media.classList.toggle('is-photo-phase',index!==0);
+      hero?.classList.toggle('is-photo-phase',index!==0);
+      hero?.classList.toggle('is-product-photo',index===1);
       const videoBuy=hero?.querySelector('.hero-video-buy');
-      if(videoBuy){
-        videoBuy.style.setProperty('display',i===0?'flex':'none','important');
-        videoBuy.setAttribute('aria-hidden',i===0?'false':'true');
-      }
+      if(videoBuy){videoBuy.style.setProperty('display',index===0?'flex':'none','important');videoBuy.setAttribute('aria-hidden',String(index!==0));}
       const videoLabel=hero?.querySelector('#heroVideoProductLabel');
-      if(videoLabel){
-        videoLabel.style.setProperty('display',i===0?'block':'none','important');
-        videoLabel.setAttribute('aria-hidden',i===0?'false':'true');
-      }
-      // El título, subtítulo y CTA son HTML real superpuesto en todas las fotografías.
-      const photoMessage=hero?.querySelector('.hero-photo-message');
-      if(photoMessage) photoMessage.style.removeProperty('display');
-      if(i===0){
-        try{ video.currentTime=0; const play=video.play(); if(play?.catch) play.catch(()=>{}); }catch(e){}
-      }else{
-        video.pause();
-        timer=setTimeout(()=>show(i===items.length-1?0:i+1),imageDuration);
-      }
-    };
+      if(videoLabel){videoLabel.style.setProperty('display',index===0?'block':'none','important');videoLabel.setAttribute('aria-hidden',String(index!==0));}
+      hero?.querySelector('.hero-photo-message')?.style.removeProperty('display');
+      if(index===0){try{video.currentTime=0;}catch(e){}}
+      else video.pause();
+      arm();
+    }
     video.loop=false;
     video.addEventListener('ended',()=>show(1));
-    video.addEventListener('error',()=>show(1),{once:true});
-    document.addEventListener('visibilitychange',()=>{
-      if(document.hidden){ clearTimeout(timer); if(index===0) video.pause(); }
-      else if(index===0){ video.play().catch(()=>{}); }
-      else { timer=setTimeout(()=>show(index===items.length-1?0:index+1),imageDuration); }
-    });
-    show(0);
+    video.addEventListener('error',()=>{videoFailed=true;if(index===0)show(1);});
+    document.addEventListener('visibilitychange',arm);
+    reduced.addEventListener('change',()=>show(reduced.matches?1:index));
+    if('IntersectionObserver' in window){
+      const observer=new IntersectionObserver(entries=>{
+        inView=entries[0].isIntersecting;arm();
+      },{threshold:0});
+      observer.observe(hero||media);
+    }
+    show(reduced.matches?1:0);
   }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initHomeHeroSequence); else initHomeHeroSequence();
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initHomeHeroSequence);
+  else initHomeHeroSequence();
 })();
+
+// Filtros del catálogo: solo las familias realmente disponibles.
+document.addEventListener('DOMContentLoaded',()=>{
+  const form=document.getElementById('catalog-filters');
+  if(!form) return;
+  const cards=[...document.querySelectorAll('#catalogo .card')];
+  const price=form.querySelector('#catalog-max-price');
+  const labels={ES:'productos',DE:'Produkte',FR:'produits',IT:'prodotti',EN:'products'};
+  function filter(){
+    const categories=[...form.querySelectorAll('[name="category"]:checked')].map(el=>el.value);
+    const max=price.value===''?Infinity:Number(price.value);
+    let shown=0;
+    cards.forEach(card=>{
+      const id=card.querySelector('[data-product]').dataset.product;
+      const product=window.ALMAZARA_CATALOG[id];
+      const match=categories.length===0||categories.includes(product.category)||(categories.includes('packs')&&id==='pack-3-aceites');
+      card.hidden=!(match&&product.price<=max);
+      if(!card.hidden)shown++;
+    });
+    const language=(document.documentElement.lang||'es').toUpperCase();
+    document.querySelector('.catalog-count').textContent=shown+' / '+cards.length+' '+(labels[language]||labels.ES);
+    document.querySelector('.catalog-empty').hidden=shown!==0;
+  }
+  form.addEventListener('submit',e=>{e.preventDefault();filter()});
+  form.addEventListener('reset',()=>setTimeout(filter,0));
+  document.querySelectorAll('[data-category]').forEach(link=>link.addEventListener('click',()=>{
+    form.querySelectorAll('[name="category"]').forEach(input=>input.checked=input.value===link.dataset.category);
+    price.value='500';filter();
+  }));
+  document.addEventListener('almazara:languagechange',()=>setTimeout(filter,0));
+  filter();
+});

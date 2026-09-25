@@ -1,0 +1,28 @@
+ALMAZARA · RESPONSIVE MÓVIL UNIFICADO
+25 de septiembre de 2026
+
+INSTALACIÓN
+1. Descomprime Almazara_Responsive_Movil.zip.
+2. Copia el contenido de la carpeta AlmazaraWeb2026 sobre tu carpeta del proyecto.
+   Acepta combinar carpetas y reemplazar los archivos con el mismo nombre.
+3. Recarga la página con Ctrl + F5.
+
+CAMBIOS
+- Las cabeceras móviles de Nosotros, Aceites, Jamones, Productos, Recetas y
+  Contacto siguen el modelo de Inicio: imagen arriba y mensaje centrado debajo.
+- Se eliminan alturas y posiciones antiguas que ocultaban títulos o dejaban
+  espacios vacíos. Los bloques crecen según su contenido.
+- Imágenes interiores, títulos, márgenes, fichas y formularios adaptados a móvil.
+- Páginas legales y pantalla de compra ajustadas para una lectura cómoda.
+- Menú alineado con la cabecera y carrito desplazable en pantallas bajas.
+- Las fotos de los productos en venta conservan su presentación estática.
+
+La nueva hoja assets/css/mobile-unified.css se carga al final en las 12 páginas
+y actúa solo hasta 640 px de ancho. Se conservan el diseño de Inicio y todos
+los estilos, brillos, animaciones y efectos existentes de la versión de ordenador.
+
+No se cambian fotografías originales, precios, textos legales, traducciones,
+catálogo ni JavaScript. El pago online mantiene el modo de demostración actual.
+
+Este ZIP es una actualización: requiere la carpeta completa del proyecto y sus
+imágenes, vídeos, fuentes y scripts existentes.

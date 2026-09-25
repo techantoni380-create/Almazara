@@ -1,0 +1,229 @@
+/* ALMAZARA · Apertura editorial. Efectos breves, siempre legibles. */
+@property --intro-gold-angle {
+  syntax: '<angle>';
+  initial-value: 120deg;
+  inherits: false;
+}
+
+.home-page #heroVideoOverlay {
+  position:absolute;
+  left:4.5%;
+  bottom:clamp(36px,5.5vh,66px);
+  z-index:5;
+  width:max-content;
+  max-width:min(680px,85%);
+  isolation:isolate;
+  pointer-events:none;
+}
+.home-page #heroVideoOverlay::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-65px -110px -85px -100px;
+  background:radial-gradient(ellipse at 35% 65%,rgba(4,12,7,.8),rgba(4,12,7,.42) 46%,transparent 73%);
+  pointer-events:none;
+}
+.home-page .home-hero.is-photo-phase #heroVideoOverlay {
+  display:none;
+}
+.home-page .hero-video-rule {
+  display:block;
+  width:66px;
+  height:1px;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#f0dfad,#bd9c51);
+  box-shadow:0 0 12px rgba(196,169,98,.25);
+  transform-origin:left;
+}
+html body.home-page .home-hero #heroVideoProductLabel {
+  position:relative!important;
+  inset:auto!important;
+  z-index:auto!important;
+  margin:0 0 24px!important;
+  width:auto!important;
+  max-width:100%!important;
+  color:#fffaf0!important;
+  font-family:'Abril Display Brand',Georgia,serif!important;
+  font-size:clamp(25px,1.85vw,36px)!important;
+  font-weight:400!important;
+  line-height:1.35!important;
+  letter-spacing:.005em!important;
+  text-transform:none!important;
+  white-space:normal!important;
+  text-shadow:0 2px 18px rgba(0,0,0,.5)!important;
+}
+.home-page #heroVideoProductLabel span {
+  padding:0 .3em;
+  color:#dfc786;
+}
+
+/* One shared control for the video and the existing photo message. */
+html body.home-page .home-hero.home-hero-live :is(#heroVideoBuy,[data-intro-cta]) {
+  position:relative!important;
+  inset:auto!important;
+  z-index:auto!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:24px!important;
+  width:max-content!important;
+  max-width:100%!important;
+  min-width:226px!important;
+  min-height:54px!important;
+  padding:0 0 0 24px!important;
+  border:1px solid rgba(213,185,117,.75)!important;
+  border-radius:3px!important;
+  background:rgba(7,16,10,.88)!important;
+  color:#f6e6b9!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,240,199,.06)!important;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  font-family:var(--sans,Arial,sans-serif)!important;
+  font-size:11px!important;
+  font-weight:600!important;
+  line-height:1.3!important;
+  letter-spacing:.13em!important;
+  text-decoration:none!important;
+  text-transform:uppercase!important;
+  white-space:nowrap;
+  transform:none!important;
+  pointer-events:auto!important;
+  overflow:hidden;
+  isolation:isolate;
+  transition:background-color .35s ease,border-color .35s ease,box-shadow .35s ease!important;
+}
+html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta]) > span {
+  position:relative;
+  z-index:1;
+}
+html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta]) > span:last-child {
+  display:grid;
+  place-items:center;
+  width:52px;
+  height:52px;
+  flex:0 0 52px;
+  border-left:1px solid rgba(213,185,117,.25);
+  margin:0;
+  padding:0;
+  background:rgba(196,169,98,.07);
+  font:400 21px/1 Arial,sans-serif;
+  letter-spacing:0;
+  text-indent:0;
+  transition:text-indent .4s ease,background-color .35s ease;
+}
+html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta])::before,
+html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta])::after {
+  content:"";
+  position:absolute;
+  pointer-events:none;
+}
+/* Gold trace: a quiet edge, then one complete turn on interaction. */
+html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta])::before {
+  inset:0;
+  z-index:2;
+  border-radius:inherit;
+  padding:1px;
+  background:conic-gradient(from var(--intro-gold-angle),transparent 0deg 190deg,#a38236 235deg,#dfbf72 270deg,#fff1ca 295deg,transparent 325deg);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  opacity:0;
+}
+html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta])::after {
+  inset:0;
+  z-index:0;
+  background:linear-gradient(110deg,transparent 22%,rgba(236,207,143,.04) 38%,rgba(255,231,180,.24) 49%,rgba(236,207,143,.04) 62%,transparent 78%);
+  transform:translateX(-120%);
+  opacity:0;
+}
+html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta]):focus-visible {
+  outline:2px solid #eedaa7;
+  outline-offset:5px;
+  border-color:#ecd49a!important;
+  box-shadow:0 0 23px rgba(196,169,98,.23)!important;
+}
+@media (hover:hover) and (pointer:fine) {
+  html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta]):hover {
+    background:rgba(22,32,18,.96)!important;
+    border-color:#e1c585!important;
+    box-shadow:0 8px 28px rgba(0,0,0,.24),0 0 23px rgba(196,169,98,.2),inset 0 1px 0 rgba(255,240,199,.12)!important;
+  }
+  html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta]):hover > span:last-child {
+    text-indent:6px;
+    background:rgba(196,169,98,.16);
+  }
+}
+@media (prefers-reduced-motion:no-preference) {
+  .home-page .home-hero:not(.is-photo-phase) .hero-video-rule {
+    animation:almazara-intro-line .9s cubic-bezier(.22,1,.36,1) .12s both;
+  }
+  .home-page .home-hero:not(.is-photo-phase) #heroVideoProductLabel {
+    animation:almazara-intro-copy 1s cubic-bezier(.22,1,.36,1) .18s both;
+  }
+  .home-page .home-hero:not(.is-photo-phase) #heroVideoBuy::after {
+    animation:almazara-intro-sheen 1.3s ease .55s both;
+  }
+  @media (hover:hover) and (pointer:fine) {
+    html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta]):hover::before {
+      animation:almazara-intro-border 2s linear both;
+    }
+    html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta]):hover::after {
+      animation:almazara-intro-hover-sheen 1.15s ease both;
+    }
+  }
+}
+@keyframes almazara-intro-line {
+  from {transform:scaleX(0);opacity:0;}
+  to {transform:scaleX(1);opacity:1;}
+}
+@keyframes almazara-intro-copy {
+  from {translate:0 9px;opacity:0;}
+  to {translate:0 0;opacity:1;}
+}
+@keyframes almazara-intro-sheen {
+  0% {transform:translateX(-120%);opacity:0;}
+  25%,65% {opacity:1;}
+  100% {transform:translateX(120%);opacity:0;}
+}
+@keyframes almazara-intro-hover-sheen {
+  0% {transform:translateX(-120%);opacity:0;}
+  25%,65% {opacity:1;}
+  100% {transform:translateX(120%);opacity:0;}
+}
+@keyframes almazara-intro-border {
+  0% {--intro-gold-angle:120deg;opacity:0;}
+  15%,80% {opacity:1;}
+  100% {--intro-gold-angle:480deg;opacity:0;}
+}
+@media (max-width:640px) {
+  /* Keep the established mobile layout: video above, readable copy below. */
+  .home-page #heroVideoOverlay {display:none;}
+  html body.home-page .home-hero.home-hero-live :is(#heroVideoBuy,[data-intro-cta]) {
+    min-width:226px!important;
+    min-height:52px!important;
+    font-size:10px!important;
+  }
+  html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta]) > span:last-child {
+    width:50px;height:50px;flex-basis:50px;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  .home-page #heroVideoOverlay *,
+  html body.home-page .home-hero.home-hero-live :is(#heroVideoBuy,[data-intro-cta]),
+  html body.home-page .home-hero.home-hero-live :is(#heroVideoBuy,[data-intro-cta]) > span:last-child {
+    animation:none!important;
+    transition:none!important;
+    translate:none!important;
+  }
+  html body.home-page .home-hero.home-hero-live :is(#heroVideoBuy,[data-intro-cta])::before,
+  html body.home-page .home-hero.home-hero-live :is(#heroVideoBuy,[data-intro-cta])::after {display:none;animation:none!important;}
+}
+@media (forced-colors:active) {
+  .home-page #heroVideoOverlay::before,
+  html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta])::before,
+  html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta])::after {display:none;}
+  html body.home-page .home-hero :is(#heroVideoBuy,[data-intro-cta]) {
+    color:LinkText!important;background:Canvas!important;border-color:LinkText!important;
+  }
+}

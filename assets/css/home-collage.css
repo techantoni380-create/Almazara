@@ -1,0 +1,57 @@
+/* Inicio: collage original y composición de texto común a las tres fotografías. */
+html body.home-page .home-hero-sequence .home-hero-collage {
+ background:#07110c!important;filter:none!important;overflow:hidden;
+}
+.almazara-mosaic {
+ position:absolute;inset:0;display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:1fr;
+ gap:3px;background:#07110c;
+}
+.mosaic-panel {position:relative;overflow:hidden;min-width:0;min-height:0;background:#132018;}
+html body.home-page .home-hero .home-hero-collage .mosaic-panel img {
+ display:block!important;position:relative!important;inset:auto!important;
+ width:100%!important;height:100%!important;max-width:none!important;
+ object-fit:cover!important;object-position:50% 56%!important;
+ transform:none!important;animation:none!important;opacity:1!important;visibility:visible!important;
+ filter:brightness(1.07) saturate(1.015)!important;background:none!important;
+}
+html body.home-page .home-hero .home-hero-collage .mosaic-panel-1 img {object-position:42% center!important;}
+html body.home-page .home-hero .home-hero-collage .mosaic-panel-2 img {object-position:52% 70%!important;}
+html body.home-page .home-hero .home-hero-collage .mosaic-panel-3 img {object-position:39% center!important;}
+html body.home-page .home-hero .home-hero-collage .mosaic-panel-4 img {object-position:50% center!important;}
+html body.home-page .home-hero.is-product-photo .home-hero-sequence:after {display:none!important;}
+@media(min-width:641px){
+ html body.home-page .home-hero-collage:after {
+  content:"";display:block!important;position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(3,12,7,.72),rgba(3,12,7,.45) 30%,rgba(3,12,7,.12) 53%,transparent 75%);
+ }
+ html body.home-page > section.home-hero.is-photo-phase .hero-inner {
+  position:absolute!important;inset:0!important;width:100%!important;max-width:none!important;
+  height:100%!important;min-height:0!important;padding:0 0 0 4.5%!important;margin:0!important;
+  display:flex!important;align-items:center!important;transform:none!important;
+ }
+ html body.home-page > section.home-hero.is-photo-phase .hero-inner .hero-photo-message {
+  position:relative!important;inset:auto!important;transform:none!important;margin:0!important;
+  display:block!important;width:44%!important;max-width:700px!important;flex:none!important;padding:0!important;text-align:left!important;
+ }
+ html body.home-page .home-hero.is-photo-phase .hero-photo-message h1 {
+  font-size:clamp(40px,4.6vw,88px)!important;line-height:1.02!important;letter-spacing:.025em!important;
+  text-shadow:0 2px 20px rgba(0,0,0,.35);
+ }
+ html body.home-page .home-hero.is-photo-phase .hero-lead-live {
+  font-size:clamp(10px,.85vw,16px)!important;line-height:1.7!important;letter-spacing:.12em!important;
+  text-shadow:0 1px 7px rgba(0,0,0,.7);
+ }
+ html body.home-page .home-hero.is-photo-phase .hero-btn-primary {min-width:0!important;max-width:100%!important;padding:0 26px!important;}
+}
+@media(max-width:640px){
+ /* La altura común evita que el mensaje salte entre las tres fotografías. */
+ html body.home-page > section.hero.home-hero.home-hero-live.is-photo-phase .hero-media.home-hero-sequence {
+  height:130vw!important;max-height:680px!important;
+ }
+ .almazara-mosaic {grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:3px;}
+ html body.home-page .home-hero .home-hero-collage .mosaic-panel-1 img {object-position:50% 55%!important;}
+ html body.home-page .home-hero .home-hero-collage .mosaic-panel-2 img {object-position:50% 76%!important;}
+ html body.home-page .home-hero .home-hero-collage .mosaic-panel-3 img {object-position:50% 60%!important;}
+ html body.home-page .home-hero .home-hero-collage .mosaic-panel-4 img {object-position:50% 55%!important;}
+}

@@ -1,0 +1,314 @@
+/* Revisión del documento «Detalles a revisar», 23/09/2026.
+   Abril Display Regular aportada por el cliente. */
+@font-face {
+  font-family: 'Abril Display Brand';
+  src: url('../fonts/Abril_Display_Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.site-header .brand-wordmark-text {
+  font-family:'Abril Display Brand','Abril Display',Georgia,serif!important;
+  font-weight:400!important;
+  font-synthesis:none;
+}
+/* Cabecera común: negro opaco, navegación coherente y eslogan blanco. */
+.site-header {
+  background:#0b0d0b!important;
+}
+.site-header .brand-word small {
+  color:#fff!important;
+}
+/* Oro pulido: relieve de luz en la marca y reflejo lento, con pausas. */
+.site-header .brand-wordmark-text {
+  color:#e8c66a;
+  filter:drop-shadow(0 0 3px rgba(215,173,50,.2));
+}
+.site-header .brand-symbol {
+  filter:brightness(1.2) saturate(1.08) drop-shadow(0 0 4px rgba(215,173,50,.26));
+}
+@supports ((background-clip:text) or (-webkit-background-clip:text)) {
+  .site-header .brand-wordmark-text {
+    background-image:linear-gradient(110deg,#bf8f2f 0%,#e6c15d 21%,#f6df94 38%,#e6bd55 46%,#fff3c3 50%,#e6bd55 54%,#f6df94 65%,#d3a33b 82%,#edce79 100%);
+    background-size:250% 100%;
+    background-position:100% 50%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+    animation:almazara-gold-reflection 9s ease-in-out infinite;
+  }
+}
+@keyframes almazara-gold-reflection {
+  0%,60% {background-position:100% 50%;}
+  86%,100% {background-position:0% 50%;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .site-header .brand-wordmark-text {animation:none;background-position:50% 50%;}
+}
+@media(forced-colors:active) {
+  .site-header .brand-wordmark-text {
+    background:none;animation:none;filter:none;
+    color:LinkText;-webkit-text-fill-color:LinkText;
+  }
+  .site-header .brand-symbol {filter:none;}
+}
+body.home-page .hero-lead-live,
+body.home-page .home-hero #heroVideoProductLabel {
+  text-transform:uppercase!important;
+}
+body.home-page .home-hero #heroVideoProductLabel {
+  max-width:calc(100% - 64px);
+  white-space:normal!important;
+  line-height:1.5;
+}
+/* Fotografías del ZIP: corrección de presentación reversible. */
+body.home-page .home-hero-sequence .ham-photo-corrected {
+  filter:brightness(1.04) contrast(.97) saturate(.88)!important;
+  object-position:48% center!important;
+}
+body.home-page .home-hero-sequence img[src="assets/img/optimized/prod-oil-real-almazara.webp"] {
+  object-fit:contain!important;
+  object-position:82% center!important;
+  background:#101d14;
+}
+body.home-page .home-story-photo {
+  position:relative;
+  overflow:hidden;
+}
+body.home-page .home-story-photo img {
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:52% 58%;
+}
+/* Paisaje retocado: conservar el contraste hasta el borde del bloque. */
+body.home-page .home-story-photo:after {
+  background:linear-gradient(90deg,transparent 85%,rgba(248,244,234,.12));
+}
+/* Frase panorámica de Nosotros; una línea cuando hay espacio real. */
+body.nosotros-page .about-final-banner .container {
+  width:calc(100% - 64px)!important;
+  max-width:1720px!important;
+}
+body.nosotros-page .about-final-banner .banner-copy {
+  max-width:none!important;
+  width:100%;
+  text-align:center;
+  padding:90px 0!important;
+}
+body.nosotros-page .about-final-banner h2 {
+  max-width:none!important;
+  font-size:clamp(23px,2.1vw,38px)!important;
+  line-height:1.4!important;
+  text-wrap:balance;
+}
+body.nosotros-page .about-final-banner .banner-line {margin:25px auto 0!important;}
+body.nosotros-page .about-final-banner:after {
+  background:linear-gradient(180deg,rgba(5,10,7,.22),rgba(5,10,7,.50),rgba(5,10,7,.22))!important;
+}
+body.productos-page .category-grid {grid-template-columns:repeat(3,minmax(0,1fr))!important;}
+body.productos-page .category {color:inherit;text-decoration:none;cursor:pointer;}
+body.productos-page .category:hover,
+body.productos-page .category:focus-visible {background:#ece4d2;outline-offset:-4px;}
+body.productos-page > .hero.productos-hero-premium .hero-media img {
+  object-fit:contain!important;object-position:85% center!important;
+  background:#102017;transform:none!important;
+}
+body.productos-page > .hero.productos-hero-premium .hero-media:after {
+  background:linear-gradient(90deg,#07100c 3%,rgba(7,16,12,.94) 33%,rgba(7,16,12,.2) 65%,transparent)!important;
+}
+.filter-panel label {display:flex;align-items:center;gap:10px;margin:14px 0;cursor:pointer;}
+.filter-panel input[type=checkbox] {accent-color:#31583a;width:17px;height:17px;}
+.filter-panel input[type=number] {width:100%;border:1px solid #cabfaa;padding:10px;background:#fffdf8;font:inherit;}
+.filter-panel button {cursor:pointer;margin-top:15px;}
+.productos-page .cards .card[hidden] {display:none!important;}
+.catalog-empty {padding:25px 0;}
+.catalog-count {font-size:13px;color:#625b4f;margin:0 0 22px;}
+@media(max-width:1100px){
+ body.home-page .home-story-photo {height:clamp(260px,52vw,500px)!important;min-height:0!important;}
+}
+@media(max-width:640px){
+ body.home-page .home-hero-sequence img[src="assets/img/optimized/prod-oil-real-almazara.webp"] {object-position:center!important;}
+ body.home-page .home-hero-live .hero-lead-live {font-size:11px!important;letter-spacing:.09em!important;line-height:1.65!important;}
+ body.nosotros-page .about-final-banner .container {width:calc(100% - 40px)!important;}
+ body.nosotros-page .about-final-banner .banner-copy {padding:64px 0!important;}
+ body.nosotros-page .about-final-banner h2 {font-size:26px!important;line-height:1.4!important;}
+ body.productos-page .category-grid {gap:0!important;}
+ body.productos-page .category {min-width:0;padding:22px 9px!important;text-align:center;}
+ body.productos-page .category b {font-size:11px!important;letter-spacing:.06em;overflow-wrap:anywhere;}
+ body.productos-page > .hero.productos-hero-premium .hero-media img {object-position:center top!important;object-fit:cover!important;}
+ body.productos-page > .hero.productos-hero-premium .hero-media:after {background:linear-gradient(180deg,rgba(7,16,12,.05),rgba(7,16,12,.3) 38%,#07100c 85%)!important;}
+}
+@media(min-width:641px){
+ html body.productos-page > section.hero.hero-anim.productos-hero-premium {background:#07100c;}
+ html body.productos-page > section.hero.hero-anim.productos-hero-premium .hero-media {left:50%!important;width:50%!important;}
+ html body.productos-page > section.hero.hero-anim.productos-hero-premium .hero-media img {object-fit:cover!important;object-position:center 52%!important;width:100%!important;}
+ html body.productos-page > section.hero.hero-anim.productos-hero-premium .hero-media:after {opacity:1!important;background:linear-gradient(90deg,#07100c,rgba(7,16,12,.1) 50%,transparent)!important;}
+ html body.productos-page > section.hero.hero-anim.productos-hero-premium h1 {font-size:clamp(48px,6vw,86px)!important;}
+}
+/* Inicio móvil: imagen y mensaje en flujo, sin posiciones que oculten el CTA. */
+@media(max-width:640px){
+ html body.home-page > section.hero.home-hero.home-hero-live {
+  position:relative!important;display:flex!important;flex-direction:column!important;
+  height:auto!important;min-height:0!important;max-height:none!important;padding:0!important;
+  background:#06100a!important;overflow:hidden!important;
+ }
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-media.home-hero-sequence {
+  position:relative!important;inset:auto!important;flex:none!important;
+  width:100%!important;height:72vw!important;max-height:430px!important;min-height:240px!important;margin:0!important;
+ }
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-media.home-hero-sequence .hero-sequence-item {
+  position:absolute!important;inset:0!important;width:100%!important;height:100%!important;
+  object-fit:cover!important;object-position:center!important;transform:none!important;
+ }
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-media.home-hero-sequence img[src="assets/img/optimized/prod-oil-real-almazara.webp"] {object-position:center 60%!important;}
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-media.home-hero-sequence:after {display:none!important;}
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-inner {
+  position:relative!important;inset:auto!important;width:100%!important;height:auto!important;min-height:0!important;
+  padding:30px 22px 38px!important;display:block!important;margin:0!important;transform:none!important;
+ }
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-inner .hero-photo-message {
+  position:relative!important;inset:auto!important;display:flex!important;flex-direction:column!important;
+  width:100%!important;max-width:none!important;height:auto!important;min-height:0!important;
+  padding:0!important;margin:0!important;transform:none!important;opacity:1!important;visibility:visible!important;
+  pointer-events:auto!important;text-align:center!important;align-items:center!important;gap:14px!important;
+ }
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-photo-message h1,
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-photo-message .hero-lead-live,
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-photo-message .hero-actions-live2 {
+  position:relative!important;inset:auto!important;transform:none!important;padding:0!important;margin:0!important;
+  opacity:1!important;visibility:visible!important;width:100%!important;height:auto!important;
+ }
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-photo-message h1 {font-size:clamp(36px,11vw,56px)!important;line-height:1.02!important;}
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-photo-message .hero-actions-live2 {display:flex!important;justify-content:center!important;}
+ html body.home-page > section.hero.home-hero.home-hero-live .hero-btn-live {position:relative!important;inset:auto!important;transform:none!important;width:auto!important;min-width:230px!important;min-height:48px!important;display:flex!important;opacity:1!important;visibility:visible!important;}
+ html body.home-page > section.hero.home-hero.home-hero-live #heroVideoBuy,
+ html body.home-page > section.hero.home-hero.home-hero-live #heroVideoProductLabel {display:none!important;}
+}
+.recipe-photo-credits {margin-top:24px!important;margin-bottom:36px!important;font-size:12px;line-height:1.7;color:#625a4d;}
+.recipe-photo-credits summary {cursor:pointer;letter-spacing:.06em;}
+.recipe-photo-credits ul {padding-left:20px;}
+.recipe-photo-credits a {color:inherit;text-underline-offset:3px;}
+.recetas-page .recipe-premium-card img {filter:none;}
+.recetas-page .recipe-premium-card:hover img {filter:none;}
+.recetas-page .recipe-featured-premium .visual img {object-position:center 62%;}
+@media(prefers-reduced-motion:reduce){
+ .hero-sequence-item,.reveal {transition:none!important;animation:none!important;}
+}
+
+
+/* Navegación legal y consentimiento: enlaces legibles en todos los anchos. */
+.footer-enterprise .footer-enterprise-legal,
+.legal-checkout-footer .footer-enterprise-legal {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:8px 10px;
+  min-width:0;
+  max-width:100%;
+  white-space:normal;
+}
+.footer-enterprise .footer-enterprise-legal a,
+.legal-checkout-footer .footer-enterprise-legal a {
+  max-width:100%;
+  overflow-wrap:anywhere;
+}
+@media(min-width:1181px) {
+  .footer-enterprise .footer-enterprise-bottom {
+    grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,1fr);
+  }
+}
+.legal-checkout-footer {
+  padding:24px;
+  border-top:1px solid rgba(196,169,98,.25);
+  background:#081009;
+  color:#c9c1b5;
+  font:11px/1.6 var(--sans,Arial,sans-serif);
+}
+.legal-checkout-footer .footer-enterprise-legal {
+  width:min(1180px,100%);
+  margin:0 auto;
+}
+.legal-checkout-footer .footer-enterprise-legal a:hover { color:#d8b34d; }
+.legal-checkout-footer .footer-enterprise-legal span { color:#5f655f; }
+.footer-enterprise .newsletter-consent { min-width:0; }
+.footer-enterprise .newsletter-consent input[type="checkbox"] {
+  box-sizing:border-box;
+  flex:0 0 18px;
+  width:18px;
+  height:18px;
+  min-width:18px;
+  min-height:18px;
+  max-width:18px;
+  max-height:18px;
+  padding:0!important;
+  margin:1px 0 0;
+}
+.footer-enterprise .newsletter-consent input[type="checkbox"]:checked::after {
+  inset:0;
+  font-size:13px;
+  line-height:16px;
+}
+.footer-enterprise .newsletter-consent input[type="checkbox"]:focus-visible {
+  outline:2px solid #e6c47a;
+  outline-offset:3px;
+}
+.footer-enterprise .newsletter-consent > span { min-width:0;flex:1; }
+@media(max-width:640px) {
+  .legal-checkout-footer .footer-enterprise-legal span { display:none; }
+  .legal-checkout-footer .footer-enterprise-legal { gap:8px 15px; }
+}
+
+
+/* Fotografía real de la botella de 500 ml: completa sobre blanco. */
+body.home-page .home-products-premium .cards > .card.producto-aceite-blanco .card-media,
+body.aceites-page .product-strip .cards > .card.producto-aceite-blanco .card-media,
+body.productos-page .filter-layout .cards > .card.producto-aceite-blanco .card-media {
+  background:#fff!important;
+}
+body.home-page .home-products-premium .cards > .card.producto-aceite-blanco .card-media img,
+body.aceites-page .product-strip .cards > .card.producto-aceite-blanco .card-media img,
+body.productos-page .filter-layout .cards > .card.producto-aceite-blanco .card-media img {
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:#fff!important;
+  transform:none!important;
+  scale:none!important;
+  filter:none!important;
+  animation:none!important;
+  transition:none!important;
+}
+.shop-cart-item img[src$="producto-aceite-almazara-blanco.webp"],
+.checkout-order-item img[src$="producto-aceite-almazara-blanco.webp"] {
+  object-fit:contain;
+  background:#fff;
+}
+
+/* Fotografía real del jamón: pieza y jamonero completos sobre blanco. */
+body.home-page .home-products-premium .cards > .card.producto-jamon-blanco .card-media,
+body.jamones-page #ibericos .cards > .card.producto-jamon-blanco .card-media,
+body.productos-page .filter-layout .cards > .card.producto-jamon-blanco .card-media {
+  background:#fff!important;
+  padding:0!important;
+}
+body.home-page .home-products-premium .cards > .card.producto-jamon-blanco .card-media img,
+body.jamones-page #ibericos .cards > .card.producto-jamon-blanco .card-media img,
+body.productos-page .filter-layout .cards > .card.producto-jamon-blanco .card-media img {
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:#fff!important;
+  transform:none!important;
+  scale:none!important;
+  filter:none!important;
+  animation:none!important;
+  transition:none!important;
+}
+.shop-cart-item img[src$="producto-jamon-almazara-blanco.webp"],
+.checkout-order-item img[src$="producto-jamon-almazara-blanco.webp"] {
+  object-fit:contain;
+  background:#fff;
+}

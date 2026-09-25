@@ -1,22 +1,20 @@
-ALMAZARA PREMIUM TEMPLATE
+ALMAZARA · PROYECTO WEB REVISADO
 
-Plantilla HTML/CSS/JS real construida a partir de los mockups visuales aprobados.
+Entrega: 23/09/2026
+Consultar REVISION_ALMAZARA.md para el detalle de los 14 puntos del PDF,
+las comprobaciones realizadas y las instrucciones de uso.
 
-Incluye:
-- 7 páginas reales.
-- Botones, textos, etiquetas y navegación creados en HTML.
-- Tipografías serif/sans, márgenes, espaciados, paleta y sombras recreados.
-- Responsive básico.
-- Efecto Ken Burns y entradas al hacer scroll.
-- Botón flotante de WhatsApp.
-- Footer solicitado:
-  Almazara SRL 2026 © Todos los derechos reservados.
-  Yonathan Alvarado · Full Stack Web Developer · Spain
-- Productos demo preparados para reemplazarse por WooCommerce.
+Proyecto estático HTML/CSS/JavaScript con ocho páginas.
+Incluye la fuente Abril Display Regular aportada por el cliente,
+carrito local, filtros del catálogo y resumen del pedido.
 
-Pendiente para versión WordPress:
-- Integrar la plantilla como tema/child theme o bloques.
-- Sustituir productos demo por loop WooCommerce.
-- Conectar carrito, checkout, stock, filtros reales.
-- Conectar formulario.
-- Sustituir imágenes y textos conceptuales por material oficial aprobado.
+Abrir con un servidor estático. Ejemplo desde esta carpeta:
+python -m http.server 8000
+Después visitar http://localhost:8000
+
+Las fotografías de recetas llevan créditos en CREDITOS_FOTOGRAFIAS.md
+y en la propia página.
+
+La integración de pagos, envío, inventario, formularios de producción
+y una eventual migración a WordPress/WooCommerce son tareas posteriores.
+El subtotal del carrito funciona; el pago online sigue desactivado.

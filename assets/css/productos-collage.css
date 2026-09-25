@@ -1,0 +1,73 @@
+/* Collage de fotos aportadas; cuarta foto retocada a petición del cliente. */
+html body.productos-page > section.hero.hero-anim.productos-hero-premium {
+  position:relative;display:block;min-height:480px!important;
+  height:38vw!important;max-height:760px;background:#07100c;overflow:hidden;
+}
+.productos-collage-media {
+  position:absolute;inset:0;display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:1fr;gap:4px;
+  background:#07100c;
+}
+.producto-foto {position:relative;min-width:0;min-height:0;overflow:hidden;}
+.productos-collage-media img {
+  display:block;width:100%;height:100%;object-fit:cover;object-position:center;
+}
+/* Conservar los productos completos usando su propia foto como fondo suave. */
+.foto-botellas:before {
+  content:"";position:absolute;inset:-18px;
+  background:var(--foto-original) center/cover no-repeat;
+  filter:blur(16px) brightness(.52);pointer-events:none;
+}
+.foto-botellas {--foto-original:url('../img/productos-foto-botellas.webp');container-type:size;}
+.productos-collage-media .foto-botellas img {
+  position:absolute;left:50%;top:50%;transform:translate(-51.7%,-50%);
+  width:auto;height:88%;height:min(94cqh,140cqw);max-width:none;object-fit:initial;
+}
+/* Tercera toma conservada; cuarta foto con el producto más grande y centrado. */
+.foto-jamon img,.foto-plato img {object-fit:cover;object-position:center;transform:none;}
+.productos-collage-media .foto-plato img {
+  object-position:50% 56%;transform:translateY(5%) scale(1.12);transform-origin:50% 56%;
+}
+.productos-collage-media:after {
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(3,10,6,.86),rgba(3,10,6,.70) 22%,rgba(3,10,6,.26) 34%,transparent 48%);
+}
+html body.productos-page > section.hero.hero-anim.productos-hero-premium .hero-inner {
+  position:relative!important;inset:auto!important;transform:none!important;z-index:1;display:flex!important;align-items:center!important;
+  height:100%!important;min-height:0!important;padding-block:0!important;
+  width:91%!important;max-width:none!important;margin-inline:auto!important;
+}
+html body.productos-page > section.hero.hero-anim.productos-hero-premium .hero-copy {
+  width:32%!important;max-width:500px!important;padding:36px 0!important;
+}
+html body.productos-page > section.hero.hero-anim.productos-hero-premium h1 {
+  font-size:clamp(34px,3.15vw,62px)!important;line-height:1.02!important;
+}
+html body.productos-page > section.hero.hero-anim.productos-hero-premium .lead {
+  max-width:380px;font-size:clamp(17px,1.5vw,24px)!important;line-height:1.5!important;
+}
+@media(max-width:900px) {
+  html body.productos-page > section.hero.hero-anim.productos-hero-premium {
+    display:flex!important;flex-direction:column;min-height:0!important;
+    height:auto!important;max-height:none!important;
+  }
+  .productos-collage-media {
+    position:relative;inset:auto;width:100%;height:calc(100vw / 1.15);aspect-ratio:1.15;gap:4px;
+    grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:1fr 1fr;
+  }
+  .productos-collage-media:after {display:none;}
+  .productos-collage-media .foto-botellas img {height:92%;height:min(94cqh,140cqw);}
+  .foto-jamon img {object-position:center 36%;}
+  .productos-collage-media .foto-plato img {object-position:center 60%;transform:none;}
+  html body.productos-page > section.hero.hero-anim.productos-hero-premium .hero-inner {
+    width:100%!important;height:auto!important;min-height:0!important;
+    padding:18px 28px 44px!important;margin:0!important;
+  }
+  html body.productos-page > section.hero.hero-anim.productos-hero-premium .hero-copy {
+    position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:680px!important;padding:0!important;margin:0 auto!important;
+  }
+  html body.productos-page > section.hero.hero-anim.productos-hero-premium h1 {
+    font-size:clamp(40px,7vw,62px)!important;
+  }
+  html body.productos-page > section.hero.hero-anim.productos-hero-premium .lead {max-width:100%;}
+}

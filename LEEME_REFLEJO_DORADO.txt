@@ -1,0 +1,16 @@
+ALMAZARA — REFLEJO DORADO EN LA FRANJA DE VALORES
+
+Aplicar sobre la última versión Premium del proyecto.
+Guarda una copia de tu carpeta, copia el contenido del ZIP dentro de
+AlmazaraWeb2026 y acepta reemplazar. Recarga con Ctrl + F5.
+
+El efecto aparece en Inicio, Nosotros, Aceites, Jamones y Contacto.
+Al pasar el ratón, un halo dorado sigue el puntero y un reflejo cruza una vez
+el recuadro. Icono y título se iluminan suavemente. Los bloques conservan
+su función informativa, su contenido y sus dimensiones.
+En pantallas táctiles se conserva la presentación estática. La preferencia
+reducir movimiento desactiva el barrido y el seguimiento del puntero.
+
+Los efectos anteriores, las recetas, los vídeos y la carga conjunta de los
+collages se conservan. Productos, Recetas y Checkout no contienen esta
+franja: solo se actualiza su referencia al archivo compartido de efectos.

@@ -1,0 +1,55 @@
+ALMAZARA — ACTUALIZACIÓN PREMIUM · 24/09/2026
+
+CÓMO ABRIR
+Extrae la carpeta AlmazaraWeb2026 completa del ZIP en una carpeta nueva.
+Abre index.html. Si actualizas tu carpeta existente, conserva antes una copia,
+copia todos los archivos y la carpeta assets, acepta reemplazar y pulsa Ctrl + F5.
+No es necesario aplicar los parches anteriores: están incluidos.
+
+CAMBIOS
+• 7 recetas y 50 ingredientes medidos, con raciones, gramos, mililitros,
+  unidades y cucharadas/cucharaditas. Preparación y reposos detallados.
+  Las cantidades son proporciones editoriales; no se ha realizado una prueba de cocina.
+• Movimiento muy lento en fotografías editoriales y banners. El movimiento de
+  las cuatro fotos de cada collage empieza conjuntamente. Se conservan encuadres.
+• Las fotos de productos del catálogo, cesta y compra permanecen sin animación.
+  Logos, iconos y banderas tampoco se desplazan.
+• Brillo dorado discreto al pasar el ratón o enfocar botones y navegación;
+  respuesta táctil. Logo con brillo en interacción.
+• Pausa del movimiento fuera de pantalla, en pestaña oculta y cuando el
+  dispositivo solicita reducir animaciones. En ese último caso, Inicio muestra
+  el collage fijo. Se respeta la reproducción del vídeo en uso normal.
+• Inicio espera la carga y decodificación de TODAS las fotos antes de pasar
+  del vídeo al collage. El tiempo del collage comienza cuando está listo.
+• 28 imágenes convertidas a WebP conservando resolución, contenido y encuadre.
+  Los gráficos de marca conservan transparencia y se exportan sin pérdida.
+  Las fotos originales se mantienen dentro del proyecto.
+• 3 vídeos activos tratados: luz, color y nitidez moderados, audio y duración
+  conservados, exportación H.264 y reproducción progresiva. Nuevas portadas.
+
+RESOLUCIÓN REAL
+Inicio: 1920 × 1080, reescalado desde el original 848 × 480.
+Aceites: 1080 × 1920 vertical. Jamones: 1920 × 1080 horizontal.
+No son nuevos vídeos 4K nativos. El clip original story-01 de 3840 × 2160
+permanece disponible, pero no sustituye planos distintos del montaje actual.
+Para obtener detalle 4K real en el vídeo de Inicio hace falta una fuente mejor.
+Las fotos conservan sus dimensiones originales; no se ha inventado detalle 4K.
+
+PESO Y CALIDAD
+El conjunto de imágenes usadas pasa de 30,55 MB a 14,54 MB (−52,39 %).
+Los tres vídeos activos pasan de 23,88 MB a 28,05 MB para conservar calidad alta.
+El ZIP contiene además originales y recursos previos que la web no descarga
+salvo que una página los utilice.
+
+COMPROBACIONES
+Navegador Chromium: 8 páginas a 1440 y 390 px, carga de recursos, ausencia de
+scroll horizontal, carrito, brillo hover, movimiento reducido, encuadres del
+collage y transición del vídeo al collage con fotografías demoradas.
+7 recetas: apertura/cierre, cantidades, cambio de idioma sin pérdida de cifras,
+foco y vista móvil. El contenido culinario sigue en español como en la versión
+anterior; esta actualización no añade traducciones completas de las recetas.
+Vídeos: decodificación, dimensiones, número de fotogramas, duración y audio.
+Fotografías: decodificación, resolución y transparencia de los gráficos de marca.
+
+La tienda conserva su funcionamiento de demostración anterior; no se han
+activado pagos ni servicios externos durante estos cambios.

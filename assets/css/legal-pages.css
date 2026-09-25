@@ -1,0 +1,72 @@
+/* ALMAZARA · Legal pages. Original olive photographs, readable paper surface. */
+.legal-page { background: #f7f4ec; color: #202820; }
+.legal-skip { position: absolute; top: -100px; left: 20px; padding: 12px 20px; z-index: 10000; background: #f7f4ec; color: #17251a; }
+.legal-skip:focus { top: 12px; }
+.legal-main { background: #f7f4ec; }
+.legal-hero { position: relative; isolation: isolate; min-height: 360px; display: flex; align-items: center; overflow: hidden; background: #17251a; }
+.legal-hero-media { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
+.legal-hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 61%; }
+.legal-hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg,rgba(6,18,10,.88),rgba(6,18,10,.59) 44%,rgba(6,18,10,.09)); }
+.legal-hero-copy { width: min(1280px,89%); margin: auto; padding: 64px 0; }
+.legal-kicker { margin: 0 0 24px; color: #e5cd89; font: 600 11px/1.5 Arial,sans-serif; letter-spacing: .23em; text-transform: uppercase; }
+.legal-hero h1 { font: 400 clamp(38px,4.6vw,66px)/1.06 'Abril Display Brand',Georgia,serif; color: #fffdf6; margin: 0 0 20px; max-width: 920px; text-wrap: balance; }
+.legal-hero-intro { margin: 0; max-width: 660px; font: 17px/1.65 Arial,sans-serif; color: #f1f1e8; }
+.legal-layout { width: min(1210px,89%); margin: 0 auto; padding: 56px 0 84px; display: grid; grid-template-columns: 240px minmax(0,1fr); gap: clamp(40px,6vw,92px); align-items: start; }
+.legal-sidebar { position: sticky; top: 125px; }
+.legal-sidebar-label { color: #746440; font: 600 10px/1.5 Arial,sans-serif; letter-spacing: .2em; text-transform: uppercase; margin: 0 0 14px; }
+.legal-document-nav { display: flex; flex-direction: column; border-top: 1px solid #d8d0bd; }
+.legal-document-nav a { display: block; padding: 15px 12px; border-bottom: 1px solid #d8d0bd; color: #364231; font: 14px/1.4 Arial,sans-serif; transition: color .2s,background .2s; }
+.legal-document-nav a:hover { background: #eee8d9; color: #57451c; }
+.legal-document-nav a[aria-current='page'] { background: #152319; color: #eedba7; border-left: 3px solid #b99a51; padding-left: 9px; }
+.legal-contact-card { margin-top: 32px; padding-top: 25px; border-top: 1px solid #d8d0bd; color: #4f584e; font: 13px/1.7 Arial,sans-serif; }
+.legal-contact-card strong { display: block; color: #202c22; margin-bottom: 9px; font-weight: 600; }
+.legal-contact-card address { font-style: normal; margin-bottom: 12px; }
+.legal-contact-card a { display: block; color: #665022; overflow-wrap: anywhere; padding: 3px 0; text-decoration: underline; text-underline-offset: 3px; }
+.legal-document { min-width: 0; max-width: 790px; }
+.legal-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; padding-bottom: 23px; border-bottom: 1px solid #d8d0bd; font: 12px/1.6 Arial,sans-serif; color: #676c60; }
+.legal-review { border: 1px solid #c3b17e; color: #72581f; padding: 5px 10px; background: #f1ead7; font-size: 11px; }
+.legal-toc { padding: 0 0 28px; border-bottom: 1px solid #d8d0bd; margin-bottom: 36px; }
+.legal-toc h2 { color: #76643d; font: 600 11px/1.5 Arial,sans-serif; text-transform: uppercase; letter-spacing: .15em; margin: 0 0 14px; }
+.legal-toc ol { padding-left: 20px; margin: 0; columns: 2; column-gap: 35px; }
+.legal-toc li { break-inside: avoid; padding: 5px 0; color: #7d6a43; font: 13px/1.5 Arial,sans-serif; }
+.legal-toc a { color: #485143; text-decoration: underline; text-decoration-color: #c9bb94; text-underline-offset: 3px; }
+.legal-section { scroll-margin-top: 130px; margin-bottom: 36px; }
+.legal-section h2 { font: 400 clamp(25px,2.3vw,31px)/1.25 'Abril Display Brand',Georgia,serif; color: #1c2d20; margin: 0 0 18px; text-wrap: balance; }
+.legal-section p,.legal-section li { font: 15px/1.85 Arial,sans-serif; color: #424a40; }
+.legal-section p { margin: 0 0 15px; }
+.legal-section ul { padding-left: 21px; margin: 12px 0 18px; }
+.legal-section li { padding: 3px 0; }
+.legal-section a { color: #765a1c; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.legal-main a:focus-visible { outline: 2px solid #957131; outline-offset: 4px; }
+.legal-page .site-footer { border-top: 1px solid #bca35e; }
+@media(max-width:900px) {
+  .legal-hero { min-height: 320px; }
+  .legal-layout { grid-template-columns: 1fr; gap: 30px; padding-top: 30px; }
+  .legal-sidebar { position: static; }
+  .legal-document-nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .legal-document-nav a { padding: 13px 10px; }
+  .legal-contact-card { display: none; }
+  .legal-document { max-width: none; }
+  .legal-meta { margin-bottom: 24px; }
+}
+@media(max-width:560px) {
+  .legal-hero-copy { padding: 42px 0; }
+  .legal-hero { min-height: 300px; }
+  .legal-hero::after { background: linear-gradient(90deg,rgba(6,18,10,.85),rgba(6,18,10,.54)); }
+  .legal-kicker { font-size: 10px; letter-spacing: .15em; margin-bottom: 17px; }
+  .legal-hero h1 { font-size: clamp(34px,9.5vw,44px); overflow-wrap: anywhere; }
+  .legal-hero-intro { font-size: 14px; }
+  .legal-layout { padding-bottom: 64px; }
+  .legal-toc ol { columns: 1; }
+  .legal-document-nav a { font-size: 12px; }
+  .legal-section p,.legal-section li { font-size: 14px; line-height: 1.8; }
+  .legal-section { scroll-margin-top: 105px; }
+}
+@media print {
+  .legal-page .site-header,.legal-page .site-footer,.legal-sidebar,.legal-hero-media,.legal-hero::after,.legal-page .alma-assistant { display: none!important; }
+  .legal-hero,.legal-main { background: #fff; color: #000; min-height: 0; }
+  .legal-hero-copy,.legal-layout { width: 100%; padding: 15px 0; display: block; }
+  .legal-hero h1,.legal-hero-intro,.legal-kicker { color: #000; }
+  .legal-document { max-width: none; }
+  .legal-section { break-inside: avoid; }
+}

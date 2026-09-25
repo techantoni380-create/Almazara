@@ -1,0 +1,50 @@
+ALMAZARA · PÁGINAS LEGALES Y FOTOGRAFÍAS DE OLIVARES
+24 de septiembre de 2026
+
+INSTALAR LA ACTUALIZACIÓN
+1. Conserva una copia de tu carpeta actual AlmazaraWeb2026.
+2. Descomprime Almazara_Paginas_Legales.zip.
+3. Copia el contenido de la carpeta AlmazaraWeb2026 del ZIP dentro de tu carpeta del proyecto. Combina las carpetas y sustituye los archivos del mismo nombre; no borres el resto de assets.
+4. Abre index.html o impressum.html. Si ya estaban abiertos, pulsa Ctrl + F5.
+
+QUÉ SE HA AÑADIDO
+- aviso-legal.html, privacidad.html, cookies.html e impressum.html.
+- Textos completos en español, alemán, francés, italiano e inglés con el selector habitual.
+- Enlaces del pie de todas las páginas y enlaces de privacidad en los formularios.
+- Navegación legal también en checkout.
+- Cabeceras con las fotografías originales ya incluidas en el proyecto: about-banner-olivares-real.jpg y aceites-hero-olivar-pexels.jpg. No se han generado imágenes ni se ha utilizado la versión de olivar editada con IA para estas páginas.
+- Fondo crema para la lectura, índice de secciones y adaptación a móvil.
+- Los formularios de demostración no incluyen nombres de campos que permitan enviar sus datos por GET al fallar JavaScript. El mensaje de newsletter aclara que no se ha registrado una suscripción.
+- Casilla de consentimiento de newsletter de tamaño compacto y pie legal adaptable.
+
+DATOS CONTRASTADOS
+Razón social: Almazara Espejo Sàrl
+UID / IDE: CHE-440.482.972 (no se presenta como un número de IVA).
+Dirección: Rue du Marché 19, 2520 La Neuveville, Suiza.
+La FOSC publicó el cambio el 29/04/2026; la web anterior todavía mostraba Grand-Rue 23.
+Correo de contacto: almazara.olive@gmail.com
+Teléfono / WhatsApp: +41 76 785 05 06
+Se ha usado el correo general publicado en contacto. La política antigua contenía otro correo para derechos; queda pendiente que la empresa confirme si desea un buzón específico.
+
+ESTADO DE LOS TEXTOS
+Son textos preparados para revisar sobre el funcionamiento de este proyecto local. Las cuatro páginas están marcadas «Texto en revisión» y llevan noindex,follow. No se han publicado ni se ha conectado ningún servicio nuevo.
+
+Para cerrar la política de privacidad y cookies antes de publicar, la empresa debe confirmar:
+- Proveedor y país de alojamiento; registros técnicos, finalidad y conservación; cookies añadidas por el servidor.
+- Proveedores, destinatarios y países que intervienen en las comunicaciones por email y WhatsApp; conservación y, si existen transferencias internacionales, protección aplicable.
+- Si el correo general será también el contacto para solicitudes sobre datos personales.
+Si después se activan contacto, newsletter, pagos, analítica u otros servicios, habrá que actualizar los textos y los controles según lo que realmente se conecte. La tienda actual no envía pedidos ni procesa pagos online.
+
+Tras completar esos datos y revisar el contenido, actualizar las cinco traducciones de assets/js/legal-content.js y su versión estática en los HTML, y retirar la marca de revisión y noindex. No retirar esa marca antes de completar la información pendiente.
+
+FUENTES
+Web anterior: https://almazara.ch/aviso-legal/
+Contacto publicado: https://almazara.ch/contacto/
+Privacidad anterior: https://almazara.ch/privacy-policy/
+FOSC, dirección actual: https://www.shab.ch/shabforms/servlet/Search?DOCID=HR02-1006637646&EID=7
+SECO/KMU, identificación comercial: https://www.kmu.admin.ch/en/statutory-obligations-swiss-and-european-e-commerce-laws
+FDPIC, declaraciones de privacidad: https://www.edoeb.admin.ch/en/privacy-statements-on-the-internet
+FDPIC, cookies y tecnologías similares: https://www.edoeb.admin.ch/en/factsheet-cookies
+
+COMPROBACIONES
+Cuatro páginas, cinco idiomas, escritorio y móvil; sin imágenes rotas ni desbordamiento horizontal observado. Enlaces legales y de consentimiento comprobados en las ocho páginas existentes. Lectura de los textos sin JavaScript, formulario demo sin email en la URL y traducción al abrir archivos con file:// verificados. No se ha alterado el vídeo, el collage ni las imágenes de productos en venta.

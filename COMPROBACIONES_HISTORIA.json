@@ -1,0 +1,89 @@
+{
+  "results": [
+    {
+      "width": 390,
+      "source": "assets/img/home-story-olivares-editada.webp",
+      "loaded": true,
+      "overflow": false,
+      "image": {
+        "x": -2.502777099609375,
+        "y": -8.32476806640625,
+        "width": 395.00555419921875,
+        "height": 263.3370361328125,
+        "top": -8.32476806640625,
+        "right": 392.5027770996094,
+        "bottom": 255.01226806640625,
+        "left": -2.502777099609375
+      },
+      "block": {
+        "x": 0,
+        "y": -7.65625,
+        "width": 390,
+        "height": 965.53125,
+        "top": -7.65625,
+        "right": 390,
+        "bottom": 957.875,
+        "left": 0
+      },
+      "link": "nosotros.html",
+      "collagePhotos": 4
+    },
+    {
+      "width": 834,
+      "source": "assets/img/home-story-olivares-editada.webp",
+      "loaded": true,
+      "overflow": false,
+      "image": {
+        "x": 0,
+        "y": 26.46875,
+        "width": 834,
+        "height": 433.671875,
+        "top": 26.46875,
+        "right": 834,
+        "bottom": 460.140625,
+        "left": 0
+      },
+      "block": {
+        "x": 0,
+        "y": 25.46875,
+        "width": 834,
+        "height": 899.0625,
+        "top": 25.46875,
+        "right": 834,
+        "bottom": 924.53125,
+        "left": 0
+      },
+      "link": "nosotros.html",
+      "collagePhotos": 4
+    },
+    {
+      "width": 1440,
+      "source": "assets/img/home-story-olivares-editada.webp",
+      "loaded": true,
+      "overflow": false,
+      "image": {
+        "x": 0,
+        "y": 165.6875,
+        "width": 691.1875,
+        "height": 620,
+        "top": 165.6875,
+        "right": 691.1875,
+        "bottom": 785.6875,
+        "left": 0
+      },
+      "block": {
+        "x": 0,
+        "y": 164.6875,
+        "width": 1440,
+        "height": 621,
+        "top": 164.6875,
+        "right": 1440,
+        "bottom": 785.6875,
+        "left": 0
+      },
+      "link": "nosotros.html",
+      "collagePhotos": 4
+    }
+  ],
+  "errors": []
+}

@@ -500,15 +500,10 @@ button,input,textarea,select{font:inherit}
   .site-header .brand-wordmark-text{font-size:22px}
 }
 
-/* Ajuste final solicitado: el subtítulo de la cabecera de Inicio
-   respira más y acompaña visualmente todo el ancho de ALMAZARA. */
-.home-page .site-header .brand-wordmark-text + small{
-  letter-spacing:.205em;
-}
-@media(max-width:1180px){
-  .home-page .site-header .brand-wordmark-text + small{letter-spacing:.17em}
-}
-\n\n
+
+
+
+
 
 /* === HERO DEFINITIVO: imagen aprobada + botones invisibles funcionales === */
 .home-page .hero-artwork-only .hero-ui-layer,
@@ -779,7 +774,9 @@ button,input,textarea,select{font:inherit}
 .home-page .feature-grid-home-final .feature-card .copy{
   text-shadow:0 2px 10px rgba(0,0,0,.38);
 }
-\n\n/* HOME · PRODUCTOS DESTACADOS — composición premium de 5 tarjetas */
+
+
+/* HOME · PRODUCTOS DESTACADOS — composición premium de 5 tarjetas */
 .home-page .home-products-premium{padding:48px 0 58px;background:#f8f4ea}
 .home-page .home-products-premium .container{width:min(1480px,calc(100% - 72px))}
 .home-page .home-products-head{position:relative;display:flex;align-items:flex-end;justify-content:center;margin-bottom:12px}
@@ -1945,45 +1942,34 @@ html{overflow-x:hidden}body{overflow-x:hidden}img,video,svg{max-width:100%}input
 .home-page .home-hero-sequence img:nth-of-type(3){object-position:center center}
 .home-page .home-hero-sequence:after{z-index:3;pointer-events:none}
 @media (prefers-reduced-motion:reduce){.home-page .home-hero-sequence .hero-sequence-item{transition:none}}
-\n\n/* ALMAZARA 2026 · Hero minimalista: vídeo limpio + mensaje solo en fotografías */\n.home-page .home-hero .hero-photo-message{\n  opacity:0;visibility:hidden;transform:translateY(12px);pointer-events:none;\n  transition:opacity .85s ease,transform .85s ease,visibility 0s linear .85s;\n}\n.home-page .home-hero:has(.home-hero-sequence.is-photo-phase) .hero-photo-message{\n  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;\n  transition:opacity .85s ease .25s,transform .85s ease .25s;\n}\n.home-page .home-hero .hero-photo-message h1{margin-bottom:14px}\n.home-page .home-hero .hero-photo-message .hero-lead-live{margin-bottom:24px;text-transform:uppercase;letter-spacing:.16em;font-family:Arial,sans-serif;font-size:13px;font-weight:700}\n.home-page .home-hero .hero-photo-message .hero-lead-live span{color:var(--gold,#d8b447);padding:0 7px}\n.home-page .home-hero .hero-photo-message .hero-actions-live2{margin-top:0}\n@media (max-width:640px){\n  .home-page .home-hero .hero-photo-message{text-align:center!important;width:min(92%,430px)!important;margin-inline:auto!important}\n  .home-page .home-hero .hero-photo-message h1{font-size:clamp(38px,11vw,54px)!important;line-height:.94!important}\n  .home-page .home-hero .hero-photo-message .hero-lead-live{font-size:10px!important;letter-spacing:.11em!important;margin-bottom:17px!important}\n  .home-page .home-hero .hero-photo-message .hero-actions-live2{justify-content:center!important}\n}\n@media (prefers-reduced-motion:reduce){.home-page .home-hero .hero-photo-message{transition:none!important}}\n
+
+
+/* ALMAZARA 2026 · Hero minimalista: vídeo limpio + mensaje solo en fotografías */
+.home-page .home-hero .hero-photo-message{
+  opacity:0;visibility:hidden;transform:translateY(12px);pointer-events:none;
+  transition:opacity .85s ease,transform .85s ease,visibility 0s linear .85s;
+}
+.home-page .home-hero:has(.home-hero-sequence.is-photo-phase) .hero-photo-message{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
+  transition:opacity .85s ease .25s,transform .85s ease .25s;
+}
+.home-page .home-hero .hero-photo-message h1{margin-bottom:14px}
+.home-page .home-hero .hero-photo-message .hero-lead-live{margin-bottom:24px;text-transform:uppercase;letter-spacing:.16em;font-family:Arial,sans-serif;font-size:13px;font-weight:700}
+.home-page .home-hero .hero-photo-message .hero-lead-live span{color:var(--gold,#d8b447);padding:0 7px}
+.home-page .home-hero .hero-photo-message .hero-actions-live2{margin-top:0}
+@media (max-width:640px){
+  .home-page .home-hero .hero-photo-message{text-align:center!important;width:min(92%,430px)!important;margin-inline:auto!important}
+  .home-page .home-hero .hero-photo-message h1{font-size:clamp(38px,11vw,54px)!important;line-height:.94!important}
+  .home-page .home-hero .hero-photo-message .hero-lead-live{font-size:10px!important;letter-spacing:.11em!important;margin-bottom:17px!important}
+  .home-page .home-hero .hero-photo-message .hero-actions-live2{justify-content:center!important}
+}
+@media (prefers-reduced-motion:reduce){.home-page .home-hero .hero-photo-message{transition:none!important}}
+
 /* =========================================================
    INICIO · HEADER + HERO PREMIUM APROBADOS · 2026-09-19
    Solo afecta a la página de Inicio.
    ========================================================= */
-@media (min-width:1101px){
-  .home-page .site-header{
-    position:sticky;top:0;
-    background:rgba(10,13,10,.76);
-    -webkit-backdrop-filter:blur(9px) saturate(115%);
-    backdrop-filter:blur(9px) saturate(115%);
-    border-bottom:1px solid rgba(216,180,71,.18);
-  }
-  .home-page .site-header .container.nav{width:min(1440px,calc(100% - 72px));height:84px;gap:22px}
-  .home-page .site-header .brand-logo{gap:13px}
-  .home-page .site-header .brand-symbol{width:56px;height:56px;flex-basis:56px}
-  .home-page .site-header .brand-word{width:242px;min-width:242px}
-  .home-page .site-header .brand-wordmark-text{
-    font-family:"Abril Display","Abril Fatface",Georgia,"Times New Roman",serif;
-    font-size:29px;font-weight:400;line-height:.92;letter-spacing:.105em;color:#d9b33d;
-  }
-  .home-page .site-header .brand-wordmark-text + small{
-    margin-top:7px;color:#d9b33d;font-family:"Abril Display",Georgia,"Times New Roman",serif;
-    font-size:9px;font-weight:400;letter-spacing:.12em;text-transform:none;
-  }
-  .home-page .site-header .nav-links{gap:27px}
-  .home-page .site-header .nav-links a{font-family:Georgia,"Times New Roman",serif;font-size:10px;letter-spacing:.07em;padding:33px 0 28px;color:#f6f0e5}
-  .home-page .site-header .nav-links a:hover:after,.home-page .site-header .nav-links a.active:after{bottom:21px;background:#d9b33d}
-  .home-page .site-header .premium-tools{gap:4px!important}
-  .home-page .site-header .head-tool{border:0;width:39px;height:39px;color:#fff;border-radius:0}
-  .home-page .site-header .head-tool:hover,.home-page .site-header .head-tool:focus-visible{background:transparent;color:#d9b33d;transform:none}
-  .home-page .site-header .tool-icon{width:19px;height:19px;display:block}
-  .home-page .site-header .tool-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-  .home-page .site-header .cart-count{display:none}
-  .home-page .site-header .lang-trigger{display:flex;align-items:center;gap:5px;width:auto;min-width:65px;padding:0 4px;color:#fff}
-  .home-page .site-header .lang-trigger .lang-flag{font-size:17px!important;line-height:1}
-  .home-page .site-header .lang-trigger .lang-code{font-size:9px!important;letter-spacing:.08em}
-  .home-page .site-header .lang-trigger .chev{font-size:10px!important;margin-left:0}
-}
+/* La cabecera de Inicio utiliza las mismas reglas compartidas que las demás páginas. */
 
 .home-page .home-hero .hero-photo-message{max-width:560px}
 .home-page .home-hero .hero-photo-message h1{
@@ -2028,7 +2014,9 @@ html{overflow-x:hidden}body{overflow-x:hidden}img,video,svg{max-width:100%}input
 
 /* Imagen 1: mostrar el mensaje HTML premium superpuesto, igual que en las demás fotografías. */
 .home-page .home-hero.is-product-photo .hero-photo-message{opacity:1!important;visibility:visible!important;transform:translateY(0)!important;pointer-events:auto!important;display:block!important;}
-\n\n/* ALMAZARA 2026 · CTA exclusivo del vídeo de Inicio */
+
+
+/* ALMAZARA 2026 · CTA exclusivo del vídeo de Inicio */
 .home-page .home-hero .hero-video-buy{
   position:absolute;left:max(22px,calc((100vw - 1500px)/2));bottom:22px;z-index:8;
   display:flex;align-items:center;justify-content:space-between;gap:26px;

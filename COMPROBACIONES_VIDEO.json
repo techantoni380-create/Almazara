@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "viewport": 390,
+      "source": "http://127.0.0.1:8765/assets/video/almazara-inicio-cine-web.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 24.3,
+      "muted": true,
+      "paused": false,
+      "poster": "http://127.0.0.1:8765/assets/img/almazara-inicio-cine-poster.jpg",
+      "transition": "passed"
+    },
+    {
+      "viewport": 1440,
+      "source": "http://127.0.0.1:8765/assets/video/almazara-inicio-cine-web.mp4",
+      "width": 1920,
+      "height": 1080,
+      "duration": 24.3,
+      "muted": true,
+      "paused": false,
+      "poster": "http://127.0.0.1:8765/assets/img/almazara-inicio-cine-poster.jpg",
+      "transition": "passed"
+    }
+  ],
+  "errors": [],
+  "media": [
+    {
+      "file": "Almazara_Inicio_4K.mp4",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "frames": "729",
+      "fps": "30/1",
+      "duration": "24.300000",
+      "bytes": 59389569,
+      "faststart": true,
+      "audio": true
+    },
+    {
+      "file": "Almazara_Inicio_Web.mp4",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "frames": "729",
+      "fps": "30/1",
+      "duration": "24.300000",
+      "bytes": 9338173,
+      "faststart": true,
+      "audio": false
+    }
+  ]
+}
