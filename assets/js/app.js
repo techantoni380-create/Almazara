@@ -49,45 +49,60 @@ document.querySelectorAll('.reveal').forEach(el=>{
   });
 })();
 
-// ALMAZARA · Asistente virtual global
+// ALMAZARA · Panel de ayuda global. Los enlaces no envían mensajes automáticamente.
 (function(){
   if(document.querySelector('.alma-assistant')) return;
-  const wa='https://wa.me/41767850506?text='+encodeURIComponent('Hola, he visitado la web de ALMAZARA y me gustaría recibir información.');
+  const copy={
+    ES:{title:'ASISTENTE VIRTUAL',dialog:'Asistente virtual de ALMAZARA',close:'Cerrar',open:'Abrir asistente virtual',hello:'Hola 👋',intro:'Soy la asistente virtual de ALMAZARA.',question:'¿En qué puedo ayudarte hoy?',products:'Nuestros productos',productsSub:'Aceites de oliva y jamones ibéricos',recipes:'Recetas',recipesSub:'Ideas y sabores mediterráneos',info:'Información',infoSub:'Dudas, envíos y pedidos',whatsapp:'Hablar por WhatsApp',email:'Escríbenos',foot:'Un placer ayudarte ♡',help:'¿Te ayudo?',name:'ASISTENTE ALMAZARA',message:'Hola, he visitado la web de ALMAZARA y me gustaría recibir información.'},
+    DE:{title:'VIRTUELLE ASSISTENZ',dialog:'Virtuelle Assistenz von ALMAZARA',close:'Schließen',open:'Virtuelle Assistenz öffnen',hello:'Hallo 👋',intro:'Ich bin die virtuelle Assistentin von ALMAZARA.',question:'Wie kann ich Ihnen heute helfen?',products:'Unsere Produkte',productsSub:'Olivenöle und Ibérico-Schinken',recipes:'Rezepte',recipesSub:'Mediterrane Ideen und Aromen',info:'Informationen',infoSub:'Fragen, Versand und Bestellungen',whatsapp:'Über WhatsApp kontaktieren',email:'Schreiben Sie uns',foot:'Wir helfen Ihnen gerne ♡',help:'Kann ich helfen?',name:'ALMAZARA-ASSISTENZ',message:'Hallo, ich habe die Website von ALMAZARA besucht und hätte gerne weitere Informationen.'},
+    FR:{title:'ASSISTANTE VIRTUELLE',dialog:'Assistante virtuelle d’ALMAZARA',close:'Fermer',open:'Ouvrir l’assistante virtuelle',hello:'Bonjour 👋',intro:'Je suis l’assistante virtuelle d’ALMAZARA.',question:'Comment puis-je vous aider aujourd’hui ?',products:'Nos produits',productsSub:'Huiles d’olive et jambons ibériques',recipes:'Recettes',recipesSub:'Idées et saveurs méditerranéennes',info:'Informations',infoSub:'Questions, livraisons et commandes',whatsapp:'Nous contacter sur WhatsApp',email:'Écrivez-nous',foot:'Un plaisir de vous aider ♡',help:'Besoin d’aide ?',name:'ASSISTANTE ALMAZARA',message:'Bonjour, j’ai visité le site d’ALMAZARA et je souhaiterais recevoir des informations.'},
+    IT:{title:'ASSISTENTE VIRTUALE',dialog:'Assistente virtuale di ALMAZARA',close:'Chiudi',open:'Apri l’assistente virtuale',hello:'Ciao 👋',intro:'Sono l’assistente virtuale di ALMAZARA.',question:'Come posso aiutarti oggi?',products:'I nostri prodotti',productsSub:'Oli d’oliva e prosciutti iberici',recipes:'Ricette',recipesSub:'Idee e sapori mediterranei',info:'Informazioni',infoSub:'Domande, spedizioni e ordini',whatsapp:'Contattaci su WhatsApp',email:'Scrivici',foot:'Un piacere aiutarti ♡',help:'Posso aiutarti?',name:'ASSISTENTE ALMAZARA',message:'Ciao, ho visitato il sito di ALMAZARA e vorrei ricevere informazioni.'},
+    EN:{title:'VIRTUAL ASSISTANT',dialog:'ALMAZARA virtual assistant',close:'Close',open:'Open virtual assistant',hello:'Hello 👋',intro:'I am ALMAZARA’s virtual assistant.',question:'How can I help you today?',products:'Our products',productsSub:'Olive oils and Iberian hams',recipes:'Recipes',recipesSub:'Mediterranean ideas and flavours',info:'Information',infoSub:'Questions, shipping and orders',whatsapp:'Contact us on WhatsApp',email:'Email us',foot:'Happy to help ♡',help:'Need help?',name:'ALMAZARA ASSISTANT',message:'Hello, I have visited the ALMAZARA website and would like some information.'}
+  };
   const wrap=document.createElement('div'); wrap.className='alma-assistant';
-  wrap.innerHTML=`<div class="alma-assistant-panel" role="dialog" aria-label="Asistente virtual de ALMAZARA">
-    <div class="alma-assistant-head"><b>ALMAZARA</b><span>ASISTENTE VIRTUAL</span><button class="alma-assistant-close" aria-label="Cerrar">×</button></div>
-    <div class="alma-assistant-body"><div class="alma-assistant-message"><b>Hola 👋</b><br>Soy la asistente virtual de ALMAZARA.<br>¿En qué puedo ayudarte hoy?</div>
+  wrap.innerHTML=`<div class="alma-assistant-panel" id="alma-assistant-panel" role="dialog" aria-label="Asistente virtual de ALMAZARA" aria-hidden="true" inert>
+    <div class="alma-assistant-head"><b>ALMAZARA</b><span data-assistant-text="title">ASISTENTE VIRTUAL</span><button type="button" class="alma-assistant-close" aria-label="Cerrar">×</button></div>
+    <div class="alma-assistant-body"><div class="alma-assistant-message"><b data-assistant-text="hello">Hola 👋</b><br><span data-assistant-text="intro">Soy la asistente virtual de ALMAZARA.</span><br><span data-assistant-text="question">¿En qué puedo ayudarte hoy?</span></div>
       <div class="alma-assistant-actions">
-        <a class="alma-assistant-action" href="productos.html"><span class="ai">🛒</span><span><b>Nuestros productos</b><small>Aceites, jamones y mucho más</small></span><span class="arrow">›</span></a>
-        <a class="alma-assistant-action" href="recetas.html"><span class="ai">♨</span><span><b>Recetas</b><small>Ideas y sabores mediterráneos</small></span><span class="arrow">›</span></a>
-        <a class="alma-assistant-action" href="contacto.html"><span class="ai">i</span><span><b>Información</b><small>Dudas, envíos y pedidos</small></span><span class="arrow">›</span></a>
-        <a class="alma-assistant-action" href="${wa}" target="_blank" rel="noopener"><span class="ai">☎</span><span><b>Hablar por WhatsApp</b><small>+41 76 785 05 06</small></span><span class="arrow">›</span></a>
-        <a class="alma-assistant-action" href="mailto:almazara.olive@gmail.com"><span class="ai">✉</span><span><b>Escríbenos</b><small>almazara.olive@gmail.com</small></span><span class="arrow">›</span></a>
-      </div></div><div class="alma-assistant-foot">Un placer ayudarte ♡</div></div>
-    <button class="alma-assistant-launcher" aria-label="Abrir asistente virtual" aria-expanded="false"><img class="alma-assistant-avatar" src="assets/img/optimized/asistente-almazara.webp" alt="Asistente virtual ALMAZARA"><span class="alma-assistant-online"></span><span><strong>¿Te ayudo?</strong><small>ASISTENTE ALMAZARA</small></span></button>`;
+        <a class="alma-assistant-action" href="productos.html"><span class="ai" aria-hidden="true">🛒</span><span><b data-assistant-text="products">Nuestros productos</b><small data-assistant-text="productsSub">Aceites de oliva y jamones ibéricos</small></span><span class="arrow" aria-hidden="true">›</span></a>
+        <a class="alma-assistant-action" href="recetas.html"><span class="ai" aria-hidden="true">♨</span><span><b data-assistant-text="recipes">Recetas</b><small data-assistant-text="recipesSub">Ideas y sabores mediterráneos</small></span><span class="arrow" aria-hidden="true">›</span></a>
+        <a class="alma-assistant-action" href="contacto.html"><span class="ai" aria-hidden="true">i</span><span><b data-assistant-text="info">Información</b><small data-assistant-text="infoSub">Dudas, envíos y pedidos</small></span><span class="arrow" aria-hidden="true">›</span></a>
+        <a class="alma-assistant-action alma-assistant-whatsapp" href="https://wa.me/41767850506" target="_blank" rel="noopener noreferrer"><span class="ai" aria-hidden="true">☎</span><span><b data-assistant-text="whatsapp">Hablar por WhatsApp</b><small>+41 76 785 05 06</small></span><span class="arrow" aria-hidden="true">›</span></a>
+        <a class="alma-assistant-action" href="mailto:almazara.olive@gmail.com"><span class="ai" aria-hidden="true">✉</span><span><b data-assistant-text="email">Escríbenos</b><small>almazara.olive@gmail.com</small></span><span class="arrow" aria-hidden="true">›</span></a>
+      </div></div><div class="alma-assistant-foot" data-assistant-text="foot">Un placer ayudarte ♡</div></div>
+    <button type="button" class="alma-assistant-launcher" aria-label="Abrir asistente virtual" aria-controls="alma-assistant-panel" aria-expanded="false"><img class="alma-assistant-avatar" src="assets/img/optimized/asistente-almazara.webp" alt=""><span class="alma-assistant-online" aria-hidden="true"></span><span><strong data-assistant-text="help">¿Te ayudo?</strong><small data-assistant-text="name">ASISTENTE ALMAZARA</small></span></button>`;
   document.body.appendChild(wrap);
-  const launcher=wrap.querySelector('.alma-assistant-launcher'), close=wrap.querySelector('.alma-assistant-close');
-  function setOpen(v){wrap.classList.toggle('open',v);launcher.setAttribute('aria-expanded',String(v));}
-  launcher.addEventListener('click',()=>setOpen(!wrap.classList.contains('open'))); close.addEventListener('click',()=>setOpen(false));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+  const launcher=wrap.querySelector('.alma-assistant-launcher');
+  const close=wrap.querySelector('.alma-assistant-close');
+  const panel=wrap.querySelector('.alma-assistant-panel');
+  function setOpen(value){
+    const wasOpen=wrap.classList.contains('open');
+    const restoreFocus=!value && wasOpen && panel.contains(document.activeElement);
+    wrap.classList.toggle('open',value);
+    launcher.setAttribute('aria-expanded',String(value));
+    panel.setAttribute('aria-hidden',String(!value));
+    panel.inert=!value;
+    if(value) close.focus();
+    else if(restoreFocus) launcher.focus();
+  }
+  function apply(lang){
+    const t=copy[String(lang||'ES').toUpperCase()]||copy.ES;
+    wrap.querySelectorAll('[data-assistant-text]').forEach(el=>{el.textContent=t[el.dataset.assistantText]});
+    panel.setAttribute('aria-label',t.dialog);
+    close.setAttribute('aria-label',t.close);
+    launcher.setAttribute('aria-label',t.open);
+    wrap.querySelector('.alma-assistant-whatsapp').href='https://wa.me/41767850506?text='+encodeURIComponent(t.message);
+  }
+  launcher.addEventListener('click',()=>setOpen(!wrap.classList.contains('open')));
+  close.addEventListener('click',()=>setOpen(false));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape' && wrap.classList.contains('open'))setOpen(false)});
+  document.addEventListener('click',e=>{if(wrap.classList.contains('open')&&!wrap.contains(e.target))setOpen(false)});
+  wrap.querySelectorAll('.alma-assistant-action').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+  window.AlmazaraAssistant={apply};
+  let language=document.documentElement.lang;
+  try { language=localStorage.getItem('almazara-lang')||language; } catch (_) {}
+  apply(language);
 })();
-
-
-// Newsletter ALMAZARA: demo visual (Brevo se conectará tras aprobación)
-document.addEventListener('DOMContentLoaded',()=>{
-  document.querySelectorAll('.newsletter-demo-form').forEach(form=>{
-    form.addEventListener('submit',e=>{
-      e.preventDefault();
-      const email=form.querySelector('input[type="email"]');
-      const consent=form.querySelector('input[type="checkbox"]');
-      if(!email.checkValidity()){ email.reportValidity(); return; }
-      if(!consent.checked){ consent.focus(); return; }
-      const ok=form.querySelector('.newsletter-success');
-      if(ok) ok.classList.add('is-visible');
-      email.value=''; consent.checked=false;
-    });
-  });
-});
 
 
 // ALMAZARA · Herramientas premium del header (demo ecommerce)
@@ -222,7 +237,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     cards.forEach(card=>{
       const id=card.querySelector('[data-product]').dataset.product;
       const product=window.ALMAZARA_CATALOG[id];
-      const match=categories.length===0||categories.includes(product.category)||(categories.includes('packs')&&id==='pack-3-aceites');
+      const match=categories.length===0||categories.includes(product.category)||(categories.includes('packs')&&product.isPack===true);
       card.hidden=!(match&&product.price<=max);
       if(!card.hidden)shown++;
     });

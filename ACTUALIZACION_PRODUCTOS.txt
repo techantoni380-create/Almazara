@@ -1,0 +1,77 @@
+NOTA POSTERIOR: se han añadido ventanas de producto y nuevas imágenes con el
+logo original. El formato de 125 ml tiene ahora una imagen ilustrativa.
+Consultar VENTANAS_Y_LOGO.txt. Este documento conserva la revisión anterior.
+
+ALMAZARA · PRECIOS Y FICHAS DE PRODUCTO
+7 de octubre de 2026
+
+PRECIOS INDICADOS POR PAOLA
+500 ml: CHF 22 + envío.
+125 ml: CHF 15 + envío.
+3 × 500 ml: CHF 60 + envío (CHF 20 por botella; ahorro CHF 6).
+6 × 500 ml: CHF 114 + envío (CHF 19 por botella; ahorro CHF 18).
+12 × 500 ml: CHF 216, envío incluido (CHF 18 por botella; ahorro CHF 48).
+Los ahorros se comparan con botellas individuales de 500 ml a CHF 22.
+No se han modificado los precios anteriores de los jamones.
+
+CAMBIOS
+- Precios y formatos en Aceites, Productos, Inicio, cesta y resumen del pedido.
+- Descripciones breves y fichas completas en producto.html?id=IDENTIFICADOR.
+- Selector de formato, cantidad y pestañas Descripción / Detalles / Envío.
+- Textos de las nuevas fichas y descripciones en ES, DE, FR, IT y EN.
+- Presentación de 500 ml con sombra sobre blanco y firma ALMAZARA.
+- La opción comercial de 125 ml se mantiene a CHF 15 según la indicación de Paola;
+  su imagen figura como pendiente para no utilizar una botella de 500 ml como si
+  fuera la de 125 ml.
+- Retirado el sello DOP de los bloques de valores de la web, según la petición
+  de no mostrar certificados por ahora. Sustituido por el emblema de la marca.
+- Se conservan los vídeos de proveedores y el panel de ayuda.
+
+ENVÍOS
+El envío incluido corresponde al pack de 12. No se aplica automáticamente por
+comprar 12 botellas sueltas ni por superar CHF 216. Un carrito que combina el pack
+de 12 con otros artículos muestra los gastos restantes pendientes de confirmar.
+Las tarifas de los demás productos no están definidas: se muestran como pendientes,
+no como cero. El subtotal sí se calcula. No se han inventado costes de transporte.
+
+COMPROBACIONES
+Pruebas en Chromium local: formatos y precios; añadir cantidades; aumentar,
+reducir y eliminar; selección y enlaces entre formatos; pestañas con teclado;
+carrito previo con precios actualizados; casos de envío individual, gratuito,
+mixto y vacío; resumen del pedido; filtros de aceites y packs; cinco idiomas;
+distribución a 1440 px y 390 px; imagen real del pack de tres; apertura/cierre del
+asistente; atributos de reproducción de los vídeos. Sin errores JavaScript en
+las páginas comprobadas. Referencias locales de las 13 páginas: existentes.
+Revisión visual de fichas y catálogo en escritorio, y ficha en móvil.
+Esto no sustituye una comprobación en los dispositivos finales del negocio.
+
+ESTADO PARA PUBLICACIÓN
+La web conserva carrito local y checkout de demostración. Los pagos online,
+formularios y suscripciones reales, las tarifas de envío y su integración con
+el sistema de pedidos aún requieren configuración. Esta entrega no publica
+la web ni configura Hostinger. Falta la foto real de 125 ml.
+
+IMAGEN EDITADA
+Archivo integrado: assets/img/optimized/aceite-500-estudio.webp
+Creada con la herramienta integrada image_gen a partir de la fotografía de
+producto existente y el logo ALMAZARA; exportada a WebP para la web.
+Es una presentación retocada: la fotografía original se conserva intacta en
+assets/img/optimized/producto-aceite-almazara-blanco.webp. El etiquetado que se
+publique debe contrastarse con el envase real de la clienta.
+
+Prompt utilizado:
+Use case: compositing. Create one premium ecommerce product photograph based on
+reference image 1 (edit target: the real ALMAZARA 500 ml olive oil bottle) and
+reference image 2 (exact brand tree emblem, supporting insert). Square canvas,
+seamless pure white studio background and white surface. Keep the real bottle
+silhouette, proportions, gold cap, oil color and original label appearance faithful
+to reference 1; front-facing upright bottle centered with comfortable whitespace,
+bottle occupies 75% canvas height. Make the volume on its label clearly read
+'500 ml', never 125 ml. Add a soft realistic contact shadow below the bottle and
+diffuse shadow falling subtly to the right; physically grounded, studio lighting,
+no hard vignette, no frame. Upper right small discreet ALMAZARA tree emblem from
+reference 2 in muted antique gold, with exact serif word 'ALMAZARA' beneath, mark
+occupies about 12% canvas width. This is only a brand signature, not a certification
+badge: NO certification seals, NO DOP, NO BPA, NO ecological badge, NO awards,
+NO extra claims or added slogans. Do not add a second bottle or props. Preserve
+the existing packaging instead of redesigning it. Crisp professional product photo.

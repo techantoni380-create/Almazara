@@ -307,8 +307,8 @@ body.productos-page .filter-layout .cards > .card.producto-jamon-blanco .card-me
   animation:none!important;
   transition:none!important;
 }
-.shop-cart-item img[src$="producto-jamon-almazara-blanco.webp"],
-.checkout-order-item img[src$="producto-jamon-almazara-blanco.webp"] {
+.shop-cart-item img[src$="producto-jamon-almazara-luminoso.webp"],
+.checkout-order-item img[src$="producto-jamon-almazara-luminoso.webp"] {
   object-fit:contain;
   background:#fff;
 }

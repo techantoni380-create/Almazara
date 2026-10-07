@@ -1,6 +1,91 @@
 window.ALMAZARA_CATALOG={
- "aceite-premium-500":{id:"aceite-premium-500",name:"Aceite de Oliva Selección Premium",format:"500 ml",price:9.99,currency:"CHF",image:"assets/img/optimized/producto-aceite-almazara-blanco.webp",category:"aceites"},
- "pack-3-aceites":{id:"pack-3-aceites",name:"Pack de 3 Aceites de Oliva",format:"3 × 500 ml",price:27.99,currency:"CHF",image:"assets/img/aceite-pack-3-real.jpeg",category:"aceites"},
- "jamon-iberico":{id:"jamon-iberico",name:"Jamón ibérico",format:"Pieza",price:500,currency:"CHF",image:"assets/img/optimized/producto-jamon-almazara-blanco.webp",category:"jamones"},
- "paleta-iberica":{id:"paleta-iberica",name:"Paleta ibérica",format:"Pieza",price:169,currency:"CHF",image:"assets/img/optimized/producto-jamon-almazara-blanco.webp",category:"jamones"}
+  "aceite-premium-500": {
+    "id": "aceite-premium-500",
+    "name": "Aceite de Oliva Selección Premium",
+    "format": "500 ml",
+    "price": 22,
+    "currency": "CHF",
+    "image": "assets/img/optimized/aceite-500-logo-original.webp",
+    "category": "aceites",
+    "bottles": 1,
+    "volumeMl": 500,
+    "isPack": false,
+    "shippingIncluded": false,
+    "description": "Aceite de oliva virgen extra para tus tostadas, ensaladas y platos del día a día. Una botella de 500 ml para disfrutar en la mesa y en la cocina."
+  },
+  "aceite-premium-125": {
+    "id": "aceite-premium-125",
+    "name": "Aceite de Oliva Selección Premium",
+    "format": "125 ml",
+    "price": 15,
+    "currency": "CHF",
+    "image": "assets/img/optimized/aceite-125-logo-original.png",
+    "category": "aceites",
+    "bottles": 1,
+    "volumeMl": 125,
+    "isPack": false,
+    "shippingIncluded": false,
+    "description": "Aceite de oliva virgen extra en un formato compacto de 125 ml. Una opción para probarlo y dar el toque final a tus platos.",
+    "imageIllustrative": true
+  },
+  "pack-3-aceites": {
+    "id": "pack-3-aceites",
+    "name": "Pack de 3 botellas de aceite",
+    "format": "3 × 500 ml",
+    "price": 60,
+    "currency": "CHF",
+    "image": "assets/img/optimized/aceite-pack-3-logo-original.webp",
+    "category": "aceites",
+    "bottles": 3,
+    "volumeMl": 500,
+    "isPack": true,
+    "shippingIncluded": false,
+    "description": "Tres botellas de 500 ml de aceite de oliva virgen extra. Para compartir o tener siempre a mano en casa, con ahorro frente a la compra individual."
+  },
+  "pack-6-aceites": {
+    "id": "pack-6-aceites",
+    "name": "Pack de 6 botellas de aceite",
+    "format": "6 × 500 ml",
+    "price": 114,
+    "currency": "CHF",
+    "image": "assets/img/optimized/aceite-pack-6-logo-original.webp",
+    "category": "aceites",
+    "bottles": 6,
+    "volumeMl": 500,
+    "isPack": true,
+    "shippingIncluded": false,
+    "description": "Seis botellas de 500 ml de aceite de oliva virgen extra. Una selección para quienes lo disfrutan a diario, con un precio más económico por botella."
+  },
+  "pack-12-aceites": {
+    "id": "pack-12-aceites",
+    "name": "Pack de 12 botellas de aceite",
+    "format": "12 × 500 ml",
+    "price": 216,
+    "currency": "CHF",
+    "image": "assets/img/optimized/aceite-pack-12-logo-original.webp",
+    "category": "aceites",
+    "bottles": 12,
+    "volumeMl": 500,
+    "isPack": true,
+    "shippingIncluded": true,
+    "description": "Doce botellas de 500 ml de aceite de oliva virgen extra. El pack con el mayor ahorro por botella de nuestra selección y envío incluido."
+  },
+  "jamon-iberico": {
+    "id": "jamon-iberico",
+    "name": "Jamón ibérico",
+    "format": "Pieza",
+    "price": 500,
+    "currency": "CHF",
+    "image": "assets/img/optimized/producto-jamon-almazara-luminoso.webp",
+    "category": "jamones"
+  },
+  "paleta-iberica": {
+    "id": "paleta-iberica",
+    "name": "Paleta ibérica",
+    "format": "Pieza",
+    "price": 169,
+    "currency": "CHF",
+    "image": "assets/img/optimized/producto-jamon-almazara-luminoso.webp",
+    "category": "jamones"
+  }
 };

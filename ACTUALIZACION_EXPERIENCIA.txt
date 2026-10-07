@@ -1,0 +1,12 @@
+Actualización de navegación, carrito y jamones · 8 de octubre de 2026
+
+- Volver al producto desde cualquier ficha completa: recupera la página de origen, el producto, la cantidad y los filtros. Compatible con el botón Atrás del navegador.
+- Fichas completas de jamón ibérico y paleta ibérica, con descripción propia en cinco idiomas, selección, cantidad, precio y el mismo carrito que los aceites.
+- Iconos de carrito con movimiento al pasar el ratón y salto al añadir productos. Respeta la preferencia del dispositivo de reducir animaciones.
+- Imagen más luminosa del jamón, sobre blanco y con sombra suave, en Inicio, Jamones, Productos, fichas, ventanas y cesta.
+
+Pendiente antes de vender: confirmar con Paola los precios, pesos y datos de proveedor de jamón/paleta; integrar y activar el cobro online. Los precios existentes se han conservado. La referencia de otra tienda se utilizó solo como ejemplo de estructura: no se copiaron sus pesos, curación, certificaciones ni valores nutricionales.
+
+Pruebas: 7 productos, regreso normal y Atrás del navegador, filtros, cantidades, cinco idiomas, móvil, animación y movimiento reducido; también apertura directa de HTML local.
+
+Extrae el ZIP en una carpeta nueva y abre index.html.

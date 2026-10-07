@@ -1,0 +1,51 @@
+/* Original supplier media. Uses the existing ALMAZARA palette and typography. */
+.origin-process,
+.origin-suppliers { scroll-margin-top: 110px; }
+.origin-process-media { padding: 42px 32px; background: var(--dark); min-width: 0; align-content: center; }
+.origin-process-grid { display: grid; grid-template-columns: 1fr 1.1fr; grid-template-rows: 1fr 1fr; gap: 14px; max-width: 620px; margin: auto; }
+.origin-photo { position: relative; margin: 0; min-width: 0; min-height: 0; overflow: hidden; border: 1px solid rgba(196,169,98,.28); }
+.origin-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.origin-photo figcaption { position: absolute; inset: auto 0 0; padding: 28px 14px 12px; color: #fff; background: linear-gradient(transparent,rgba(7,16,10,.85)); font: 18px/1.3 var(--serif); }
+.origin-film { min-width: 0; margin: 0; }
+.origin-film video { display: block; width: 100%; height: auto; object-fit: contain; background: #07100a; border: 1px solid rgba(196,169,98,.38); }
+.origin-film video:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
+.origin-film-portrait { grid-column: 2; grid-row: 1 / 3; }
+.origin-film-portrait video { aspect-ratio: 464 / 832; }
+.origin-film figcaption { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; padding: 12px 0 0; font: 17px/1.35 var(--serif); color: var(--gold); }
+.origin-film figcaption small { font: 11px/1.5 var(--sans); color: #dbd2c0; }
+.origin-credit { margin: 15px 0 0; color: #c9c0af; font: 11px/1.6 var(--sans); letter-spacing: .035em; }
+.origin-process-media > .origin-credit { max-width: 620px; margin-inline: auto; }
+.origin-suppliers { background: var(--paper); padding: 80px 0; border-block: 1px solid var(--line); }
+.origin-suppliers-grid { display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: clamp(32px,5vw,72px); }
+.origin-suppliers-copy { min-width: 0; }
+.origin-suppliers .kicker { color: #6f4e37; font-size: 11px; line-height: 1.65; letter-spacing: .16em; }
+.origin-suppliers h2 { margin: 0 0 22px; font: 400 clamp(38px,4vw,58px)/1.04 var(--serif); color: var(--ink); }
+.origin-suppliers-copy p { font: 15px/1.8 var(--sans); color: #585449; }
+.origin-suppliers-copy .origin-suppliers-note { font: italic 18px/1.5 var(--serif); padding: 2px 0 3px 18px; border-left: 2px solid var(--gold); margin-block: 22px; }
+.origin-suppliers .btn { margin-top: 8px; white-space: normal; line-height: 1.5; text-align: center; }
+.origin-film-landscape video { aspect-ratio: 832 / 464; box-shadow: 0 16px 40px rgba(7,16,10,.12); }
+.origin-suppliers .origin-film figcaption { color: #6f4e37; }
+.origin-suppliers .origin-film figcaption small,
+.origin-suppliers .origin-credit { color: #686154; }
+body.home-page .origin-story .home-story-photo img { object-position: 50% 74%; }
+body.nosotros-page .about-roots-premium .visual img[src*="proveedores"] { object-position: center; }
+@media (min-width: 1101px) {
+  body.home-page .origin-story,
+  body.home-page .origin-story .home-story-visual { min-height: 520px; }
+}
+@media (max-width: 980px) {
+  .origin-process { grid-template-columns: 1fr; }
+  .origin-process-media { padding: 28px 6vw 38px; }
+  .origin-process-grid { max-width: 600px; }
+  .origin-suppliers-grid { grid-template-columns: 1fr; gap: 32px; }
+  .origin-suppliers { padding-block: 54px; }
+  .origin-suppliers-copy { max-width: 620px; }
+}
+@media (max-width: 480px) {
+  .origin-process-media { padding: 8px 20px 30px; }
+  .origin-process-grid { gap: 9px; }
+  .origin-photo figcaption { padding: 22px 8px 9px; font-size: 15px; }
+  .origin-film figcaption { font-size: 15px; }
+  .origin-suppliers { padding-block: 42px; }
+  .origin-suppliers .container { width: calc(100% - 40px); }
+}

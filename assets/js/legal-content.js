@@ -1,4 +1,4 @@
-/* ALMAZARA · Review drafts, 24 September 2026. No remote services. */
+/* ALMAZARA · Technical operation updated 7 October 2026; owner review remains required. */
 window.AlmazaraLegalContent = {
   "aviso-legal": {
     "ES": {
@@ -16,8 +16,8 @@ window.AlmazaraLegalContent = {
           "id": "catalogo",
           "title": "Catálogo y consultas de compra",
           "paragraphs": [
-            "El sitio presenta productos y precios y ofrece un carrito guardado en tu navegador. En esta versión, el carrito y la pantalla de compra son demostrativos: no se realiza ningún pago ni se envía un pedido vinculante.",
-            "Las consultas de compra se atienden directamente por correo electrónico o WhatsApp. Cualquier compra se acuerda con Almazara, con confirmación de la disponibilidad, el precio total, la entrega y el pago antes de cerrar la venta."
+            "El catálogo guarda los productos y cantidades de la cesta en tu navegador. Cuando el pago online esté habilitado, el servidor verificará los precios y el envío antes de abrir la pantalla de pago de Stripe. Solo se confirma un pago después de recibir la verificación de la pasarela.",
+            "Si el pago o el envío de un producto está pendiente de confirmar, contacta con Almazara. Antes de activar la venta deben validarse los precios, impuestos, disponibilidad, plazos de entrega y condiciones de devolución y compra. Este texto sigue en revisión."
           ]
         },
         {
@@ -61,8 +61,8 @@ window.AlmazaraLegalContent = {
           "id": "catalogo",
           "title": "Katalog und Kaufanfragen",
           "paragraphs": [
-            "Die Website zeigt Produkte und Preise und bietet einen im Browser gespeicherten Warenkorb. In dieser Version dienen der Warenkorb und der Kassenbereich zu Demonstrationszwecken: Es wird weder eine Zahlung abgewickelt noch eine verbindliche Bestellung übermittelt.",
-            "Kaufanfragen werden direkt per E-Mail oder WhatsApp bearbeitet. Ein Kauf wird mit Almazara vereinbart; Verfügbarkeit, Gesamtpreis, Lieferung und Zahlung werden vor Vertragsabschluss bestätigt."
+            "Der Warenkorb speichert Produktkennungen und Mengen im Browser. Wenn Online-Zahlungen aktiviert sind, prüft der Server Preise und Versand vor dem Öffnen der Stripe-Zahlungsseite. Eine Zahlung wird erst nach Bestätigung durch den Zahlungsanbieter bestätigt.",
+            "Sind Zahlung oder Versand noch nicht bestätigt, kontaktiere Almazara. Vor Verkaufsstart müssen Preise, Steuern, Verfügbarkeit, Lieferfristen sowie Rückgabe- und Kaufbedingungen bestätigt werden. Dieser Text bleibt in Prüfung."
           ]
         },
         {
@@ -106,8 +106,8 @@ window.AlmazaraLegalContent = {
           "id": "catalogo",
           "title": "Catalogue et demandes d’achat",
           "paragraphs": [
-            "Le site présente des produits et des prix et propose un panier enregistré dans votre navigateur. Dans cette version, le panier et la page de commande sont des démonstrations : aucun paiement n’est effectué et aucune commande ferme n’est transmise.",
-            "Les demandes d’achat sont traitées directement par e-mail ou WhatsApp. Tout achat est convenu avec Almazara, après confirmation de la disponibilité, du prix total, de la livraison et du paiement avant la conclusion de la vente."
+            "Le panier conserve les produits et quantités dans votre navigateur. Quand le paiement en ligne est activé, le serveur vérifie prix et livraison avant d’ouvrir la page Stripe. Le paiement est confirmé uniquement après vérification de la passerelle.",
+            "Si le paiement ou la livraison reste à confirmer, contactez Almazara. Prix, taxes, disponibilité, délais, retours et conditions de vente doivent être validés avant activation. Ce texte reste en cours de validation."
           ]
         },
         {
@@ -151,8 +151,8 @@ window.AlmazaraLegalContent = {
           "id": "catalogo",
           "title": "Catalogo e richieste di acquisto",
           "paragraphs": [
-            "Il sito presenta prodotti e prezzi e offre un carrello salvato nel browser. In questa versione, il carrello e la pagina di acquisto sono dimostrativi: non viene effettuato alcun pagamento né trasmesso alcun ordine vincolante.",
-            "Le richieste di acquisto vengono gestite direttamente tramite e-mail o WhatsApp. Ogni acquisto viene concordato con Almazara, previa conferma della disponibilità, del prezzo totale, della consegna e del pagamento prima della conclusione della vendita."
+            "Il carrello conserva prodotti e quantità nel browser. Quando il pagamento online è attivo, il server verifica prezzi e spedizione prima di aprire Stripe. Il pagamento viene confermato solo dopo la verifica della piattaforma.",
+            "Se pagamento o spedizione richiedono conferma, contatta Almazara. Prima dell’attivazione occorre validare prezzi, imposte, disponibilità, consegna, resi e condizioni di vendita. Questo testo resta in revisione."
           ]
         },
         {
@@ -196,8 +196,8 @@ window.AlmazaraLegalContent = {
           "id": "catalogo",
           "title": "Catalogue and purchase enquiries",
           "paragraphs": [
-            "The website displays products and prices and provides a cart stored in your browser. In this version, the cart and checkout are for demonstration purposes: no payment is processed and no binding order is submitted.",
-            "Purchase enquiries are handled directly by email or WhatsApp. Any purchase is agreed with Almazara, with availability, the total price, delivery and payment confirmed before the sale is concluded."
+            "The basket stores product IDs and quantities in your browser. When online payment is enabled, the server checks prices and shipping before opening Stripe Checkout. A payment is confirmed only after verification by the payment provider.",
+            "If payment or shipping still needs confirmation, contact Almazara. Prices, taxes, availability, delivery times, returns and purchase terms must be validated before enabling sales. This text remains under review."
           ]
         },
         {
@@ -273,7 +273,7 @@ window.AlmazaraLegalContent = {
           "id": "avisos",
           "title": "Información complementaria",
           "paragraphs": [
-            "El Aviso legal explica las condiciones de uso y el carácter demostrativo del carrito y la pantalla de compra. La información sobre datos personales y almacenamiento en el navegador figura en la Política de privacidad y la Política de cookies."
+            "El Aviso legal describe el catálogo y la preparación del pago. La Política de privacidad y la página de cookies describen los formularios y el almacenamiento del navegador. Las condiciones comerciales siguen pendientes de validación."
           ]
         }
       ]
@@ -323,7 +323,7 @@ window.AlmazaraLegalContent = {
           "id": "avisos",
           "title": "Weitere Informationen",
           "paragraphs": [
-            "Die Rechtlichen Hinweise erläutern die Nutzungsbedingungen und den Demonstrationscharakter von Warenkorb und Kassenbereich. Informationen zu Personendaten und zur Speicherung im Browser finden Sie in der Datenschutzerklärung und den Cookie-Hinweisen."
+            "Der rechtliche Hinweis erklärt Katalog und Zahlungsvorbereitung. Datenschutz- und Cookie-Seiten erklären Formulare und Browserspeicher. Die Geschäftsbedingungen müssen noch bestätigt werden."
           ]
         }
       ]
@@ -373,7 +373,7 @@ window.AlmazaraLegalContent = {
           "id": "avisos",
           "title": "Informations complémentaires",
           "paragraphs": [
-            "Les Informations juridiques expliquent les conditions d’utilisation et le caractère démonstratif du panier et de la page de commande. Les informations sur les données personnelles et le stockage dans le navigateur figurent dans la Politique de confidentialité et la Politique relative aux cookies."
+            "Les mentions légales décrivent le catalogue et la préparation du paiement. Les pages de confidentialité et de cookies décrivent formulaires et stockage du navigateur. Les conditions commerciales restent à valider."
           ]
         }
       ]
@@ -423,7 +423,7 @@ window.AlmazaraLegalContent = {
           "id": "avisos",
           "title": "Ulteriori informazioni",
           "paragraphs": [
-            "Le Avvertenze legali spiegano le condizioni d’uso e il carattere dimostrativo del carrello e della pagina di acquisto. Le informazioni sui dati personali e sulla memorizzazione nel browser sono riportate nell’Informativa sulla privacy e nell’Informativa sui cookie."
+            "L’avviso legale descrive catalogo e preparazione del pagamento. Le pagine privacy e cookie descrivono moduli e memoria del browser. Le condizioni commerciali restano da validare."
           ]
         }
       ]
@@ -473,7 +473,7 @@ window.AlmazaraLegalContent = {
           "id": "avisos",
           "title": "Further information",
           "paragraphs": [
-            "The Legal notice explains the terms of use and the demonstration status of the cart and checkout. Information about personal data and storage in your browser is provided in the Privacy policy and Cookie policy."
+            "The legal notice describes the catalog and payment preparation. Privacy and cookie pages describe forms and browser storage. Commercial terms remain to be validated."
           ]
         }
       ]
@@ -493,11 +493,11 @@ window.AlmazaraLegalContent = {
           ]
         },
         {
-          "id": "demostracion",
-          "title": "Formularios de demostración",
+          "id": "formularios",
+          "title": "Contacto, newsletter y pago",
           "paragraphs": [
-            "Los formularios de contacto, newsletter y checkout no están conectados a un servicio de envío. Esta aplicación no transmite ni guarda los datos personales introducidos en esos campos. No se registra una suscripción, no se envía un pedido y no hay pago online activo.",
-            "El navegador puede recordar campos mediante su función de autocompletado, según tu configuración. Esto es independiente de la aplicación."
+            "Al activar estos servicios, el formulario de contacto envía tu nombre, correo, teléfono opcional y mensaje al correo de Almazara. La newsletter registra correo, idioma, estado y fechas de consentimiento; la suscripción se activa después de confirmar por correo. Puedes cancelar mediante el enlace de baja.",
+            "Al continuar al pago, Stripe recoge los datos de entrega y pago en su propia página. La web almacena una referencia del pedido, productos, cantidades, importes y estado del pago. No recibe ni almacena los datos de la tarjeta. Si un servicio no está conectado, se muestra un aviso y no se confirma su envío o pago."
           ]
         },
         {
@@ -513,7 +513,9 @@ window.AlmazaraLegalContent = {
           "title": "Datos funcionales en tu navegador",
           "paragraphs": [
             "La aplicación utiliza localStorage para recordar el idioma (almazara-lang) y los identificadores de productos y cantidades del carrito (almazara_cart_v1). No guarda en esas claves los datos personales de los formularios.",
-            "Estas claves no tienen vencimiento programado: permanecen hasta que se actualiza su contenido o se eliminan los datos del sitio en el navegador. La página de cookies explica cómo gestionarlas."
+            "Estas claves no tienen vencimiento programado: permanecen hasta que se actualiza su contenido o se eliminan los datos del sitio en el navegador. La página de cookies explica cómo gestionarlas.",
+            "Además del idioma y el carrito, se guardan referencias de pagos completados para evitar vaciar la cesta dos veces. sessionStorage recuerda la introducción, la navegación de fichas y el pedido en curso durante la sesión de la pestaña. No guarda los datos de tarjeta.",
+            "Los formularios usan una cookie de sesión almazara_session para proteger las peticiones. No se han añadido herramientas de analítica o publicidad. Los límites de peticiones usan identificadores derivados de la dirección IP y una clave del servidor; se conservan hasta que vence su ventana de control."
           ]
         },
         {
@@ -547,11 +549,11 @@ window.AlmazaraLegalContent = {
           ]
         },
         {
-          "id": "demostracion",
-          "title": "Demonstrationsformulare",
+          "id": "formularios",
+          "title": "Kontakt, Newsletter und Zahlung",
           "paragraphs": [
-            "Die Kontakt-, Newsletter- und Checkout-Formulare sind mit keinem Versanddienst verbunden. Diese Anwendung übermittelt und speichert keine in diese Felder eingegebenen Personendaten. Es erfolgt keine Newsletter-Anmeldung, keine Bestellung wird versendet und es ist keine Onlinezahlung aktiviert.",
-            "Ihr Browser kann Formulareingaben je nach Ihren Einstellungen über seine Funktion zum automatischen Ausfüllen speichern. Dies erfolgt unabhängig von der Anwendung."
+            "Nach Aktivierung sendet das Kontaktformular Name, E-Mail, optionale Telefonnummer und Nachricht an Almazara. Der Newsletter speichert E-Mail, Sprache, Status und Einwilligungsdaten; die Anmeldung wird per E-Mail bestätigt. Der Abmeldelink beendet das Abonnement.",
+            "Stripe erfasst Liefer- und Zahlungsdaten auf seiner eigenen Seite. Die Website speichert Bestellreferenz, Produkte, Mengen, Beträge und Zahlungsstatus, aber keine Kartendaten. Ein nicht verbundener Dienst zeigt einen Hinweis und bestätigt keinen Versand oder Zahlungseingang."
           ]
         },
         {
@@ -567,7 +569,9 @@ window.AlmazaraLegalContent = {
           "title": "Funktionale Daten in Ihrem Browser",
           "paragraphs": [
             "Die Anwendung nutzt localStorage, um die Sprache (almazara-lang) sowie Produktkennungen und Mengen im Warenkorb (almazara_cart_v1) zu speichern. Personendaten aus Formularen werden nicht unter diesen Schlüsseln gespeichert.",
-            "Für diese Schlüssel ist kein Ablaufdatum programmiert: Sie bleiben erhalten, bis ihr Inhalt aktualisiert wird oder Sie die Websitedaten im Browser löschen. Auf der Cookie-Seite erfahren Sie, wie Sie diese Daten verwalten können."
+            "Für diese Schlüssel ist kein Ablaufdatum programmiert: Sie bleiben erhalten, bis ihr Inhalt aktualisiert wird oder Sie die Websitedaten im Browser löschen. Auf der Cookie-Seite erfahren Sie, wie Sie diese Daten verwalten können.",
+            "Neben Sprache und Warenkorb werden Referenzen abgeschlossener Zahlungen gespeichert, um den Warenkorb nicht doppelt zu reduzieren. sessionStorage merkt sich Intro, Produktrücknavigation und laufende Bestellung für die Tab-Sitzung. Keine Kartendaten werden dort gespeichert.",
+            "Die Formulare nutzen das Sitzungscookie almazara_session zum Schutz von Anfragen. Es wurden keine Analyse- oder Werbetools hinzugefügt. Anfragelimits verwenden aus IP-Adresse und Serverschlüssel abgeleitete Kennungen bis zum Ende des Kontrollzeitraums."
           ]
         },
         {
@@ -601,11 +605,11 @@ window.AlmazaraLegalContent = {
           ]
         },
         {
-          "id": "demostracion",
-          "title": "Formulaires de démonstration",
+          "id": "formularios",
+          "title": "Contact, newsletter et paiement",
           "paragraphs": [
-            "Les formulaires de contact, de newsletter et de commande ne sont reliés à aucun service d’envoi. Cette application ne transmet ni ne conserve les données personnelles saisies dans ces champs. Aucune inscription à la newsletter n’est enregistrée, aucune commande n’est envoyée et aucun paiement en ligne n’est actif.",
-            "Le navigateur peut mémoriser des champs grâce à sa fonction de saisie automatique, selon vos réglages. Cette fonction est indépendante de l’application."
+            "Après activation, le formulaire de contact transmet nom, e-mail, téléphone facultatif et message à Almazara. La newsletter conserve e-mail, langue, statut et dates de consentement, avec confirmation par e-mail. Le lien de désinscription permet de se retirer.",
+            "Stripe recueille les coordonnées de livraison et de paiement sur sa propre page. Le site conserve référence, produits, quantités, montants et statut de commande, sans recevoir ni stocker les données de carte. Un service non connecté affiche un avis et ne confirme aucun envoi ou paiement."
           ]
         },
         {
@@ -621,7 +625,9 @@ window.AlmazaraLegalContent = {
           "title": "Données fonctionnelles dans votre navigateur",
           "paragraphs": [
             "L’application utilise localStorage pour mémoriser la langue (almazara-lang) ainsi que les identifiants des produits et les quantités du panier (almazara_cart_v1). Les données personnelles des formulaires ne sont pas enregistrées dans ces clés.",
-            "Ces clés n’ont pas de date d’expiration programmée : elles restent présentes jusqu’à la mise à jour de leur contenu ou à la suppression des données du site dans le navigateur. La page sur les cookies explique comment les gérer."
+            "Ces clés n’ont pas de date d’expiration programmée : elles restent présentes jusqu’à la mise à jour de leur contenu ou à la suppression des données du site dans le navigateur. La page sur les cookies explique comment les gérer.",
+            "Outre la langue et le panier, des références de paiements traités évitent de vider le panier deux fois. sessionStorage conserve introduction, retour aux fiches et commande en cours durant la session de l’onglet. Aucune donnée de carte n’y est stockée.",
+            "Les formulaires utilisent le cookie de session almazara_session pour sécuriser les requêtes. Aucun outil publicitaire ou analytique n’a été ajouté. Les limites de requêtes utilisent des identifiants dérivés de l’adresse IP et d’une clé serveur jusqu’à expiration de leur période de contrôle."
           ]
         },
         {
@@ -655,11 +661,11 @@ window.AlmazaraLegalContent = {
           ]
         },
         {
-          "id": "demostracion",
-          "title": "Moduli dimostrativi",
+          "id": "formularios",
+          "title": "Contatto, newsletter e pagamento",
           "paragraphs": [
-            "I moduli di contatto, newsletter e checkout non sono collegati a un servizio di invio. Questa applicazione non trasmette né salva i dati personali inseriti in questi campi. Non viene registrata alcuna iscrizione alla newsletter, non viene inviato alcun ordine e non sono attivi pagamenti online.",
-            "Il browser può ricordare i campi tramite la propria funzione di compilazione automatica, in base alle tue impostazioni. Questa funzione è indipendente dall’applicazione."
+            "Una volta attivo, il modulo di contatto invia nome, email, telefono facoltativo e messaggio ad Almazara. La newsletter conserva email, lingua, stato e date del consenso; l’iscrizione richiede conferma via email. Il link di cancellazione permette di annullarla.",
+            "Stripe raccoglie dati di consegna e pagamento nella propria pagina. Il sito conserva riferimento, prodotti, quantità, importi e stato dell’ordine, senza ricevere o salvare i dati della carta. Un servizio non collegato mostra un avviso e non conferma invii o pagamenti."
           ]
         },
         {
@@ -675,7 +681,9 @@ window.AlmazaraLegalContent = {
           "title": "Dati funzionali nel browser",
           "paragraphs": [
             "L’applicazione utilizza localStorage per ricordare la lingua (almazara-lang) e gli identificativi dei prodotti e le quantità nel carrello (almazara_cart_v1). I dati personali dei moduli non vengono salvati in queste chiavi.",
-            "Queste chiavi non hanno una scadenza programmata: rimangono presenti finché il contenuto viene aggiornato o i dati del sito vengono eliminati dal browser. La pagina sui cookie spiega come gestirle."
+            "Queste chiavi non hanno una scadenza programmata: rimangono presenti finché il contenuto viene aggiornato o i dati del sito vengono eliminati dal browser. La pagina sui cookie spiega come gestirle.",
+            "Oltre a lingua e carrello si conservano riferimenti dei pagamenti elaborati per non svuotare due volte il carrello. sessionStorage conserva introduzione, ritorno alle schede e ordine durante la sessione della scheda del browser. Non vi sono dati di carta.",
+            "I moduli usano il cookie di sessione almazara_session per proteggere le richieste. Non sono stati aggiunti strumenti pubblicitari o di analisi. I limiti usano identificatori derivati dall’indirizzo IP e da una chiave server fino alla scadenza del periodo di controllo."
           ]
         },
         {
@@ -709,11 +717,11 @@ window.AlmazaraLegalContent = {
           ]
         },
         {
-          "id": "demostracion",
-          "title": "Demonstration forms",
+          "id": "formularios",
+          "title": "Contact, newsletter and payment",
           "paragraphs": [
-            "The contact, newsletter and checkout forms are not connected to a submission service. This application does not transmit or save personal data entered in these fields. No newsletter subscription is registered, no order is submitted and online payment is not active.",
-            "Your browser may remember fields through its autofill feature, depending on your settings. This operates independently of the application."
+            "Once activated, the contact form emails your name, email, optional phone number and message to Almazara. Newsletter records include email, language, status and consent dates; activation requires email confirmation. The unsubscribe link cancels the subscription.",
+            "Stripe collects delivery and payment details on its own page. The website stores an order reference, products, quantities, amounts and payment status. It never receives or stores card details. A disconnected service shows a notice and does not confirm sending or payment."
           ]
         },
         {
@@ -729,7 +737,9 @@ window.AlmazaraLegalContent = {
           "title": "Functional data in your browser",
           "paragraphs": [
             "The application uses localStorage to remember the language (almazara-lang) and the product identifiers and quantities in the basket (almazara_cart_v1). Personal data from forms are not stored under these keys.",
-            "These keys have no programmed expiry: they remain until their content is updated or the site data are deleted in the browser. The cookies page explains how to manage them."
+            "These keys have no programmed expiry: they remain until their content is updated or the site data are deleted in the browser. The cookies page explains how to manage them.",
+            "Alongside language and basket data, completed payment references prevent removing purchased items twice. sessionStorage remembers the introduction, product return navigation and current order during the tab session. It does not contain card data.",
+            "Forms use the almazara_session session cookie to protect requests. No analytics or advertising tools have been added. Request limits use identifiers derived from the IP address and a server key until their control window expires."
           ]
         },
         {
@@ -760,8 +770,7 @@ window.AlmazaraLegalContent = {
           "id": "alcance",
           "title": "Qué utiliza esta versión",
           "paragraphs": [
-            "El código de esta versión no crea cookies propias ni incorpora analítica, píxeles publicitarios o rastreadores. Utiliza almacenamiento local del navegador para dos funciones: idioma y carrito.",
-            "Esta descripción no confirma la ausencia de cookies que pueda añadir el servidor o un servicio de alojamiento."
+            "La web utiliza almacenamiento del navegador para el idioma, el carrito, la vuelta a fichas y la introducción. Los formularios y el pago utilizan una cookie de sesión de seguridad. No se han añadido analítica ni píxeles publicitarios."
           ]
         },
         {
@@ -774,12 +783,12 @@ window.AlmazaraLegalContent = {
         {
           "id": "inventario",
           "title": "Datos guardados y finalidad",
-          "paragraphs": [
-            "La aplicación utiliza estas dos claves de localStorage:"
-          ],
+          "paragraphs": [],
           "items": [
             "almazara-lang: código del idioma, como ES, DE, FR, IT o EN, para conservar la selección. También se guarda al cargar el idioma predeterminado.",
-            "almazara_cart_v1: identificadores de productos y cantidades, para mantener el carrito entre visitas. No contiene los datos personales del checkout."
+            "almazara_cart_v1: identificadores de productos y cantidades, para mantener el carrito entre visitas. No contiene los datos personales del checkout.",
+            "Cookie almazara_session: identificador de sesión, HttpOnly y SameSite=Lax; en HTTPS también Secure. Se utiliza al abrir formularios, confirmar correos o preparar pagos. Su duración es la sesión del navegador.",
+            "localStorage almazara_completed_orders: últimas 50 referencias procesadas para no descontar dos veces los productos de la cesta. sessionStorage almazara_intro_seen_v1, almazara-product-return:* y almazara_payment_*: introducción, navegación de producto y pedido durante la sesión de pestaña."
           ]
         },
         {
@@ -788,7 +797,8 @@ window.AlmazaraLegalContent = {
           "paragraphs": [
             "No hay vencimiento programado para estas claves. Sus valores se mantienen hasta que la aplicación los sustituye o el navegador los elimina. Quitar productos actualiza el carrito y no elimina necesariamente la clave.",
             "Puedes borrar los datos de este sitio desde los ajustes de privacidad o de datos de sitios de tu navegador. Esto vacía el carrito guardado y restablece el idioma. Si visitas de nuevo la web, puede volver a guardarse el idioma predeterminado; el carrito se guardará al utilizarlo.",
-            "Puedes bloquear el almacenamiento en los ajustes de tu navegador; si lo haces, puede que estas funciones no recuerden tus preferencias."
+            "Puedes bloquear el almacenamiento en los ajustes de tu navegador; si lo haces, puede que estas funciones no recuerden tus preferencias.",
+            "Cookie almazara_session: identificador de sesión, HttpOnly y SameSite=Lax; en HTTPS también Secure. Se utiliza al abrir formularios, confirmar correos o preparar pagos. Su duración es la sesión del navegador."
           ]
         },
         {
@@ -817,8 +827,7 @@ window.AlmazaraLegalContent = {
           "id": "alcance",
           "title": "Was diese Version verwendet",
           "paragraphs": [
-            "Der Code dieser Version setzt keine eigenen Cookies und enthält keine Analysewerkzeuge, Werbepixel oder Tracker. Er nutzt den lokalen Browserspeicher für zwei Funktionen: Sprache und Warenkorb.",
-            "Diese Beschreibung bestätigt nicht, dass der Server oder ein Hosting-Dienst keine weiteren Cookies setzt."
+            "Der Browser speichert Sprache, Warenkorb, Produktrücknavigation und Intro. Formulare und Zahlung verwenden ein Sicherheits-Sitzungscookie. Keine Analyse- oder Werbepixel wurden hinzugefügt."
           ]
         },
         {
@@ -831,12 +840,12 @@ window.AlmazaraLegalContent = {
         {
           "id": "inventario",
           "title": "Gespeicherte Daten und Zweck",
-          "paragraphs": [
-            "Die Anwendung verwendet diese beiden localStorage-Schlüssel:"
-          ],
+          "paragraphs": [],
           "items": [
             "almazara-lang: Sprachcode wie ES, DE, FR, IT oder EN, um die Auswahl zu speichern. Er wird auch beim Laden der Standardsprache gespeichert.",
-            "almazara_cart_v1: Produktkennungen und Mengen, damit der Warenkorb zwischen Besuchen erhalten bleibt. Er enthält keine Personendaten aus dem Checkout."
+            "almazara_cart_v1: Produktkennungen und Mengen, damit der Warenkorb zwischen Besuchen erhalten bleibt. Er enthält keine Personendaten aus dem Checkout.",
+            "Cookie almazara_session: Sitzungskennung, HttpOnly und SameSite=Lax, bei HTTPS auch Secure. Für Formulare, E-Mail-Bestätigung und Zahlungsvorbereitung; gültig für die Browsersitzung.",
+            "localStorage almazara_completed_orders: die letzten 50 verarbeiteten Referenzen verhindern doppelte Warenkorbänderungen. sessionStorage almazara_intro_seen_v1, almazara-product-return:* und almazara_payment_*: Intro, Produktrücknavigation und Bestellung während der Tab-Sitzung."
           ]
         },
         {
@@ -845,7 +854,8 @@ window.AlmazaraLegalContent = {
           "paragraphs": [
             "Für diese Schlüssel ist kein Ablaufdatum programmiert. Ihre Werte bleiben gespeichert, bis die Anwendung sie ersetzt oder der Browser sie löscht. Das Entfernen von Produkten aktualisiert den Warenkorb, löscht aber nicht unbedingt den Schlüssel.",
             "Sie können die Daten dieser Website in den Datenschutz- oder Websitedaten-Einstellungen Ihres Browsers löschen. Dadurch werden der gespeicherte Warenkorb geleert und die Sprache zurückgesetzt. Bei einem erneuten Besuch kann die Standardsprache wieder gespeichert werden; der Warenkorb wird bei seiner Nutzung gespeichert.",
-            "Sie können die Speicherung in Ihren Browsereinstellungen blockieren. Dann können diese Funktionen Ihre Einstellungen möglicherweise nicht dauerhaft speichern."
+            "Sie können die Speicherung in Ihren Browsereinstellungen blockieren. Dann können diese Funktionen Ihre Einstellungen möglicherweise nicht dauerhaft speichern.",
+            "Cookie almazara_session: Sitzungskennung, HttpOnly und SameSite=Lax, bei HTTPS auch Secure. Für Formulare, E-Mail-Bestätigung und Zahlungsvorbereitung; gültig für die Browsersitzung."
           ]
         },
         {
@@ -874,8 +884,7 @@ window.AlmazaraLegalContent = {
           "id": "alcance",
           "title": "Ce que cette version utilise",
           "paragraphs": [
-            "Le code de cette version ne crée pas de cookies propres et n’intègre pas d’outils d’analyse, de pixels publicitaires ou de traceurs. Il utilise le stockage local du navigateur pour deux fonctions : la langue et le panier.",
-            "Cette description ne confirme pas l’absence de cookies pouvant être ajoutés par le serveur ou un service d’hébergement."
+            "Le navigateur conserve langue, panier, retour aux fiches et introduction. Formulaires et paiement utilisent un cookie de session de sécurité. Aucun pixel publicitaire ou analytique n’a été ajouté."
           ]
         },
         {
@@ -888,12 +897,12 @@ window.AlmazaraLegalContent = {
         {
           "id": "inventario",
           "title": "Données conservées et finalité",
-          "paragraphs": [
-            "L’application utilise ces deux clés localStorage :"
-          ],
+          "paragraphs": [],
           "items": [
             "almazara-lang : code de langue, par exemple ES, DE, FR, IT ou EN, pour conserver le choix. Il est également enregistré lors du chargement de la langue par défaut.",
-            "almazara_cart_v1 : identifiants des produits et quantités, pour conserver le panier entre les visites. Cette clé ne contient pas les données personnelles du formulaire de commande."
+            "almazara_cart_v1 : identifiants des produits et quantités, pour conserver le panier entre les visites. Cette clé ne contient pas les données personnelles du formulaire de commande.",
+            "Cookie almazara_session : identifiant de session, HttpOnly et SameSite=Lax, également Secure en HTTPS. Utilisé pour les formulaires, la confirmation par e-mail et le paiement ; durée de la session du navigateur.",
+            "localStorage almazara_completed_orders : les 50 dernières références évitent de réduire le panier deux fois. sessionStorage almazara_intro_seen_v1, almazara-product-return:* et almazara_payment_* : introduction, retour aux fiches et commande durant la session de l’onglet."
           ]
         },
         {
@@ -902,7 +911,8 @@ window.AlmazaraLegalContent = {
           "paragraphs": [
             "Aucune expiration n’est programmée pour ces clés. Leurs valeurs restent présentes jusqu’à leur remplacement par l’application ou leur suppression par le navigateur. Retirer des produits met à jour le panier sans nécessairement supprimer la clé.",
             "Vous pouvez effacer les données de ce site dans les réglages de confidentialité ou de données des sites de votre navigateur. Cela vide le panier enregistré et réinitialise la langue. Lors d’une nouvelle visite, la langue par défaut peut être enregistrée à nouveau ; le panier est enregistré lorsque vous l’utilisez.",
-            "Vous pouvez bloquer le stockage dans les réglages de votre navigateur. Ces fonctions risquent alors de ne pas mémoriser vos préférences."
+            "Vous pouvez bloquer le stockage dans les réglages de votre navigateur. Ces fonctions risquent alors de ne pas mémoriser vos préférences.",
+            "Cookie almazara_session : identifiant de session, HttpOnly et SameSite=Lax, également Secure en HTTPS. Utilisé pour les formulaires, la confirmation par e-mail et le paiement ; durée de la session du navigateur."
           ]
         },
         {
@@ -931,8 +941,7 @@ window.AlmazaraLegalContent = {
           "id": "alcance",
           "title": "Cosa utilizza questa versione",
           "paragraphs": [
-            "Il codice di questa versione non crea cookie propri e non integra strumenti di analisi, pixel pubblicitari o sistemi di tracciamento. Utilizza l’archiviazione locale del browser per due funzioni: lingua e carrello.",
-            "Questa descrizione non conferma l’assenza di cookie eventualmente aggiunti dal server o da un servizio di hosting."
+            "Il browser conserva lingua, carrello, ritorno alle schede e introduzione. Moduli e pagamento usano un cookie di sessione di sicurezza. Non sono stati aggiunti pixel pubblicitari o di analisi."
           ]
         },
         {
@@ -945,12 +954,12 @@ window.AlmazaraLegalContent = {
         {
           "id": "inventario",
           "title": "Dati salvati e finalità",
-          "paragraphs": [
-            "L’applicazione utilizza queste due chiavi localStorage:"
-          ],
+          "paragraphs": [],
           "items": [
             "almazara-lang: codice della lingua, ad esempio ES, DE, FR, IT o EN, per ricordare la scelta. Viene salvato anche al caricamento della lingua predefinita.",
-            "almazara_cart_v1: identificativi dei prodotti e quantità, per mantenere il carrello tra una visita e l’altra. Non contiene i dati personali del checkout."
+            "almazara_cart_v1: identificativi dei prodotti e quantità, per mantenere il carrello tra una visita e l’altra. Non contiene i dati personali del checkout.",
+            "Cookie almazara_session: identificatore di sessione, HttpOnly e SameSite=Lax, anche Secure in HTTPS. Serve per moduli, conferma email e pagamento; dura per la sessione del browser.",
+            "localStorage almazara_completed_orders: ultimi 50 riferimenti elaborati per non ridurre due volte il carrello. sessionStorage almazara_intro_seen_v1, almazara-product-return:* e almazara_payment_*: introduzione, ritorno alle schede e ordine durante la sessione della scheda."
           ]
         },
         {
@@ -959,7 +968,8 @@ window.AlmazaraLegalContent = {
           "paragraphs": [
             "Per queste chiavi non è programmata una scadenza. I valori rimangono presenti finché l’applicazione li sostituisce o il browser li elimina. Rimuovere prodotti aggiorna il carrello, ma non elimina necessariamente la chiave.",
             "Puoi cancellare i dati di questo sito dalle impostazioni sulla privacy o sui dati dei siti del tuo browser. Questa operazione svuota il carrello salvato e reimposta la lingua. A una nuova visita, la lingua predefinita può essere nuovamente salvata; il carrello viene salvato quando lo utilizzi.",
-            "Puoi bloccare l’archiviazione nelle impostazioni del browser; in tal caso queste funzioni potrebbero non ricordare le tue preferenze."
+            "Puoi bloccare l’archiviazione nelle impostazioni del browser; in tal caso queste funzioni potrebbero non ricordare le tue preferenze.",
+            "Cookie almazara_session: identificatore di sessione, HttpOnly e SameSite=Lax, anche Secure in HTTPS. Serve per moduli, conferma email e pagamento; dura per la sessione del browser."
           ]
         },
         {
@@ -988,8 +998,7 @@ window.AlmazaraLegalContent = {
           "id": "alcance",
           "title": "What this version uses",
           "paragraphs": [
-            "The code in this version does not set its own cookies or include analytics, advertising pixels or trackers. It uses the browser’s local storage for two functions: language and basket.",
-            "This description does not confirm the absence of cookies that a server or hosting service might add."
+            "The browser stores language, basket, product return navigation and introduction state. Forms and payment use a security session cookie. No advertising or analytics pixels have been added."
           ]
         },
         {
@@ -1002,12 +1011,12 @@ window.AlmazaraLegalContent = {
         {
           "id": "inventario",
           "title": "Stored data and purpose",
-          "paragraphs": [
-            "The application uses these two localStorage keys:"
-          ],
+          "paragraphs": [],
           "items": [
             "almazara-lang: a language code such as ES, DE, FR, IT or EN, to remember the selection. It is also saved when the default language loads.",
-            "almazara_cart_v1: product identifiers and quantities, to keep the basket between visits. It does not contain personal data from checkout."
+            "almazara_cart_v1: product identifiers and quantities, to keep the basket between visits. It does not contain personal data from checkout.",
+            "almazara_session cookie: session identifier, HttpOnly and SameSite=Lax; also Secure over HTTPS. Used for forms, email confirmation and payment preparation; lasts for the browser session.",
+            "localStorage almazara_completed_orders: the last 50 processed references avoid removing basket items twice. sessionStorage almazara_intro_seen_v1, almazara-product-return:* and almazara_payment_*: introduction, product navigation and order during the tab session."
           ]
         },
         {
@@ -1016,7 +1025,8 @@ window.AlmazaraLegalContent = {
           "paragraphs": [
             "These keys have no programmed expiry. Their values remain until the application replaces them or the browser deletes them. Removing products updates the basket without necessarily deleting the key.",
             "You can delete this site’s data through your browser’s privacy or site-data settings. This clears the saved basket and resets the language. On a later visit, the default language may be saved again; the basket is saved when you use it.",
-            "You can block storage in your browser settings. If you do, these features may no longer remember your preferences."
+            "You can block storage in your browser settings. If you do, these features may no longer remember your preferences.",
+            "almazara_session cookie: session identifier, HttpOnly and SameSite=Lax; also Secure over HTTPS. Used for forms, email confirmation and payment preparation; lasts for the browser session."
           ]
         },
         {

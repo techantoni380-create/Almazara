@@ -1,3 +1,19 @@
+ACTUALIZACIÓN RESPONSIVE Y HOSTINGER
+La guía vigente es EMPEZAR_HOSTINGER.md. Incluye lo configurado y lo pendiente antes de vender.
+Las notas anteriores describen entregas anteriores y no sustituyen esta guía.
+
+CORRECCIÓN 07/10/2026: reparada la imagen de 125 ml. Se usa PNG validado
+en Aceites, Productos, ventanas, ficha y carrito.
+
+ACTUALIZACIÓN 07/10/2026: ventanas en todos los productos; logo original sin
+redibujar e imagen ilustrativa de 125 ml. Véase VENTANAS_Y_LOGO.txt.
+
+ACTUALIZACIÓN 07/10/2026: precios, descripciones y nuevas fichas de producto.
+Consulta ACTUALIZACION_PRODUCTOS.txt para cambios, pruebas y pendientes.
+Abrir producto.html para ver la nueva presentación de la botella de 500 ml.
+
+Actualización 06/10/2026: ver CAMBIOS_PROVEEDORES.txt para los nuevos recursos y comprobaciones.
+
 ALMAZARA · PROYECTO WEB REVISADO
 
 Entrega: 23/09/2026

@@ -1,0 +1,63 @@
+.product-detail-page{background:#fbf8f0;color:#273322}
+.product-detail-page .oil-detail-main{padding:0;background:#fbf8f0}
+.oil-detail-container{padding-top:35px;padding-bottom:76px}
+.oil-breadcrumb{display:flex;align-items:center;gap:15px;font:11px/1.5 var(--sans);color:#797462;padding-bottom:32px}
+.oil-breadcrumb a{color:inherit;text-decoration:none}
+.oil-breadcrumb a:hover{text-decoration:underline}
+.oil-detail-hero{display:grid;grid-template-columns:1.02fr 1fr;gap:68px;align-items:center}
+.oil-detail-visual{position:relative;background:white;aspect-ratio:1/1;overflow:hidden;border:1px solid #eee8dc}
+.oil-detail-visual>img{display:block;width:100%;height:100%;object-fit:contain}
+.oil-detail-main [hidden]{display:none!important}
+#detailPack{position:absolute;left:22px;bottom:22px;padding:11px 18px;background:#2e3d1f;color:#fff;font:13px/1.4 var(--sans);letter-spacing:.06em}
+#detailPlaceholder{height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;background:radial-gradient(#fff,#f4f0e5)}
+#detailPlaceholder img{width:80px;height:80px;object-fit:contain}
+#detailPlaceholder span{font:15px var(--serif);letter-spacing:.22em;color:#8b7138}
+#detailPlaceholder strong{font:60px var(--serif);color:#2e3d1f}
+#detailPlaceholder small{font:12px var(--sans);color:#756a51}
+.oil-detail-eyebrow{margin:0 0 20px;font:10px/1.6 var(--sans);letter-spacing:.18em;color:#8b7138}
+.oil-detail-copy h1{font:400 clamp(35px,3.5vw,54px)/1.08 var(--serif);margin:0 0 18px;letter-spacing:-.035em;text-transform:none}
+.oil-detail-copy h1 em{color:#8b7138;font-weight:400}
+.oil-detail-format{font:12px var(--sans);letter-spacing:.09em;color:#78705f;margin:0 0 20px}
+.oil-detail-price-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:0 0 18px}
+#detailPrice{font:400 34px/1.2 var(--serif);letter-spacing:-.02em}
+#detailSaving{font:11px var(--sans);padding:7px 10px;background:#edf1e7;color:#39502c}
+#detailIntro{font:14px/1.75 var(--sans);color:#6d675b;margin:0 0 23px;max-width:56ch}
+.oil-choice-label{font:11px/1.5 var(--sans);letter-spacing:.05em;margin:0 0 10px}
+.oil-format-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 26px}
+.oil-format-choices a{border:1px solid #d8d1c2;padding:11px 9px;text-align:center;text-decoration:none;color:#5b5c4d;background:#fffcf5;transition:border-color .2s,background .2s;min-width:0}
+.oil-format-choices b{display:block;font:500 12px/1.4 var(--sans)}
+.oil-format-choices small{display:block;margin-top:4px;font:10px/1.3 var(--sans);color:#81745c}
+.oil-format-choices a.is-current{border-color:#657343;background:#f0eedf;box-shadow:inset 0 0 0 1px #657343}
+.oil-format-choices a:hover{border-color:#657343}
+.oil-buy-row{display:flex;gap:12px;align-items:stretch;margin:0}
+.oil-quantity{display:flex;flex-direction:column;gap:4px;flex:0 0 82px;background:#fff;border:1px solid #d6cdb8;padding:7px 12px}
+.oil-quantity span{font:9px/1.3 var(--sans);color:#7b725f}
+.oil-quantity input{padding:0;background:none!important;border:0!important;outline-offset:3px;width:100%;min-width:0;color:#2e3d1f;font:15px var(--sans);height:24px}
+.oil-buy-row .btn{flex:1;min-width:0;border:1px solid #b59b5d;border-radius:0;margin:0;padding:17px 12px;color:#253220;background:#c4a962;font:600 10px/1.5 var(--sans);letter-spacing:.1em;cursor:pointer}
+.oil-buy-row .btn:hover{background:#d1bb85;transform:none}
+.oil-detail-shipping{font:11px/1.6 var(--sans);color:#776d58;margin:13px 0 0}
+.oil-detail-shipping.is-free{color:#365129;font-weight:600}
+.oil-detail-information{margin-top:62px;border-top:1px solid #d8d0bf}
+.oil-detail-tabs{display:flex;gap:35px;border-bottom:1px solid #d8d0bf}
+.oil-detail-tabs button{border:0;border-bottom:2px solid transparent;background:transparent;border-radius:0;padding:20px 0 17px;margin-bottom:-1px;font:12px/1.5 var(--sans);color:#7f7767;cursor:pointer}
+.oil-detail-tabs button[aria-selected=true]{border-bottom-color:#9c803c;color:#2e3d1f}
+.oil-detail-information [role=tabpanel]{padding:34px 0;min-height:190px;font:14px/1.8 var(--sans);color:#6d675b}
+.oil-detail-information [role=tabpanel]>p{max-width:720px}
+.oil-detail-information a{color:#5d682e;text-underline-offset:4px}
+.oil-description-panel{display:grid;grid-template-columns:1fr 1.7fr;gap:50px}
+.oil-description-panel h2{margin:0;font:400 31px/1.25 var(--serif);color:#34422b;letter-spacing:-.02em}
+.oil-description-panel p{margin:0 0 14px}
+.oil-detail-facts{margin:0;max-width:760px}
+.oil-detail-facts>div{display:grid;grid-template-columns:1fr 1.7fr;border-bottom:1px solid #e4ddcf;padding:10px 0;gap:20px}
+.oil-detail-facts dt{font-weight:500;color:#35412e}
+.oil-detail-facts dd{margin:0}
+.oil-detail-end{text-align:center;border-top:1px solid #d8d0bf;padding-top:35px;margin-top:10px}
+.oil-detail-end>span{font:10px var(--sans);letter-spacing:.25em;color:#a48943}
+.oil-detail-end>p{font:italic 26px var(--serif);margin:12px 0 18px;color:#445137}
+.oil-detail-end>a{font:11px var(--sans);text-decoration:none;color:#726847}
+.oil-detail-main :focus-visible{outline:2px solid #657343;outline-offset:5px}
+@media(min-width:1400px){.oil-detail-container{max-width:1180px}}
+@media(max-width:1050px){.oil-detail-hero{gap:32px}.oil-detail-eyebrow{font-size:9px}.oil-format-choices{gap:6px}}
+@media(max-width:760px){.oil-detail-container{padding-top:22px;padding-bottom:48px}.oil-breadcrumb{padding-bottom:22px}.oil-detail-hero{grid-template-columns:1fr;gap:29px}.oil-detail-visual{max-width:520px;width:100%;margin:auto}.oil-detail-copy h1{font-size:40px}.oil-detail-eyebrow{margin-bottom:15px}.oil-detail-copy{max-width:520px;width:100%;margin:auto}.oil-format-choices{grid-template-columns:repeat(3,minmax(0,1fr))}.oil-detail-information{margin-top:38px}.oil-detail-tabs{gap:20px;justify-content:space-between}.oil-detail-tabs button{font-size:11px;text-align:left}.oil-description-panel{grid-template-columns:1fr;gap:18px}.oil-description-panel h2{font-size:29px}.oil-detail-information [role=tabpanel]{padding:25px 0;min-height:0}.oil-detail-facts>div{grid-template-columns:1fr 1.4fr}.oil-detail-end{margin-top:10px}}
+
+#detailImageNote{position:absolute;bottom:7px;left:12px;right:12px;text-align:center;font:10px/1.5 var(--sans);color:#776d58}

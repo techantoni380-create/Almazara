@@ -1,0 +1,87 @@
+/* Final responsive layer: full compositions, touch feedback and accessible forms. */
+html{scroll-padding-top:100px}body{overflow-wrap:break-word}img,video{max-width:100%}
+button,a,input,select,textarea{-webkit-tap-highlight-color:rgba(196,169,98,.25)}
+:focus-visible{outline:2px solid #9c7b32;outline-offset:4px}
+.footer-enterprise-socials svg{width:22px;height:22px;display:block;fill:none;stroke:currentColor;stroke-width:1.8}
+.footer-enterprise-socials a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px}
+.footer-enterprise-socials a[aria-disabled=true]{opacity:.55;cursor:default}
+.footer-newsletter-form{width:100%;min-width:0}
+.footer-newsletter-form .newsletter-input-row{display:flex;width:100%;min-width:0}
+.footer-newsletter-form input[type=email]{min-width:0;flex:1;font-size:16px!important}
+.footer-newsletter-form button{flex-shrink:0;min-height:48px;cursor:pointer}
+.footer-newsletter-form .newsletter-consent{display:flex!important;align-items:flex-start!important;gap:10px;line-height:1.65!important;text-align:left}
+.newsletter-consent input,.contact-privacy input{width:18px!important;height:18px!important;flex:0 0 18px;margin-top:3px;accent-color:#b09651}
+.newsletter-success.is-visible,.form-result{display:block!important;margin-top:14px;font-size:14px;line-height:1.6}
+.newsletter-success[data-state=error]{color:#ffd1a3}.form-result[data-state=error]{color:#924521}
+.newsletter-success:empty,.form-result:empty{display:none!important}
+.form-trap{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+button[aria-busy=true]{opacity:.65;cursor:wait}
+@media(max-width:1024px){
+ html body #complete-collage-hero > :is(.aceites-collage-media,.productos-collage-media){position:relative!important;inset:auto!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:auto!important;gap:3px;overflow:visible!important;background:#132016;order:0;aspect-ratio:auto!important;flex:none!important}
+ html body :is(.aceites-collage-panel,.producto-foto){position:relative!important;inset:auto!important;aspect-ratio:2/3!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;container-type:normal!important;background:#111b13}
+ html body :is(.aceites-collage-panel,.producto-foto)>img{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important;translate:none!important;scale:1!important;animation:none!important;filter:none!important}
+ html body #complete-collage-hero{display:flex!important;flex-direction:column!important;height:auto!important;min-height:0!important}
+ html body #complete-collage-hero>.hero-inner{position:relative!important;width:100%!important;height:auto!important;min-height:0!important;inset:auto!important;padding:36px 24px!important;order:1;background:#162219}
+ html body #complete-collage-hero::after{display:none!important}
+ html body .producto-foto::before{opacity:.15!important}
+ html body .producto-foto::after{display:none!important}
+ .footer-enterprise-newsletter{min-width:0!important;max-width:100%!important}
+ .checkout-grid{grid-template-columns:1fr!important}.checkout-panel{min-width:0}
+}
+@media(min-width:641px) and (max-width:1024px){
+ html body #complete-collage-hero > :is(.aceites-collage-media,.productos-collage-media){grid-template-columns:repeat(4,minmax(0,1fr))!important}
+}
+@media(max-width:640px){
+ .container{max-width:100%}.footer-enterprise{padding-left:20px!important;padding-right:20px!important}
+ input,select,textarea{font-size:16px!important}button,.btn{touch-action:manipulation}
+ .footer-newsletter-form .newsletter-input-row{flex-direction:column!important;gap:10px;background:none!important;border:0!important}
+ .footer-newsletter-form input[type=email]{width:100%!important;box-sizing:border-box!important;min-height:50px!important;border:1px solid rgba(196,169,98,.5)!important;padding:14px!important;background:rgba(255,255,255,.035)!important}
+ .footer-newsletter-form button{width:100%!important;justify-content:space-between!important;padding:15px!important}
+ .footer-enterprise-newsletter h3{font-size:clamp(26px,8vw,38px)!important;line-height:1.2!important}
+ .footer-enterprise-legal{line-height:1.8;flex-wrap:wrap!important}
+ .footer-enterprise-socials{justify-content:center;gap:16px!important}
+ .cart-drawer{width:min(100vw,430px)!important;max-width:100vw!important;padding:24px 18px!important;box-sizing:border-box!important}
+ .shop-cart-item{grid-template-columns:58px minmax(0,1fr) auto!important;gap:10px!important}
+ .shop-cart-item h3{font-size:15px!important}.shop-line b{white-space:nowrap;font-size:13px}
+ .checkout-wrap{padding:28px 16px!important}.checkout-panel{padding:22px 18px!important}
+ .checkout-summary-row{gap:14px}.checkout-summary-row strong{text-align:right}
+ .checkout-order-item{grid-template-columns:56px minmax(0,1fr) auto!important;gap:10px!important}
+ .contact-premium-wrap,.contact-premium-fields,.contact-field-row{min-width:0}
+ .contact-field{min-width:0!important}.contact-field input,.contact-field textarea{min-width:0;width:100%}
+ .product-modal-close,.premium-close{min-width:44px;min-height:44px}
+}
+@keyframes almazara-touch-gold{0%,100%{box-shadow:0 0 0 rgba(196,169,98,0)}40%{box-shadow:0 0 26px rgba(196,169,98,.55),inset 0 0 16px rgba(235,207,142,.2)}}
+@media(prefers-reduced-motion:no-preference){
+ .is-touch-glowing{animation:almazara-touch-gold 1.4s ease-in-out!important}
+ :is(.value,.stat).is-touch-glowing::before{opacity:1!important}
+ :is(.value,.stat).is-touch-glowing::after{animation:almazara-value-reflection 1.3s ease both!important}
+ body .card.is-touch-glowing .add-to-cart::before,body .touch-cart-preview::before{animation:almazara-cart-roll .65s ease-in-out both}
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){body .card:hover .add-to-cart:not(.cart-just-added)::before{animation:almazara-cart-roll .65s ease-in-out both}}
+@media(prefers-reduced-motion:reduce){.is-touch-glowing{animation:none!important;box-shadow:0 0 0 2px rgba(196,169,98,.4)}html{scroll-behavior:auto!important}}
+/* Full viewport intro. Root/body locks also remove the desktop scrollbar. */
+html.intro-open{overflow:hidden!important;overscroll-behavior:none!important;scrollbar-gutter:auto!important}
+html body.intro-open{overflow:hidden!important;position:fixed!important;inset:0!important;width:100%!important;height:100vh!important;height:100dvh!important;overscroll-behavior:none!important}
+html body dialog.almazara-intro{position:fixed!important;inset:0!important;width:100vw!important;max-width:none!important;height:100vh!important;height:100dvh!important;max-height:none!important;box-sizing:border-box!important;margin:0!important;padding:0!important;border:0!important;outline:0!important;border-radius:0!important;background:#060a10;color:#e5d19b;z-index:2147483000;overflow:hidden!important;opacity:1;transition:opacity .34s ease}
+.almazara-intro::backdrop{background:transparent}
+html body dialog.almazara-intro[open]{display:block!important}
+html body .almazara-intro .intro-film{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;display:block;object-fit:cover!important;object-position:50% 50%;z-index:1}
+.almazara-intro .intro-ambient{display:none}
+html body dialog.almazara-intro.intro-leaving{opacity:0}
+/* Very tall phones: keep the final logo within the safe horizontal frame;
+   a synchronized, blurred background extends the film to the screen edges. */
+@media(max-aspect-ratio:9/20){
+ html body .almazara-intro .intro-film{top:50%;bottom:auto;height:min(100%,222vw)!important;transform:translateY(-50%);-webkit-mask-image:linear-gradient(transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(transparent,#000 7%,#000 93%,transparent)}
+ html body .almazara-intro .intro-ambient{display:block;position:absolute;inset:-24px;width:calc(100% + 48px)!important;height:calc(100% + 48px)!important;max-width:none!important;max-height:none!important;object-fit:cover!important;filter:blur(18px) brightness(.6);pointer-events:none}
+}
+@media(min-aspect-ratio:2/1){html body .almazara-intro .intro-film{object-position:50% 65%}}
+@media(prefers-reduced-motion:reduce){html body dialog.almazara-intro{transition:none}}
+.checkout-pay{width:100%;margin-top:20px;padding:18px;border:1px solid #baa05e;background:#263720;color:#f4e8c8;cursor:pointer;font:600 13px/1.5 var(--sans);letter-spacing:.08em}
+.checkout-pay:disabled{opacity:.55;cursor:not-allowed}.checkout-ready-note{font-size:14px;line-height:1.7;color:#515b46}.checkout-consent{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.6;margin:18px 0}.checkout-consent input{width:18px;height:18px;flex:0 0 18px;accent-color:#324226}
+.checkout-result{padding:18px;border:1px solid #b99b57;line-height:1.7;margin-bottom:22px}.checkout-result:empty{display:none}
+
+@media(max-width:1024px){html body #complete-collage-hero > :is(.aceites-collage-media,.productos-collage-media)::after{display:none!important}}
+
+@media(prefers-reduced-motion:no-preference){html body .card .add-to-cart.cart-just-added::before{animation:almazara-cart-jump .72s ease-in-out both}}
+
+.checkout-consent a{text-decoration:underline;text-underline-offset:3px}.shop-line{grid-column:auto!important;text-align:right!important}.shop-qty button{min-width:36px;min-height:36px}

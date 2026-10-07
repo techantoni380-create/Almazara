@@ -1,0 +1,66 @@
+NOTA 07/10/2026: se ha completado una revisión en Chromium de las fichas y el
+catálogo, además de pruebas funcionales. Véase ACTUALIZACION_PRODUCTOS.txt.
+Los apartados siguientes conservan el historial de comprobaciones anteriores.
+
+ALMAZARA · MATERIAL DE PROVEEDORES
+Actualización: 6 de octubre de 2026
+
+CAMBIOS
+- Inicio: fotografía real del olivar y texto breve sobre los proveedores.
+- Aceites: fotos de la floración y las aceitunas junto al vídeo de elaboración.
+- Nosotros: fotos reales y nuevo bloque sobre el origen, con vídeo de recolección.
+- Dos vídeos sin pista de audio, con portada, controles, reproducción automática y bucle.
+- Textos nuevos, pies de foto y descripciones accesibles en ES / DE / FR / IT / EN.
+- Estilos adaptables para móvil, tableta y ordenador, con la paleta existente.
+- No se han incorporado los folletos que muestran la botella negra de PALOMA.
+
+ARCHIVOS ORIGINALES UTILIZADOS
+WhatsApp Image 2026-10-02 at 09.07.55.jpeg -> olivar.webp
+WhatsApp Image 2026-10-02 at 09.07.36.jpeg -> camino-olivar.webp
+WhatsApp Image 2026-10-02 at 09.07.54.jpeg -> floracion.webp
+WhatsApp Image 2026-10-02 at 09.07.59.jpeg -> aceitunas.webp
+WhatsApp Video 2026-10-02 at 09.08.0.mp4 -> recoleccion-sin-audio.mp4
+WhatsApp Video 2026-10-02 at 09.08.00.mp4 -> elaboracion-sin-audio.mp4
+Los archivos web están en assets/img/proveedores y assets/video/proveedores.
+Las imágenes se han convertido a WebP. Los vídeos conservan su resolución de origen.
+
+COMPROBACIONES REALIZADAS
+- Sintaxis JavaScript y existencia de los recursos locales de las tres páginas editadas.
+- Traducción del contenido nuevo en los cinco idiomas y restauración al español,
+  comprobadas ejecutando el traductor en un DOM de prueba.
+- Evento de cambio de idioma y atributos accesibles de los nuevos recursos.
+- Inspección de los vídeos: ambos tienen únicamente una pista de vídeo, sin audio.
+- No se ha podido realizar la revisión visual en navegador: pendiente comprobar
+  el aspecto y la reproducción en móvil, tableta y ordenador antes de publicar.
+
+PENDIENTES
+- Aceite ecológico: foto real, nombre, formato, precio y confirmación de la clienta.
+- Revisión visual final del sitio antes de publicarlo.
+- Esta actualización no publica la web ni configura Hostinger.
+- Se conserva el funcionamiento previo del proyecto: carrito local y resumen
+  del pedido; pagos, envíos e integraciones reales siguen pendientes.
+
+PARA REVISAR EN LOCAL
+Descomprimir el ZIP y abrir la carpeta AlmazaraWeb2026 en VS Code.
+Abrir index.html con Live Server, si se dispone de esa extensión.
+Alternativa con Python instalado, desde la carpeta del proyecto:
+python -m http.server 8000
+Después abrir http://localhost:8000
+
+REVISIÓN SOLICITADA EL 06/10/2026, 23:59 (ESPAÑA)
+- Los dos vídeos de proveedores tienen autoplay, loop, muted y playsinline.
+- Eliminado el rótulo visible «Sin sonido» de ambos vídeos.
+- Se conservan los controles nativos para poder pausar la reproducción.
+- Asistente: traducción completa a ES / DE / FR / IT / EN y mensaje de WhatsApp
+  preparado en el idioma seleccionado.
+- Mejorados el cierre, el foco de teclado y el acceso a los enlaces en pantallas bajas.
+- Comprobados apertura y cierre, Escape, clic exterior, foco de teclado, ausencia
+  de duplicados, idiomas y destinos de los cinco enlaces mediante un DOM de prueba
+  sobre las 12 páginas del proyecto. No se han enviado mensajes a terceros.
+- WhatsApp: +41 76 785 05 06. Correo: almazara.olive@gmail.com.
+  Ambos coinciden con Contacto; la titularidad, disponibilidad y recepción de mensajes
+  requieren confirmación de la clienta.
+- El asistente funciona como panel de ayuda y enlaces; no integra un motor
+  de conversación ni genera respuestas automáticas a preguntas libres.
+- La reproducción automática queda sujeta a las preferencias del navegador.
+- Sigue pendiente una comprobación real en los navegadores de destino.

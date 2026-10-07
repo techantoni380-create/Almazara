@@ -1,0 +1,29 @@
+ALMAZARA · Actualización responsive y preparación para Hostinger
+
+REALIZADO
+- 13 páginas: 65 comprobaciones de ancho (320, 390, 768, 1024 y 1440 px), sin desbordamientos horizontales.
+- Comprobación adicional en horizontal 844 × 390 px.
+- Imágenes completas en cabeceras Aceites/Productos; comprobados también sus contenedores.
+- Efectos al aparecer y tocar en pantallas táctiles; carrito animado al añadir, sin duplicar cantidades.
+- Respeto de reducir movimiento. Fichas y retorno conservan producto y cantidad.
+- Intro H.264 de 10 segundos: autoplay silenciado, pantalla completa, sin botones visibles, fundido al terminar y una vez por sesión de pestaña. Escape disponible; un fallo de autoplay abre la web directamente.
+- Iconos SVG Instagram/Facebook/YouTube, pendientes de sus enlaces oficiales.
+- Newsletter: envío SMTP local simulado, doble confirmación, baja, consentimiento, límites, mensajes reales de éxito/error.
+- Contacto: formulario conectado al backend y probado con SMTP local simulado.
+- Checkout: importes calculados por servidor, control de moneda, envío y productos no confirmados; conexión Stripe preparada.
+- Webhook: firma, importe, referencia, eventos duplicados y conservación de estado pagado comprobados con eventos simulados.
+- Confirmación de pago: totales guardados en servidor y actualización de la cesta una única vez, sin borrar productos añadidos posteriormente.
+- Cinco idiomas en formularios, pago, intro y textos técnicos actualizados.
+- PHP 8.3 y JavaScript sin errores de sintaxis; recursos estáticos locales existentes.
+
+LÍMITES DE LA COMPROBACIÓN
+Se usaron Chromium con emulación táctil, PHP local, SQLite, un servidor SMTP local de prueba y respuestas Stripe simuladas. No se enviaron correos externos, no hubo transacciones, no se desplegó en Hostinger. No se ha probado en iPhone/Android físicos ni Safari real. MySQL, SMTP y Stripe reales se comprueban durante la instalación.
+
+PENDIENTE PARA VENDER
+Configurar dominio/HTTPS, MySQL, correo y Stripe de ALMAZARA. Confirmar precios de jamón/paleta, tarifa o reglas de envío y condiciones comerciales. Añadir enlaces de redes. La implementación permanece desactivada si faltan las claves o validaciones necesarias.
+
+GUÍA VIGENTE
+EMPEZAR_HOSTINGER.md. Las notas antiguas de entregas anteriores son históricas.
+
+REVISIÓN INTRODUCCIÓN
+Pantalla completa sin botones visibles ni barra de desplazamiento. Comprobada en 1920×930, 1366×768, 768×1024, 390×844, 360×800, 320×900 y 3440×1440. Cierre automático con fundido, una vez por sesión, Escape y entrada directa si se bloquea autoplay. Emulación en Chromium.

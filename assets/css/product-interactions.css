@@ -1,0 +1,38 @@
+/* Shared purchase feedback, independent of translated button text. */
+body :is(.add-to-cart,#quickAdd,#detailBuy button)::before,
+.cart-drawer h2::before{
+ content:"";display:inline-block;width:19px;height:19px;margin-right:10px;
+ vertical-align:-.18em;background:currentColor;transform-origin:55% 80%;
+ -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 4h2l2 11h11l2-8H6M8 11h10'/%3E%3Ccircle cx='9' cy='20' r='1'/%3E%3Ccircle cx='17' cy='20' r='1'/%3E%3C/svg%3E") center/contain no-repeat;
+ mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 4h2l2 11h11l2-8H6M8 11h10'/%3E%3Ccircle cx='9' cy='20' r='1'/%3E%3Ccircle cx='17' cy='20' r='1'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.cart-drawer h2::before{width:27px;height:27px;margin-right:12px}
+@keyframes almazara-cart-roll{
+ 0%,100%{transform:translateX(0) rotate(0)}
+ 30%{transform:translateX(-3px) rotate(-9deg)}
+ 65%{transform:translateX(4px) rotate(6deg)}
+}
+@keyframes almazara-cart-jump{
+ 0%,100%{transform:translateY(0) rotate(0) scale(1)}
+ 20%{transform:translateY(1px) scale(1.08,.9)}
+ 45%{transform:translateY(-9px) rotate(-10deg) scale(1.03)}
+ 68%{transform:translateY(0) rotate(4deg) scale(1.06,.94)}
+ 84%{transform:translateY(-3px) rotate(-3deg)}
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ body :is(.add-to-cart,#quickAdd,#detailBuy button):hover::before{animation:almazara-cart-roll .65s ease-in-out both}
+}
+@media(prefers-reduced-motion:no-preference){
+ body :is(.add-to-cart,#quickAdd,#detailBuy button):focus-visible::before{animation:almazara-cart-roll .65s ease-in-out both}
+ body :is(.add-to-cart,#quickAdd,#detailBuy button).cart-just-added::before,
+ .cart-trigger.cart-just-added .tool-icon,
+ .cart-drawer.cart-just-added h2::before{animation:almazara-cart-jump .72s ease-in-out both}
+}
+@media(prefers-reduced-motion:reduce){
+ body :is(.add-to-cart,#quickAdd,#detailBuy button)::before,
+ .cart-trigger .tool-icon,.cart-drawer h2::before{animation:none!important}
+}
+.product-back{display:inline-flex;align-items:center;padding:11px 17px;margin-bottom:20px;border:1px solid #c8b784;background:#fffdf8;color:#35432b;text-decoration:none;font:500 13px/1.5 var(--sans);transition:background .2s,border-color .2s}
+.product-back:hover{background:#eee9d9;border-color:#8b7138}
+.product-back:focus-visible{outline:2px solid #657343;outline-offset:4px}
+@media(max-width:760px){.product-back{font-size:12px;margin-bottom:16px}}

@@ -1,0 +1,67 @@
+ALMAZARA · VENTANAS DE PRODUCTO Y LOGO ORIGINAL
+7 de octubre de 2026
+
+VENTANAS
+Al pulsar la imagen, el título o «Ver detalles» de un producto, se abre una
+ventana sobre la página actual. Disponible en Inicio, Aceites, Jamones y Productos.
+Incluye foto, nombre, formato, precio, descripción, cantidad y añadir al carrito.
+Los aceites permiten abrir también su ficha completa. Los jamones incluyen un
+enlace de consulta para los datos específicos de cada pieza.
+
+Se puede cerrar con la cruz, Escape o pulsando el fondo. El foco vuelve al
+elemento que abrió la ventana. El contenido se adapta a móvil y se puede desplazar
+dentro de la ventana cuando no cabe en la pantalla. Textos en ES / DE / FR / IT / EN.
+
+LOGO ORIGINAL SIN REDIBUJAR
+Archivo fuente: assets/img/branding/almazara-logo-original.png
+Es una copia exacta de LOGO1(8).png aportado por Yonathan. No se ha recoloreado,
+redibujado, deformado ni sustituido su diseño. Se coloca proporcionalmente
+como imagen independiente sobre la etiqueta y en la esquina superior derecha.
+La igualdad del archivo fuente y los logos incrustados se ha verificado por bytes.
+
+IMÁGENES DE LA WEB
+assets/img/optimized/aceite-500-logo-original.webp
+assets/img/optimized/aceite-125-logo-original.webp
+Las dos imágenes se exportan sin pérdida y muestran el volumen correspondiente.
+La imagen de 125 ml utiliza la misma botella como maqueta, según lo solicitado.
+En su ventana y ficha se identifica como imagen ilustrativa. No es una fotografía
+independiente del envase real de 125 ml.
+Las composiciones editables están en los archivos SVG con los mismos nombres.
+Ambas contienen el PNG original incrustado, sin alteraciones de sus bytes.
+La foto real anterior del pack de tres se mantiene.
+
+MÉTODO DE PREPARACIÓN
+Se utilizó image_gen (herramienta integrada) para borrar únicamente el logo
+redibujado y el volumen anterior de una copia de la fotografía de estudio.
+Después se compuso la imagen con el PNG original y el texto del volumen en SVG.
+El SVG se exportó en navegador a WebP sin pérdida para reducir su peso en la web.
+Se ha comprobado que el WebP conserva los mismos píxeles que la imagen renderizada.
+Los originales anteriores permanecen en el proyecto como material de edición.
+
+Prompt de la edición de la capa fotográfica:
+Use case: precise-object-edit. Edit this existing 1254x1254 ALMAZARA bottle
+photograph to prepare a background layer for later exact logo compositing.
+REMOVE ONLY these three elements: (1) the small tree-and-circle emblem and
+ALMAZARA word at the upper right on the white background; replace them with
+matching clean white background. (2) The circular tree emblem in the middle
+of the front paper bottle label; replace it with seamless matching blank beige
+paper texture. Keep the other olive branch decorations outside that emblem
+unchanged. (3) The small '500 ml' volume text near the bottom of the paper label;
+replace it with matching blank paper texture. Leave clear blank spaces in these
+three locations. DO NOT put any replacement logo, tree, volume or artwork in those
+spaces; the ORIGINAL PNG logo will be composited by the website separately,
+unmodified. KEEP EVERYTHING ELSE unchanged: same centered front facing bottle
+in same position and scale, same bottle outline and proportions, same gold cap,
+neck sticker, oil, lighting, all remaining wording including ALMAZARA at top of
+label and French text, entire pure white backdrop, and exactly the same soft
+contact shadow beneath and to the right. No new objects, marks, labels,
+certificates, or extra text. Deliver only the cleaned photograph at the same
+square composition.
+
+COMPROBACIONES
+Probado en Chromium: los siete productos, las cuatro páginas con catálogo,
+cinco idiomas, apertura desde foto/título/enlace, cierre por teclado/cruz/fondo,
+recuperación del foco, cantidades al carrito, imagen y formato de 125 ml,
+distribución en escritorio y desplazamiento de la ventana en móvil.
+Los precios y condiciones de envío se mantienen. Pagos reales e integraciones
+de pedidos continúan pendientes, como en la entrega anterior.

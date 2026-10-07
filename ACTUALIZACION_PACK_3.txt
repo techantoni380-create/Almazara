@@ -1,0 +1,9 @@
+Actualización del pack de 3 botellas — 7 de octubre de 2026
+
+Tres botellas de 500 ml sobre fondo blanco y sombras suaves.
+Se reutiliza la botella existente y el logotipo original, sin redibujarlo.
+Imagen actualizada en Aceites, Productos, ventana de detalles, ficha y carrito.
+Precio conservado: CHF 60, gastos de envío aparte.
+
+Imagen web: assets/img/optimized/aceite-pack-3-logo-original.webp
+Fuente editable: assets/img/optimized/aceite-pack-3-logo-original.svg

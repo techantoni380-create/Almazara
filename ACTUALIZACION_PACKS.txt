@@ -1,0 +1,12 @@
+Packs actualizados · 8 de octubre de 2026
+
+Imágenes de los packs de 3, 6 y 12 botellas en Aceites y Productos.
+Fondo blanco, sombra suave y la botella existente con su logotipo original.
+Pack de 6: dos filas de tres. Pack de 12: tres filas de cuatro.
+Las ventanas de detalle, fichas, cesta y resumen del pedido utilizan las mismas imágenes.
+
+Precios conservados: 3 botellas CHF 60; 6 botellas CHF 114; 12 botellas CHF 216.
+Gastos de envío aparte, excepto en el pack de 12 que incluye el envío.
+
+Extrae este ZIP completo en una carpeta nueva y abre index.html.
+Para actualizar una copia existente, sustituye también la carpeta assets completa.
